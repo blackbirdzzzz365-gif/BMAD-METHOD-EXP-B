@@ -1,0 +1,45 @@
+# BMAD Startup Advisor Expansion Pack Configuration
+pack:
+  id: bmad-startup-advisor
+  name: BMAD Startup Advisor
+  version: 1.0.0
+  description: Comprehensive startup advisory for early and growth stage companies
+  author: BMAD
+  tags:
+    - startup
+    - entrepreneurship
+    - venture
+    - growth
+    - lean-startup
+    - fundraising
+    - product-market-fit
+  
+  capabilities:
+    - business_model_validation
+    - customer_development_strategy
+    - fundraising_guidance
+    - growth_strategy_planning
+    - pivot_decision_support
+    - exit_planning
+    - investor_relations
+    - metric_tracking
+  
+  dependencies:
+    required:
+      - bmad-core
+    recommended:
+      - bmad-product-manager
+      - bmad-market-researcher
+      - bmad-pmo-agile
+      - bmad-strategy-consulting
+  
+  integration_points:
+    - product_development
+    - market_validation
+    - agile_execution
+    - strategic_planning
+  
+  metadata:
+    min_bmad_version: "1.0.0"
+    last_updated: "2024-01-30"
+    stability: "stable"

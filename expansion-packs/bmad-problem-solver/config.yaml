@@ -1,0 +1,50 @@
+name: bmad-problem-solver
+version: 1.1.0
+short-title: Problem Solver Pack
+description: >-
+  Comprehensive problem-solving expansion pack using mental models, systems thinking, 
+  and structured frameworks. Tackles complex business and operational problems with 
+  visual explanations, consensus-based analysis, and adaptive complexity levels.
+author: BMad Community
+slashPrefix: bmadps
+
+dependencies:
+  - bmad-strategy-consulting  # For strategic problem analysis
+  - bmad-product-manager      # For product-related problems
+  - bmad-startup-advisor      # For startup challenges
+  - bmad-pmo-agile           # For operational issues
+
+capabilities:
+  - problem_decomposition: Break complex problems into manageable parts
+  - root_cause_analysis: Find underlying causes using multiple frameworks
+  - systems_thinking: Understand interconnections and feedback loops
+  - decision_making: Structured evaluation of options and trade-offs
+  - visual_thinking: Mermaid diagrams and ASCII art for clarity
+  - pattern_recognition: Identify similar problems and solutions
+  - assumption_testing: Track and validate key assumptions
+
+core_frameworks:
+  classic:
+    - five_whys: Root cause analysis through iterative questioning
+    - fishbone_diagram: Cause and effect visualization
+    - swot_analysis: Strengths, Weaknesses, Opportunities, Threats
+    - force_field: Driving and restraining forces analysis
+    - pareto_principle: 80/20 analysis for prioritization
+  modern:
+    - design_thinking: Human-centered problem solving
+    - systems_mapping: Complex system visualization
+    - first_principles: Fundamental truth analysis
+    - mental_models: Charlie Munger's latticework
+    - cynefin: Problem complexity categorization
+
+visualization_styles:
+  - mermaid: flowcharts, mind maps, sequence diagrams
+  - ascii_art: box diagrams, trees, matrices
+  - markdown_tables: comparison matrices, decision grids
+  - emoji_enhanced: visual markers for quick scanning
+
+agent_coordination:
+  mode: consensus
+  process: collaborative_analysis
+  conflict_resolution: structured_debate
+  output_synthesis: unified_recommendations
