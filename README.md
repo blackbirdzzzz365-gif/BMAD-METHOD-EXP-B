@@ -1,186 +1,194 @@
-# BMad-Method: Universal AI Agent Framework
+# BMAD-METHOD Expansion Packs
 
-[![Version](https://img.shields.io/npm/v/bmad-method?color=blue&label=version)](https://www.npmjs.com/package/bmad-method)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Node.js Version](https://img.shields.io/badge/node-%3E%3D20.0.0-brightgreen)](https://nodejs.org)
-[![Discord](https://img.shields.io/badge/Discord-Join%20Community-7289da?logo=discord&logoColor=white)](https://discord.gg/gk8jAdXWmj)
+Professional expansion packs for [BMAD-METHOD](https://github.com/bmadcode/BMAD-METHOD) that extend its capabilities beyond software development into business strategy, product management, and market research.
 
-Foundations in Agentic Agile Driven Development, known as the Breakthrough Method of Agile AI-Driven Development, yet so much more. Transform any domain with specialized AI expertise: software development, entertainment, creative writing, business strategy to personal wellness just to name a few.
+## 🚀 Overview
 
-**[Subscribe to BMadCode on YouTube](https://www.youtube.com/@BMadCode?sub_confirmation=1)**
+This repository contains three comprehensive expansion packs that transform BMAD-METHOD into a complete business analysis and strategy platform:
 
-**[Join our Discord Community](https://discord.gg/gk8jAdXWmj)** - A growing community for AI enthusiasts! Get help, share ideas, explore AI agents & frameworks, collaborate on tech projects, enjoy hobbies, and help each other succeed. Whether you're stuck on BMad, building your own agents, or just want to chat about the latest in AI - we're here for you! **Some mobile and VPN may have issue joining the discord, this is a discord issue - if the invite does not work, try from your own internet or another network, or non-VPN.**
+### 📊 Market Researcher Pack
+Transform your AI agents into a professional market research team capable of conducting comprehensive market analysis, consumer insights, and competitive intelligence.
 
-⭐ **If you find this project helpful or useful, please give it a star in the upper right hand corner!** It helps others discover BMad-Method and you will be notified of updates!
+### 🎯 Product Manager Pack  
+Equip your agents with industry-standard product management frameworks including Jobs-to-be-Done (JTBD), OKRs, and RICE prioritization for full product lifecycle management.
 
-## Overview
+### 🏛️ Strategy Consulting Pack
+Access McKinsey, BCG, and Bain-level strategic consulting capabilities with elite strategy agents, proven frameworks, and executive-ready deliverables.
 
-**BMad Method's Two Key Innovations:**
+## 📦 What's Included
 
-**1. Agentic Planning:** Dedicated agents (Analyst, PM, Architect) collaborate with you to create detailed, consistent PRDs and Architecture documents. Through advanced prompt engineering and human-in-the-loop refinement, these planning agents produce comprehensive specifications that go far beyond generic AI task generation.
+### Expansion Pack Contents
+- **12 Specialized Agents**: From market researchers to senior strategy partners
+- **11 Strategic Tasks**: Interactive, framework-based analysis procedures
+- **8 Professional Templates**: Executive-ready reports and presentations
+- **Complete Frameworks**: JTBD, OKR, RICE, McKinsey 7S, Three Horizons
+- **Knowledge Bases**: Deep domain expertise for each pack
 
-**2. Context-Engineered Development:** The Scrum Master agent then transforms these detailed plans into hyper-detailed development stories that contain everything the Dev agent needs - full context, implementation details, and architectural guidance embedded directly in story files.
+## 🛠️ Installation
 
-This two-phase approach eliminates both **planning inconsistency** and **context loss** - the biggest problems in AI-assisted development. Your Dev agent opens a story file with complete understanding of what to build, how to build it, and why.
+### Prerequisites
+- BMAD-METHOD installed in your project
+- Access to AI agent platform (Cursor, Windsurf, etc.)
 
-**📖 [See the complete workflow in the User Guide](bmad-core/user-guide.md)** - Planning phase, development cycle, and all agent roles
+### Installation Steps
 
-## Quick Navigation
-
-### Understanding the BMad Workflow
-
-**Before diving in, review these critical workflow diagrams that explain how BMad works:**
-
-1. **[Planning Workflow (Web UI)](bmad-core/user-guide.md#the-planning-workflow-web-ui)** - How to create PRD and Architecture documents
-2. **[Core Development Cycle (IDE)](bmad-core/user-guide.md#the-core-development-cycle-ide)** - How SM, Dev, and QA agents collaborate through story files
-
-> ⚠️ **These diagrams explain 90% of BMad Method Agentic Agile flow confusion** - Understanding the PRD+Architecture creation and the SM/Dev/QA workflow and how agents pass notes through story files is essential - and also explains why this is NOT taskmaster or just a simple task runner!
-
-### What would you like to do?
-
-- **[Install and Build software with Full Stack Agile AI Team](#quick-start)** → Quick Start Instruction
-- **[Learn how to use BMad](bmad-core/user-guide.md)** → Complete user guide and walkthrough
-- **[See available AI agents](/bmad-core/agents))** → Specialized roles for your team
-- **[Explore non-technical uses](#-beyond-software-development---expansion-packs)** → Creative writing, business, wellness, education
-- **[Create my own AI agents](#creating-your-own-expansion-pack)** → Build agents for your domain
-- **[Browse ready-made expansion packs](expansion-packs/)** → Game dev, DevOps, infrastructure and get inspired with ideas and examples
-- **[Understand the architecture](docs/core-architecture.md)** → Technical deep dive
-- **[Join the community](https://discord.gg/gk8jAdXWmj)** → Get help and share ideas
-
-## Important: Keep Your BMad Installation Updated
-
-**Stay up-to-date effortlessly!** If you already have BMad-Method installed in your project, simply run:
-
+1. **Clone this repository**:
 ```bash
-npx bmad-method install
-# OR
-git pull
-npm run install:bmad
+git clone https://github.com/bookmark/BMAD-METHOD-EXP.git
 ```
 
-This will:
-
-- ✅ Automatically detect your existing v4 installation
-- ✅ Update only the files that have changed and add new files
-- ✅ Create `.bak` backup files for any custom modifications you've made
-- ✅ Preserve your project-specific configurations
-
-This makes it easy to benefit from the latest improvements, bug fixes, and new agents without losing your customizations!
-
-## Quick Start
-
-### One Command for Everything (IDE Installation)
-
-**Just run one of these commands:**
-
+2. **Copy expansion packs to your BMAD installation**:
 ```bash
-npx bmad-method install
-# OR if you already have BMad installed:
-git pull
-npm run install:bmad
+cp -r BMAD-METHOD-EXP/expansion-packs/* /path/to/your/project/BMAD-METHOD/expansion-packs/
 ```
 
-This single command handles:
+3. **Verify installation**:
+Check that the following directories exist:
+- `expansion-packs/bmad-market-researcher/`
+- `expansion-packs/bmad-product-manager/`
+- `expansion-packs/bmad-strategy-consulting/`
 
-- **New installations** - Sets up BMad in your project
-- **Upgrades** - Updates existing installations automatically
-- **Expansion packs** - Installs any expansion packs you've added to package.json
+## 💡 Usage Examples
 
-> **That's it!** Whether you're installing for the first time, upgrading, or adding expansion packs - these commands do everything.
+### Market Research Example
+```
+Load agent: market-research-lead
 
-**Prerequisites**: [Node.js](https://nodejs.org) v20+ required
+Agent: "Hello! I'm Maya, your Senior Market Research Strategist. Let's analyze your market opportunity."
 
-### Fastest Start: Web UI Full Stack Team at your disposal (2 minutes)
+User: "I need to understand the market for a new fintech app"
 
-1. **Get the bundle**: Save or clone the [full stack team file](dist/teams/team-fullstack.txt) or choose another team
-2. **Create AI agent**: Create a new Gemini Gem or CustomGPT
-3. **Upload & configure**: Upload the file and set instructions: "Your critical operating instructions are attached, do not break character as directed"
-4. **Start Ideating and Planning**: Start chatting! Type `*help` to see available commands or pick an agent like `*analyst` to start right in on creating a brief.
-5. **CRITICAL**: Talk to BMad Orchestrator in the web at ANY TIME (#bmad-orchestrator command) and ask it questions about how this all works!
-6. **When to move to the IDE**: Once you have your PRD, Architecture, optional UX and Briefs - its time to switch over to the IDE to shard your docs, and start implementing the actual code! See the [User guide](bmad-core/user-guide.md) for more details
-
-### Alternative: Clone and Build
-
-```bash
-git clone https://github.com/bmadcode/bmad-method.git
-npm run install:bmad # build and install all to a destination folder
+Agent: *Initiates comprehensive market analysis with TAM/SAM/SOM calculations*
 ```
 
-## 🌟 Beyond Software Development - Expansion Packs
+### Product Management Example
+```
+Load agent: product-lead
 
-BMad's natural language framework works in ANY domain. Expansion packs provide specialized AI agents for creative writing, business strategy, health & wellness, education, and more. Also expansion packs can expand the core BMad-Method with specific functionality that is not generic for all cases. [See the Expansion Packs Guide](docs/expansion-packs.md) and learn to create your own!
+Agent: "I'm Alex Chen, your Senior Product Manager. I'll help you build the right product using JTBD, OKR, and RICE frameworks."
 
-## Codebase Flattener Tool
+User: "Help me prioritize features for our roadmap"
 
-The BMad-Method includes a powerful codebase flattener tool designed to prepare your project files for AI model consumption. This tool aggregates your entire codebase into a single XML file, making it easy to share your project context with AI assistants for analysis, debugging, or development assistance.
-
-### Features
-
-- **AI-Optimized Output**: Generates clean XML format specifically designed for AI model consumption
-- **Smart Filtering**: Automatically respects `.gitignore` patterns to exclude unnecessary files
-- **Binary File Detection**: Intelligently identifies and excludes binary files, focusing on source code
-- **Progress Tracking**: Real-time progress indicators and comprehensive completion statistics
-- **Flexible Output**: Customizable output file location and naming
-
-### Usage
-
-```bash
-# Basic usage - creates flattened-codebase.xml in current directory
-npx bmad-method flatten
-
-# Specify custom input directory
-npx bmad-method flatten --input /path/to/source/directory
-npx bmad-method flatten -i /path/to/source/directory
-
-# Specify custom output file
-npx bmad-method flatten --output my-project.xml
-npx bmad-method flatten -o /path/to/output/codebase.xml
-
-# Combine input and output options
-npx bmad-method flatten --input /path/to/source --output /path/to/output/codebase.xml
+Agent: *Runs RICE prioritization analysis*
 ```
 
-### Example Output
-
-The tool will display progress and provide a comprehensive summary:
-
+### Strategy Consulting Example
 ```
-📊 Completion Summary:
-✅ Successfully processed 156 files into flattened-codebase.xml
-📁 Output file: /path/to/your/project/flattened-codebase.xml
-📏 Total source size: 2.3 MB
-📄 Generated XML size: 2.1 MB
-📝 Total lines of code: 15,847
-🔢 Estimated tokens: 542,891
-📊 File breakdown: 142 text, 14 binary, 0 errors
+Load agent: senior-partner
+
+Agent: "I'm Victoria Sterling, Senior Partner. I've advised Fortune 500 CEOs for 25+ years. Let's develop your strategy."
+
+User: "We need a digital transformation strategy"
+
+Agent: *Conducts strategic situation assessment and builds transformation roadmap*
 ```
 
-The generated XML file contains all your project's source code in a structured format that AI models can easily parse and understand, making it perfect for code reviews, architecture discussions, or getting AI assistance with your BMad-Method projects.
+## 🔗 Integration with BMAD Ecosystem
 
-## Documentation & Resources
+These expansion packs are designed to work seamlessly together and with core BMAD agents:
 
-### Essential Guides
+```mermaid
+graph TD
+    MR[Market Research] --> PM[Product Management]
+    SC[Strategy Consulting] --> PM
+    SC --> MR
+    PM --> BMAD[BMAD Core Agents]
+    SC --> BMAD
+    MR --> BMAD
+```
 
-- 📖 **[User Guide](bmad-core/user-guide.md)** - Complete walkthrough from project inception to completion
-- 🏗️ **[Core Architecture](docs/core-architecture.md)** - Technical deep dive and system design
-- 🚀 **[Expansion Packs Guide](docs/expansion-packs.md)** - Extend BMad to any domain beyond software development
+### Cross-Pack Collaboration
+- **Market Research** provides insights for Product and Strategy decisions
+- **Product Management** bridges business strategy and development
+- **Strategy Consulting** provides overarching direction for all agents
 
-## Support
+## 📋 Expansion Pack Details
 
-- 💬 [Discord Community](https://discord.gg/gk8jAdXWmj)
-- 🐛 [Issue Tracker](https://github.com/bmadcode/bmad-method/issues)
-- 💬 [Discussions](https://github.com/bmadcode/bmad-method/discussions)
+### Market Researcher Pack
 
-## Contributing
+**Agents**:
+- Maya - Market Research Lead
+- Alex - Data Analyst  
+- Sofia - Consumer Insights Specialist
+- Marcus - Competitive Intelligence Analyst
 
-**We're excited about contributions and welcome your ideas, improvements, and expansion packs!** 🎉
+**Key Capabilities**:
+- Market sizing (TAM/SAM/SOM)
+- Consumer behavior analysis
+- Competitive landscape mapping
+- Persona development
+- Trend analysis
 
-📋 **[Read CONTRIBUTING.md](CONTRIBUTING.md)** - Complete guide to contributing, including guidelines, process, and requirements
+### Product Manager Pack
 
-## License
+**Agents**:
+- Alex Chen - Product Lead
+- Sarah Kim - Product Strategist
+- David Park - Product Analyst
+- Maya Patel - Technical PM
 
-MIT License - see [LICENSE](LICENSE) for details.
+**Key Frameworks**:
+- Jobs-to-be-Done (JTBD)
+- Objectives & Key Results (OKR)
+- RICE Prioritization
+- Platform vs Feature Analysis
 
-[![Contributors](https://contrib.rocks/image?repo=bmadcode/bmad-method)](https://github.com/bmadcode/bmad-method/graphs/contributors)
+### Strategy Consulting Pack
 
-<sub>Built with ❤️ for the AI-assisted development community</sub>
+**Agents**:
+- Victoria Sterling - Senior Partner
+- Marcus Chen - Strategy Consultant
+- Dr. Sarah Mitchell - Org Design Expert
+- Alex Kumar - Digital Strategist
+
+**Key Frameworks**:
+- McKinsey 7S Analysis
+- Three Horizons Planning
+- Strategic Situation Assessment
+- Transformation Roadmaps
+
+## 🤝 Contributing
+
+Contributions are welcome! If you'd like to add new expansion packs or improve existing ones:
+
+1. Fork this repository
+2. Create your feature branch (`git checkout -b feature/amazing-pack`)
+3. Commit your changes (`git commit -m 'Add amazing expansion pack'`)
+4. Push to the branch (`git push origin feature/amazing-pack`)
+5. Open a Pull Request
+
+### Creating New Expansion Packs
+
+Follow the BMAD-METHOD structure:
+```
+expansion-packs/
+└── your-pack-name/
+    ├── agents/       # Agent definitions
+    ├── tasks/        # Reusable tasks
+    ├── templates/    # Output templates
+    ├── workflows/    # Multi-step processes
+    ├── data/         # Knowledge bases
+    └── config.yaml   # Pack configuration
+```
+
+## 📄 License
+
+This project follows the same license as BMAD-METHOD. See the [original repository](https://github.com/bmadcode/BMAD-METHOD) for details.
+
+## 🙏 Acknowledgments
+
+- [Brian Madison (BMad)](https://github.com/bmadcode) for creating BMAD-METHOD
+- The BMAD community for inspiration and support
+- McKinsey, BCG, and Bain for strategic frameworks and methodologies
+
+## 📞 Support
+
+- **BMAD Discord**: [Join the community](https://discord.gg/gk8jAdXWmj)
+- **Issues**: Open an issue in this repository
+- **Discussions**: Use GitHub Discussions for questions and ideas
+
+---
+
+**Made with ❤️ for the BMAD community**
+
+*Extending AI agents beyond code into complete business solutions*
