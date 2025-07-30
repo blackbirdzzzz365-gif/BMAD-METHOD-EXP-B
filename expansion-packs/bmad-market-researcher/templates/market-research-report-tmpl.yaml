@@ -1,0 +1,252 @@
+template:
+  id: market-research-report-template
+  name: Market Research Report
+  version: 1.0
+  output:
+    format: markdown
+    filename: docs/market-research-report.md
+    title: "Market Research Report: {{project_name}}"
+
+workflow:
+  mode: interactive
+  elicit: true
+  custom_elicitation:
+    title: "Market Research Report Enhancement Options"
+    options:
+      - "Deepen market sizing analysis with additional methods"
+      - "Expand competitor analysis with more players"
+      - "Add consumer insights and personas"
+      - "Include trend analysis and future projections"
+      - "Add regional market variations"
+      - "Include pricing and business model analysis"
+      - "Incorporate risk assessment"
+      - "Generate executive presentation"
+      - "Create action plan and next steps"
+      - "Proceed to finalize report"
+
+sections:
+  - id: executive-summary
+    title: Executive Summary
+    instruction: Write this section LAST. Summarize key findings, market opportunity, competitive landscape, and strategic recommendations in 1-2 pages.
+
+  - id: research-overview
+    title: Research Overview
+    sections:
+      - id: objectives
+        title: Research Objectives
+        instruction: |
+          State the primary objectives:
+          - Key questions this research answers
+          - Decisions this research will inform
+          - Success criteria for the research
+      - id: methodology
+        title: Methodology
+        instruction: |
+          Describe research approach:
+          - Data sources (primary and secondary)
+          - Analysis frameworks used
+          - Time period of research
+          - Limitations and assumptions
+
+  - id: market-analysis
+    title: Market Analysis
+    sections:
+      - id: market-definition
+        title: Market Definition
+        instruction: |
+          Define the market scope:
+          - Product/service category
+          - Geographic boundaries
+          - Customer segments included
+          - Value chain position
+      - id: market-sizing
+        title: Market Size & Growth
+        sections:
+          - id: tam-analysis
+            title: Total Addressable Market (TAM)
+            template: |
+              **TAM Calculation:**
+              
+              Method 1 - Top Down:
+              {{top_down_calculation}}
+              Result: ${{tam_top_down}}
+              
+              Method 2 - Bottom Up:
+              {{bottom_up_calculation}}
+              Result: ${{tam_bottom_up}}
+              
+              **Validated TAM: ${{tam_final}}**
+          - id: sam-analysis
+            title: Serviceable Addressable Market (SAM)
+            template: |
+              **SAM Factors:**
+              - Geographic focus: {{geographic_limits}}
+              - Customer segments: {{target_segments}}
+              - Constraints: {{constraints}}
+              
+              **SAM: ${{sam_value}} ({{sam_percentage}}% of TAM)**
+          - id: som-analysis
+            title: Serviceable Obtainable Market (SOM)
+            template: |
+              **Realistic Market Capture:**
+              - Year 1: ${{som_year1}} ({{market_share_year1}}%)
+              - Year 3: ${{som_year3}} ({{market_share_year3}}%)
+              - Year 5: ${{som_year5}} ({{market_share_year5}}%)
+      - id: growth-dynamics
+        title: Market Growth & Dynamics
+        instruction: |
+          Analyze market trajectory:
+          - Historical growth rate
+          - Projected CAGR
+          - Growth drivers
+          - Market inhibitors
+          - Inflection points
+
+  - id: customer-analysis
+    title: Customer Analysis
+    sections:
+      - id: segment-analysis
+        title: Target Segments
+        instruction: For each key segment, provide detailed analysis including size, characteristics, needs, and behaviors
+        repeatable: true
+        sections:
+          - id: segment-profile
+            title: "Segment: {{segment_name}}"
+            template: |
+              **Profile:**
+              - Size: {{segment_size}}
+              - Characteristics: {{key_characteristics}}
+              - Needs: {{primary_needs}}
+              - Pain Points: {{main_pain_points}}
+              - Buying Behavior: {{purchasing_patterns}}
+              - Growth Rate: {{segment_growth}}
+      - id: personas
+        title: Customer Personas
+        instruction: Include 2-3 detailed personas that represent key customer types
+      - id: customer-insights
+        title: Key Customer Insights
+        template: |
+          **Critical Insights:**
+          1. {{insight_1}}
+          2. {{insight_2}}
+          3. {{insight_3}}
+          
+          **Implications for Strategy:**
+          {{strategic_implications}}
+
+  - id: competitive-analysis
+    title: Competitive Analysis
+    sections:
+      - id: competitive-landscape
+        title: Competitive Landscape Overview
+        instruction: |
+          Describe market structure:
+          - Number and types of competitors
+          - Market concentration
+          - Competitive intensity
+          - Entry barriers
+      - id: competitor-profiles
+        title: Key Competitor Analysis
+        instruction: Profile top 3-5 competitors
+        repeatable: true
+        sections:
+          - id: competitor
+            title: "{{competitor_name}}"
+            template: |
+              **Overview:** {{company_description}}
+              **Market Share:** {{market_share_estimate}}
+              **Target Market:** {{target_segments}}
+              **Value Proposition:** {{value_prop}}
+              **Strengths:** {{key_strengths}}
+              **Weaknesses:** {{key_weaknesses}}
+              **Strategy:** {{strategic_focus}}
+      - id: positioning-analysis
+        title: Competitive Positioning
+        instruction: Include positioning map and differentiation analysis
+
+  - id: opportunity-assessment
+    title: Market Opportunities
+    sections:
+      - id: opportunity-identification
+        title: Opportunity Analysis
+        instruction: Identify and evaluate specific market opportunities
+        repeatable: true
+        sections:
+          - id: opportunity
+            title: "Opportunity: {{opportunity_name}}"
+            template: |
+              **Description:** {{opportunity_description}}
+              **Market Size:** {{potential_value}}
+              **Fit Assessment:** {{strategic_fit}}
+              **Requirements:** {{key_requirements}}
+              **Risks:** {{main_risks}}
+              **Priority:** {{priority_level}}
+      - id: strategic-recommendations
+        title: Strategic Recommendations
+        sections:
+          - id: market-entry
+            title: Market Entry Strategy
+            instruction: |
+              Recommend approach:
+              - Entry mode
+              - Timing considerations
+              - Resource requirements
+              - Success factors
+          - id: positioning-strategy
+            title: Positioning & Differentiation
+            instruction: |
+              Define strategic positioning:
+              - Unique value proposition
+              - Key differentiators
+              - Target segment prioritization
+              - Competitive advantages
+
+  - id: risks-mitigation
+    title: Risks & Mitigation
+    sections:
+      - id: risk-assessment
+        title: Risk Assessment
+        instruction: Identify and evaluate key risks
+        template: |
+          **Market Risks:**
+          {{market_risks}}
+          
+          **Competitive Risks:**
+          {{competitive_risks}}
+          
+          **Execution Risks:**
+          {{execution_risks}}
+          
+          **Mitigation Strategies:**
+          {{mitigation_plans}}
+
+  - id: action-plan
+    title: Action Plan & Next Steps
+    sections:
+      - id: immediate-actions
+        title: Immediate Actions (0-3 months)
+        instruction: List specific, actionable next steps
+      - id: short-term-plan
+        title: Short-term Plan (3-12 months)
+        instruction: Outline key initiatives and milestones
+      - id: validation-plan
+        title: Market Validation Plan
+        instruction: |
+          Define validation approach:
+          - Key assumptions to test
+          - Validation methods
+          - Success metrics
+          - Timeline
+
+  - id: appendices
+    title: Appendices
+    sections:
+      - id: data-sources
+        title: A. Data Sources & References
+        instruction: List all sources used
+      - id: calculations
+        title: B. Detailed Calculations
+        instruction: Include detailed market sizing calculations
+      - id: additional-data
+        title: C. Supporting Data
+        instruction: Additional charts, tables, and analysis

@@ -1,0 +1,9 @@
+name: bmad-product-manager
+version: 1.0.0
+short-title: Product Management Pack
+description: >-
+  Comprehensive Product Management expansion pack for BMad Method - Full product 
+  lifecycle management with JTBD, OKR, RICE frameworks. Supports B2B/B2C tech 
+  products with Agile/Lean methodologies and cross-functional collaboration.
+author: BMad Community
+slashPrefix: bmadpm

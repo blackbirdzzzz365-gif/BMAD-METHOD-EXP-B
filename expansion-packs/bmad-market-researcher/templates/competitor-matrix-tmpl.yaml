@@ -1,0 +1,200 @@
+template:
+  id: competitor-matrix-template
+  name: Competitive Analysis Matrix
+  version: 1.0
+  output:
+    format: markdown
+    filename: docs/competitive-analysis.md
+    title: "Competitive Analysis: {{market_name}}"
+
+workflow:
+  mode: interactive
+  elicit: true
+
+sections:
+  - id: overview
+    title: Competitive Landscape Overview
+    sections:
+      - id: market-structure
+        title: Market Structure
+        template: |
+          **Market Type:** {{market_type}}
+          **Market Maturity:** {{maturity_stage}}
+          **Number of Players:** {{competitor_count}}
+          **Market Concentration:** {{concentration_level}}
+          **Entry Barriers:** {{entry_barriers}}
+
+  - id: competitor-matrix
+    title: Competitor Comparison Matrix
+    instruction: Create a comprehensive comparison table
+    template: |
+      | Criteria | {{company_name}} | {{competitor_1}} | {{competitor_2}} | {{competitor_3}} | {{competitor_4}} |
+      |----------|------------------|------------------|------------------|------------------|------------------|
+      | **Company Overview** |
+      | Founded | {{your_founded}} | {{comp1_founded}} | {{comp2_founded}} | {{comp3_founded}} | {{comp4_founded}} |
+      | Headquarters | {{your_hq}} | {{comp1_hq}} | {{comp2_hq}} | {{comp3_hq}} | {{comp4_hq}} |
+      | Employees | {{your_employees}} | {{comp1_employees}} | {{comp2_employees}} | {{comp3_employees}} | {{comp4_employees}} |
+      | Funding/Revenue | {{your_funding}} | {{comp1_funding}} | {{comp2_funding}} | {{comp3_funding}} | {{comp4_funding}} |
+      | **Market Position** |
+      | Market Share | {{your_share}}% | {{comp1_share}}% | {{comp2_share}}% | {{comp3_share}}% | {{comp4_share}}% |
+      | Target Market | {{your_target}} | {{comp1_target}} | {{comp2_target}} | {{comp3_target}} | {{comp4_target}} |
+      | Geographic Focus | {{your_geo}} | {{comp1_geo}} | {{comp2_geo}} | {{comp3_geo}} | {{comp4_geo}} |
+      | **Product/Service** |
+      | Core Offering | {{your_offering}} | {{comp1_offering}} | {{comp2_offering}} | {{comp3_offering}} | {{comp4_offering}} |
+      | Key Features | {{your_features}} | {{comp1_features}} | {{comp2_features}} | {{comp3_features}} | {{comp4_features}} |
+      | Unique Differentiator | {{your_diff}} | {{comp1_diff}} | {{comp2_diff}} | {{comp3_diff}} | {{comp4_diff}} |
+      | **Pricing** |
+      | Pricing Model | {{your_model}} | {{comp1_model}} | {{comp2_model}} | {{comp3_model}} | {{comp4_model}} |
+      | Price Range | {{your_price}} | {{comp1_price}} | {{comp2_price}} | {{comp3_price}} | {{comp4_price}} |
+      | **Customer** |
+      | Customer Size | {{your_cust_size}} | {{comp1_cust_size}} | {{comp2_cust_size}} | {{comp3_cust_size}} | {{comp4_cust_size}} |
+      | Key Customers | {{your_customers}} | {{comp1_customers}} | {{comp2_customers}} | {{comp3_customers}} | {{comp4_customers}} |
+      | NPS/Rating | {{your_nps}} | {{comp1_nps}} | {{comp2_nps}} | {{comp3_nps}} | {{comp4_nps}} |
+
+  - id: detailed-profiles
+    title: Detailed Competitor Profiles
+    repeatable: true
+    sections:
+      - id: competitor-profile
+        title: "{{competitor_name}}"
+        sections:
+          - id: company-background
+            title: Company Background
+            template: |
+              **Overview:** {{company_description}}
+              **Mission:** {{company_mission}}
+              **Founded:** {{year_founded}}
+              **Leadership:** {{key_executives}}
+              **Funding History:** {{funding_details}}
+          - id: product-analysis
+            title: Product/Service Analysis
+            template: |
+              **Core Products:**
+              {{product_portfolio}}
+              
+              **Technology Stack:** {{tech_stack}}
+              
+              **Key Capabilities:**
+              - {{capability_1}}
+              - {{capability_2}}
+              - {{capability_3}}
+              
+              **Product Roadmap:** {{known_roadmap}}
+          - id: market-strategy
+            title: Market Strategy
+            template: |
+              **Value Proposition:** {{value_prop}}
+              
+              **Target Segments:**
+              - {{segment_1}}
+              - {{segment_2}}
+              
+              **Go-to-Market:** {{gtm_strategy}}
+              
+              **Partnerships:** {{key_partnerships}}
+          - id: swot
+            title: SWOT Analysis
+            template: |
+              **Strengths:**
+              - {{strength_1}}
+              - {{strength_2}}
+              - {{strength_3}}
+              
+              **Weaknesses:**
+              - {{weakness_1}}
+              - {{weakness_2}}
+              - {{weakness_3}}
+              
+              **Opportunities:**
+              - {{opportunity_1}}
+              - {{opportunity_2}}
+              
+              **Threats:**
+              - {{threat_1}}
+              - {{threat_2}}
+
+  - id: positioning-analysis
+    title: Market Positioning Analysis
+    sections:
+      - id: positioning-map
+        title: Positioning Map
+        instruction: Describe the positioning landscape
+        template: |
+          **Positioning Dimensions:**
+          - X-Axis: {{x_axis_dimension}}
+          - Y-Axis: {{y_axis_dimension}}
+          
+          **Position Analysis:**
+          {{positioning_description}}
+          
+          **Market Gaps:** {{identified_gaps}}
+      - id: differentiation
+        title: Differentiation Analysis
+        template: |
+          **Our Key Differentiators:**
+          1. {{our_diff_1}}
+          2. {{our_diff_2}}
+          3. {{our_diff_3}}
+          
+          **Competitive Advantages:**
+          {{competitive_advantages}}
+          
+          **Areas of Parity:**
+          {{parity_areas}}
+          
+          **Competitive Disadvantages:**
+          {{disadvantages}}
+
+  - id: strategic-implications
+    title: Strategic Implications
+    sections:
+      - id: opportunities
+        title: Strategic Opportunities
+        template: |
+          **Market Opportunities:**
+          1. {{opportunity_1}}
+          2. {{opportunity_2}}
+          3. {{opportunity_3}}
+          
+          **Differentiation Opportunities:**
+          {{diff_opportunities}}
+          
+          **Partnership Opportunities:**
+          {{partnership_opps}}
+      - id: threats-responses
+        title: Competitive Threats & Responses
+        template: |
+          **Key Threats:**
+          1. {{threat_1}} → Response: {{response_1}}
+          2. {{threat_2}} → Response: {{response_2}}
+          3. {{threat_3}} → Response: {{response_3}}
+      - id: recommendations
+        title: Strategic Recommendations
+        template: |
+          **Immediate Actions:**
+          - {{immediate_1}}
+          - {{immediate_2}}
+          
+          **Short-term Strategy (3-6 months):**
+          {{short_term_strategy}}
+          
+          **Long-term Positioning (6-12 months):**
+          {{long_term_strategy}}
+
+  - id: monitoring-plan
+    title: Competitive Monitoring Plan
+    template: |
+      **Key Metrics to Track:**
+      - {{metric_1}}
+      - {{metric_2}}
+      - {{metric_3}}
+      
+      **Information Sources:**
+      - {{source_1}}
+      - {{source_2}}
+      - {{source_3}}
+      
+      **Review Frequency:** {{review_frequency}}
+      
+      **Early Warning Signals:**
+      {{warning_signals}}

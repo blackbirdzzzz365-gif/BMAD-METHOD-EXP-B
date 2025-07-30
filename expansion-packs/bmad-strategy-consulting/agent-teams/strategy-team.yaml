@@ -1,0 +1,110 @@
+team:
+  id: strategy-consulting-team
+  name: Elite Strategy Consulting Team
+  description: Top-tier strategy consulting team for enterprise transformation and strategic planning
+  
+agents:
+  - id: senior-partner
+    role: Engagement Lead & Strategic Advisor
+    responsibilities:
+      - Overall engagement leadership
+      - C-suite relationship management
+      - Strategic recommendations
+      - Board-level communication
+      - Quality assurance
+    when_active: Always - leads all strategic engagements
+    
+  - id: strategy-consultant
+    role: Lead Analyst & Framework Expert
+    responsibilities:
+      - Detailed strategic analysis
+      - Framework application
+      - Market and competitive intelligence
+      - Financial modeling
+      - Option development
+    when_active: Throughout engagement for analysis
+    
+  - id: org-design-expert
+    role: Organizational Transformation Lead
+    responsibilities:
+      - Operating model design
+      - Organizational structure
+      - Culture transformation
+      - Change management strategy
+      - Capability building
+    when_active: During organizational assessment and transformation
+    
+  - id: digital-strategist
+    role: Digital & Innovation Expert
+    responsibilities:
+      - Digital transformation strategy
+      - Technology enablement
+      - Innovation opportunities
+      - Platform strategies
+      - Data and analytics strategy
+    when_active: For digital/technology components
+
+collaboration_model:
+  leadership: senior-partner
+  communication: All agents coordinate through senior-partner
+  decision_making: Consensus with senior-partner final say
+  
+  handoffs:
+    - from: senior-partner
+      to: strategy-consultant
+      trigger: Deep analysis needed
+    - from: strategy-consultant
+      to: senior-partner
+      trigger: Synthesis complete
+    - from: senior-partner
+      to: org-design-expert
+      trigger: Organization alignment required
+    - from: senior-partner
+      to: digital-strategist
+      trigger: Digital strategy needed
+    - from: all
+      to: senior-partner
+      trigger: Executive communication
+
+working_model:
+  - Hypothesis-driven approach
+  - Weekly team meetings
+  - Daily standups during sprints
+  - Peer review of all deliverables
+  - Client steering committee updates
+
+integration_points:
+  - with: market-researcher
+    when: Market analysis phase
+    purpose: Deep market insights
+  - with: product-manager
+    when: Product strategy
+    purpose: Product portfolio decisions
+  - with: financial-analyst
+    when: Business case development
+    purpose: Financial modeling
+  - with: data-scientist
+    when: Analytics strategy
+    purpose: Data strategy development
+
+deliverables:
+  - Strategic situation assessment
+  - Strategic options and recommendations
+  - Transformation roadmap
+  - Operating model design
+  - Executive presentations
+  - Implementation plans
+
+quality_standards:
+  - McKinsey/BCG/Bain caliber analysis
+  - Fact-based recommendations
+  - Clear strategic storyline
+  - Implementable solutions
+  - Measurable value creation
+
+workflows:
+  - strategic-planning-cycle
+  - transformation-design
+  - merger-integration
+  - digital-transformation
+  - crisis-response

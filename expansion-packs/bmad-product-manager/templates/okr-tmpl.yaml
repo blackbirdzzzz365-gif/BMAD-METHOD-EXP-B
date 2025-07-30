@@ -1,0 +1,218 @@
+template:
+  id: okr-planning-template
+  name: OKR Planning Document
+  version: 1.0
+  output:
+    format: markdown
+    filename: docs/okrs-{{period}}.md
+    title: "OKRs: {{period}} - {{team_name}}"
+
+workflow:
+  mode: structured
+  instruction: Create comprehensive OKR documentation with clear objectives and measurable key results
+
+sections:
+  - id: header
+    title: OKR Overview
+    template: |
+      # {{team_name}} OKRs - {{period}}
+      
+      **Period:** {{start_date}} - {{end_date}}
+      **Team/Level:** {{organizational_level}}
+      **Owner:** {{owner_name}}
+      **Last Updated:** {{last_updated}}
+      
+      ## Mission Statement
+      {{team_mission}}
+      
+      ## Strategic Context
+      {{strategic_context}}
+
+  - id: okr-summary
+    title: OKR Summary
+    instruction: High-level view of all objectives
+    template: |
+      ## Summary View
+      
+      | Objective | Priority | Owner | Status |
+      |-----------|----------|-------|--------|
+      | O1: {{objective_1_summary}} | {{priority_1}} | {{owner_1}} | {{status_1}} |
+      | O2: {{objective_2_summary}} | {{priority_2}} | {{owner_2}} | {{status_2}} |
+      | O3: {{objective_3_summary}} | {{priority_3}} | {{owner_3}} | {{status_3}} |
+
+  - id: detailed-okrs
+    title: Detailed OKRs
+    repeatable: true
+    sections:
+      - id: objective
+        title: "Objective {{objective_number}}: {{objective_title}}"
+        template: |
+          ### Objective {{objective_number}}: {{objective_title}}
+          
+          **Description:** {{objective_description}}
+          
+          **Why This Matters:** {{objective_rationale}}
+          
+          **Success Vision:** {{success_vision}}
+          
+          #### Key Results:
+      
+      - id: key-results
+        title: Key Results
+        repeatable: true
+        template: |
+          **KR {{objective_number}}.{{kr_number}}: {{kr_title}}**
+          
+          | Attribute | Value |
+          |-----------|-------|
+          | Metric | {{metric_definition}} |
+          | Baseline | {{baseline_value}} |
+          | Target | {{target_value}} |
+          | Stretch | {{stretch_value}} |
+          | Owner | {{kr_owner}} |
+          | Measurement | {{how_measured}} |
+          | Frequency | {{update_frequency}} |
+          
+          **Initiatives to Achieve:**
+          - {{initiative_1}}
+          - {{initiative_2}}
+          - {{initiative_3}}
+          
+          **Dependencies:**
+          - {{dependency_1}}
+          - {{dependency_2}}
+
+  - id: alignment-cascade
+    title: Alignment & Cascade
+    template: |
+      ## Organizational Alignment
+      
+      ### Upward Alignment
+      **Company/Parent OKR:** {{parent_okr}}
+      **How We Contribute:** {{contribution_description}}
+      
+      ### Downward Cascade
+      | Our Objective | Supporting Team | Their Objective |
+      |---------------|-----------------|-----------------|
+      | O1 | {{team_1}} | {{team_1_objective}} |
+      | O1 | {{team_2}} | {{team_2_objective}} |
+      | O2 | {{team_3}} | {{team_3_objective}} |
+      
+      ### Cross-functional Dependencies
+      - {{cross_func_dep_1}}
+      - {{cross_func_dep_2}}
+
+  - id: tracking-scoring
+    title: Tracking & Scoring
+    sections:
+      - id: tracking-plan
+        title: Tracking Plan
+        template: |
+          ### Measurement Cadence
+          
+          **Weekly Check-ins:**
+          - Format: {{weekly_format}}
+          - Participants: {{weekly_participants}}
+          - Focus: {{weekly_focus}}
+          
+          **Monthly Reviews:**
+          - Format: {{monthly_format}}
+          - Participants: {{monthly_participants}}
+          - Deliverables: {{monthly_deliverables}}
+          
+          **Quarterly Retrospective:**
+          - Format: {{quarterly_format}}
+          - Participants: {{quarterly_participants}}
+          - Outcomes: {{quarterly_outcomes}}
+      
+      - id: scoring-methodology
+        title: Scoring Methodology
+        template: |
+          ### Scoring Scale
+          
+          | Score | Meaning | Action |
+          |-------|---------|--------|
+          | 0.0-0.3 | Off track | Major intervention needed |
+          | 0.4-0.6 | Behind | Attention required |
+          | 0.7-0.9 | On track | Continue execution |
+          | 1.0 | Achieved | Celebrate & set higher bar |
+          
+          ### Scoring Formula
+          {{scoring_formula_explanation}}
+
+  - id: risks-mitigation
+    title: Risks & Mitigation
+    sections:
+      - id: risk-assessment
+        title: Risk Assessment
+        repeatable: true
+        template: |
+          **Risk:** {{risk_description}}
+          - Impact on OKRs: {{okr_impact}}
+          - Probability: {{risk_probability}}
+          - Mitigation: {{mitigation_plan}}
+          - Early Warning Signs: {{warning_signs}}
+
+  - id: resources-support
+    title: Resources & Support
+    template: |
+      ## Resource Requirements
+      
+      ### People
+      - {{people_requirement_1}}
+      - {{people_requirement_2}}
+      
+      ### Budget
+      - {{budget_requirement_1}}
+      - {{budget_requirement_2}}
+      
+      ### Tools & Systems
+      - {{tools_requirement_1}}
+      - {{tools_requirement_2}}
+      
+      ### Executive Support Needed
+      - {{exec_support_1}}
+      - {{exec_support_2}}
+
+  - id: communication-plan
+    title: Communication Plan
+    template: |
+      ## Communication Strategy
+      
+      ### Launch Communication
+      - **All Hands:** {{all_hands_plan}}
+      - **Team Meetings:** {{team_meeting_plan}}
+      - **Documentation:** {{documentation_plan}}
+      
+      ### Ongoing Updates
+      - **Dashboard:** {{dashboard_location}}
+      - **Slack Channel:** {{slack_channel}}
+      - **Email Updates:** {{email_frequency}}
+      
+      ### Stakeholder Engagement
+      | Stakeholder | Engagement Method | Frequency |
+      |-------------|------------------|-----------|
+      | {{stakeholder_1}} | {{method_1}} | {{frequency_1}} |
+      | {{stakeholder_2}} | {{method_2}} | {{frequency_2}} |
+      | {{stakeholder_3}} | {{method_3}} | {{frequency_3}} |
+
+  - id: learning-iteration
+    title: Learning & Iteration
+    template: |
+      ## Continuous Improvement
+      
+      ### Mid-Cycle Adjustments
+      Criteria for adjusting OKRs:
+      - {{adjustment_criteria_1}}
+      - {{adjustment_criteria_2}}
+      
+      ### Learning Objectives
+      What we want to learn this cycle:
+      1. {{learning_objective_1}}
+      2. {{learning_objective_2}}
+      
+      ### Retrospective Questions
+      - What worked well?
+      - What didn't work?
+      - What should we do differently?
+      - What did we learn about our capacity?

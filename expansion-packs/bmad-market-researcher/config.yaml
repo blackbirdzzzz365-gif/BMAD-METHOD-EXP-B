@@ -1,0 +1,9 @@
+name: bmad-market-researcher
+version: 1.0.0
+short-title: Market Research Pack
+description: >-
+  Professional Market Research expansion pack for BMad Method - Comprehensive 
+  market analysis, consumer insights, and competitive intelligence focused. 
+  Supports both B2B and B2C research with interactive data gathering.
+author: BMad Community
+slashPrefix: bmadmr

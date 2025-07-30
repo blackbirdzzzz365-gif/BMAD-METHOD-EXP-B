@@ -1,0 +1,148 @@
+workflow:
+  id: strategic-planning-cycle
+  name: Comprehensive Strategic Planning Process
+  description: End-to-end strategic planning from assessment to implementation
+  type: sequential
+  
+phases:
+  - id: situation-assessment
+    name: Strategic Situation Assessment
+    agents:
+      - senior-partner
+      - strategy-consultant
+    tasks:
+      - task: strategic-situation-assessment
+        description: Comprehensive current state analysis
+      - task: Market and competitive analysis
+        description: External environment assessment
+      - task: Capability assessment
+        description: Internal strengths and gaps
+    outputs:
+      - Situation assessment report
+      - SWOT analysis
+      - Strategic issues identification
+    duration: 2-3 weeks
+
+  - id: strategy-development
+    name: Strategy Development
+    agents:
+      - senior-partner
+      - strategy-consultant
+      - digital-strategist
+    tasks:
+      - task: Strategic options generation
+        description: Develop 3-5 strategic alternatives
+      - task: three-horizons-planning
+        description: Balance short and long-term growth
+      - task: Business case development
+        description: Financial and strategic evaluation
+    outputs:
+      - Strategic options analysis
+      - Recommended strategy
+      - Three horizons portfolio
+      - Business case
+    duration: 3-4 weeks
+
+  - id: organizational-alignment
+    name: Organizational Design & Alignment
+    agents:
+      - org-design-expert
+      - senior-partner
+    tasks:
+      - task: mckinsey-7s-analysis
+        description: Assess organizational alignment
+      - task: Operating model design
+        description: Design target operating model
+      - task: Culture assessment
+        description: Identify culture gaps
+    outputs:
+      - 7S alignment assessment
+      - Target operating model
+      - Culture change plan
+      - Organization design
+    duration: 2-3 weeks
+
+  - id: transformation-planning
+    name: Transformation Planning
+    agents:
+      - senior-partner
+      - org-design-expert
+      - digital-strategist
+    tasks:
+      - task: Transformation roadmap development
+        description: Detailed implementation planning
+      - task: Change impact assessment
+        description: Stakeholder and change analysis
+      - task: Risk and mitigation planning
+        description: Identify and address risks
+    outputs:
+      - Transformation roadmap
+      - Change management plan
+      - Risk mitigation plan
+      - Governance structure
+    duration: 2-3 weeks
+
+  - id: executive-alignment
+    name: Executive Alignment & Approval
+    agents:
+      - senior-partner
+    tasks:
+      - task: Executive presentation preparation
+        template: strategy-deck-tmpl
+      - task: Board preparation
+        description: Board-level materials
+      - task: Stakeholder alignment
+        description: Key stakeholder engagement
+    outputs:
+      - Executive strategy deck
+      - Board presentation
+      - Stakeholder communication plan
+      - Approved strategy
+    duration: 1-2 weeks
+
+  - id: implementation-launch
+    name: Implementation Launch
+    agents:
+      - senior-partner
+      - org-design-expert
+    tasks:
+      - task: 100-day plan activation
+        description: Quick wins and momentum
+      - task: Transformation office setup
+        description: Governance activation
+      - task: Communication cascade
+        description: Organization-wide rollout
+    outputs:
+      - 100-day plan
+      - TMO charter
+      - Communication materials
+      - Launch metrics
+    duration: 2-4 weeks
+
+success_criteria:
+  - Clear strategic direction approved
+  - Organization aligned and mobilized
+  - Transformation roadmap activated
+  - Quick wins identified and launched
+  - Governance structure operational
+  - Metrics and tracking in place
+
+checkpoints:
+  - After Assessment: Go/No-Go on strategy development
+  - After Strategy: Executive approval before org design
+  - After Planning: Board approval before launch
+  - After 100 days: Progress review and adjustment
+
+integration_points:
+  - with: market-researcher
+    when: Situation assessment
+    purpose: Market analysis and insights
+  - with: product-manager
+    when: Strategy development
+    purpose: Product strategy alignment
+  - with: financial-analyst
+    when: Business case
+    purpose: Financial modeling
+  - with: change-manager
+    when: Transformation planning
+    purpose: Change management expertise

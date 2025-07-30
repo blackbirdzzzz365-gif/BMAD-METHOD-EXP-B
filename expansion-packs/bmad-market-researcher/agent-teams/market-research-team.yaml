@@ -1,0 +1,62 @@
+team:
+  id: market-research-team
+  name: Market Research Team
+  description: Complete market research team for comprehensive analysis
+  
+agents:
+  - id: market-research-lead
+    role: Team Lead & Research Strategist
+    responsibilities:
+      - Overall research strategy and coordination
+      - Stakeholder communication
+      - Final report generation
+      - Quality assurance
+    when_active: Always - coordinates all research activities
+    
+  - id: data-analyst
+    role: Quantitative Analysis Specialist
+    responsibilities:
+      - Market sizing calculations
+      - Growth projections
+      - Statistical analysis
+      - Data visualization
+    when_active: During market analysis and sizing phases
+    
+  - id: consumer-insights
+    role: Consumer Behavior Expert
+    responsibilities:
+      - Customer research
+      - Persona development
+      - Journey mapping
+      - Behavioral analysis
+    when_active: During customer research phases
+    
+  - id: competitive-intelligence
+    role: Competitive Analysis Specialist
+    responsibilities:
+      - Competitor profiling
+      - Market positioning
+      - Strategic analysis
+      - Threat assessment
+    when_active: During competitive analysis phases
+
+collaboration_model:
+  leadership: market-research-lead
+  communication: All agents report findings to lead
+  handoffs:
+    - from: market-research-lead
+      to: all
+      trigger: Research phase initiation
+    - from: data-analyst
+      to: market-research-lead
+      trigger: Market sizing complete
+    - from: consumer-insights
+      to: market-research-lead
+      trigger: Personas developed
+    - from: competitive-intelligence
+      to: market-research-lead
+      trigger: Competitive analysis complete
+
+workflows:
+  - market-research-comprehensive
+  - quick-market-assessment

@@ -1,0 +1,112 @@
+workflow:
+  id: market-research-comprehensive
+  name: Comprehensive Market Research
+  description: End-to-end market research workflow for new opportunities
+  type: sequential
+  
+phases:
+  - id: research-planning
+    name: Research Planning
+    agents:
+      - market-research-lead
+    tasks:
+      - task: Define research objectives and scope
+        description: Clarify what questions need answering
+      - task: Select research methodology
+        description: Choose appropriate research methods
+      - task: Create research timeline
+        description: Set milestones and deliverables
+    outputs:
+      - Research brief
+      - Methodology plan
+      - Project timeline
+
+  - id: market-analysis
+    name: Market Analysis
+    agents:
+      - market-research-lead
+      - data-analyst
+    tasks:
+      - task: conduct-market-analysis
+        description: Perform TAM/SAM/SOM analysis
+      - task: Analyze market dynamics
+        description: Growth rates, drivers, trends
+      - task: Industry structure analysis
+        description: Porter's Five Forces, value chain
+    outputs:
+      - Market sizing report
+      - Growth projections
+      - Industry analysis
+
+  - id: customer-research
+    name: Customer Research
+    agents:
+      - consumer-insights
+      - market-research-lead
+    tasks:
+      - task: consumer-insights-research
+        description: Deep dive into consumer behavior
+      - task: persona-development
+        description: Create detailed personas
+      - task: Journey mapping
+        description: Map customer journeys
+    outputs:
+      - Consumer insights report
+      - Persona cards
+      - Journey maps
+
+  - id: competitive-analysis
+    name: Competitive Intelligence
+    agents:
+      - competitive-intelligence
+      - data-analyst
+    tasks:
+      - task: competitor-analysis
+        description: Analyze key competitors
+      - task: Positioning analysis
+        description: Map competitive positioning
+      - task: SWOT analysis
+        description: Strengths, weaknesses, opportunities, threats
+    outputs:
+      - Competitor profiles
+      - Positioning maps
+      - Competitive strategy
+
+  - id: opportunity-assessment
+    name: Opportunity Assessment
+    agents:
+      - market-research-lead
+      - data-analyst
+    tasks:
+      - task: Identify market opportunities
+        description: Based on all research findings
+      - task: Evaluate opportunity fit
+        description: Assess strategic alignment
+      - task: Risk assessment
+        description: Identify and evaluate risks
+    outputs:
+      - Opportunity matrix
+      - Risk assessment
+      - Strategic recommendations
+
+  - id: report-generation
+    name: Report & Presentation
+    agents:
+      - market-research-lead
+    tasks:
+      - task: Synthesize all findings
+        description: Integrate all research streams
+      - task: Generate comprehensive report
+        template: market-research-report-tmpl
+      - task: Create executive presentation
+        description: Key findings and recommendations
+    outputs:
+      - Comprehensive market research report
+      - Executive presentation
+      - Action plan
+
+success_criteria:
+  - All research objectives addressed
+  - Data-driven insights provided
+  - Actionable recommendations delivered
+  - Clear go/no-go decision support
