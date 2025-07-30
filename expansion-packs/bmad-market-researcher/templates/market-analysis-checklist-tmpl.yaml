@@ -1,0 +1,228 @@
+template:
+  id: market-analysis-checklist
+  name: Market Analysis Checklist
+  version: 1.0
+  output:
+    format: markdown
+    filename: docs/market-analysis-checklist.md
+    title: "Market Analysis Checklist: {{project_name}}"
+
+workflow:
+  mode: checklist
+  instruction: Use this checklist to ensure comprehensive market analysis coverage
+
+sections:
+  - id: preparation
+    title: 1. Analysis Preparation
+    items:
+      - id: scope-definition
+        title: Scope & Objectives
+        checklist:
+          - [ ] Define market boundaries and segments
+          - [ ] Clarify analysis objectives and decisions to inform
+          - [ ] Identify key stakeholders and their needs
+          - [ ] Set timeline and deliverable expectations
+          - [ ] Determine budget and resource constraints
+      
+      - id: data-planning
+        title: Data Collection Planning
+        checklist:
+          - [ ] Identify primary data needs
+          - [ ] List secondary data sources
+          - [ ] Plan customer interview/survey approach
+          - [ ] Define competitive intelligence sources
+          - [ ] Establish data quality criteria
+
+  - id: market-sizing
+    title: 2. Market Size & Growth Analysis
+    items:
+      - id: tam-calculation
+        title: TAM Calculation
+        checklist:
+          - [ ] Complete top-down market sizing
+          - [ ] Complete bottom-up validation
+          - [ ] Triangulate with third method
+          - [ ] Document all assumptions
+          - [ ] Validate with industry experts
+      
+      - id: sam-som
+        title: SAM & SOM Analysis
+        checklist:
+          - [ ] Define serviceable market constraints
+          - [ ] Calculate SAM based on target segments
+          - [ ] Project realistic market capture (SOM)
+          - [ ] Create 3-5 year projections
+          - [ ] Identify growth scenarios
+
+  - id: customer-research
+    title: 3. Customer & Segment Analysis
+    items:
+      - id: segment-identification
+        title: Segment Identification
+        checklist:
+          - [ ] Identify all potential segments
+          - [ ] Size each segment
+          - [ ] Assess segment attractiveness
+          - [ ] Prioritize target segments
+          - [ ] Document segment characteristics
+      
+      - id: customer-insights
+        title: Customer Insights
+        checklist:
+          - [ ] Conduct customer interviews (min 10-15)
+          - [ ] Map customer journey
+          - [ ] Identify jobs-to-be-done
+          - [ ] Document pain points and needs
+          - [ ] Create detailed personas (2-3)
+      
+      - id: buying-behavior
+        title: Buying Behavior
+        checklist:
+          - [ ] Map decision-making process
+          - [ ] Identify decision criteria
+          - [ ] Understand budget/pricing sensitivity
+          - [ ] Determine purchase frequency
+          - [ ] Identify influencers
+
+  - id: competitive-analysis
+    title: 4. Competitive Intelligence
+    items:
+      - id: competitor-identification
+        title: Competitor Mapping
+        checklist:
+          - [ ] Identify direct competitors
+          - [ ] Identify indirect/substitute solutions
+          - [ ] Map emerging competitors
+          - [ ] Assess competitive intensity
+          - [ ] Identify market leaders
+      
+      - id: competitor-analysis
+        title: Competitor Deep Dive
+        checklist:
+          - [ ] Analyze top 5 competitors
+          - [ ] Document value propositions
+          - [ ] Assess strengths/weaknesses
+          - [ ] Understand pricing strategies
+          - [ ] Map market positioning
+      
+      - id: competitive-dynamics
+        title: Market Dynamics
+        checklist:
+          - [ ] Analyze market share trends
+          - [ ] Identify competitive moats
+          - [ ] Assess entry barriers
+          - [ ] Evaluate switching costs
+          - [ ] Project competitive evolution
+
+  - id: trend-analysis
+    title: 5. Market Trends & Dynamics
+    items:
+      - id: macro-trends
+        title: Macro Trends
+        checklist:
+          - [ ] Analyze regulatory changes
+          - [ ] Assess technology disruptions
+          - [ ] Evaluate demographic shifts
+          - [ ] Consider economic factors
+          - [ ] Identify social/cultural changes
+      
+      - id: industry-trends
+        title: Industry Trends
+        checklist:
+          - [ ] Track industry growth rates
+          - [ ] Identify emerging technologies
+          - [ ] Monitor business model shifts
+          - [ ] Assess consolidation trends
+          - [ ] Evaluate ecosystem changes
+
+  - id: opportunity-assessment
+    title: 6. Opportunity Evaluation
+    items:
+      - id: opportunity-identification
+        title: Opportunity Identification
+        checklist:
+          - [ ] Map unmet customer needs
+          - [ ] Identify market gaps
+          - [ ] Assess white spaces
+          - [ ] Evaluate adjacency opportunities
+          - [ ] Consider new market creation
+      
+      - id: opportunity-prioritization
+        title: Opportunity Prioritization
+        checklist:
+          - [ ] Size each opportunity
+          - [ ] Assess strategic fit
+          - [ ] Evaluate competitive advantage
+          - [ ] Consider resource requirements
+          - [ ] Create opportunity matrix
+
+  - id: synthesis
+    title: 7. Synthesis & Recommendations
+    items:
+      - id: key-insights
+        title: Key Insights
+        checklist:
+          - [ ] Synthesize market attractiveness
+          - [ ] Summarize customer insights
+          - [ ] Highlight competitive dynamics
+          - [ ] Identify critical success factors
+          - [ ] Document key risks
+      
+      - id: strategic-recommendations
+        title: Strategic Recommendations
+        checklist:
+          - [ ] Define go-to-market strategy
+          - [ ] Recommend positioning approach
+          - [ ] Suggest entry/expansion strategy
+          - [ ] Propose differentiation strategy
+          - [ ] Create action plan
+
+  - id: deliverables
+    title: 8. Deliverables & Communication
+    items:
+      - id: report-creation
+        title: Report Creation
+        checklist:
+          - [ ] Create executive summary
+          - [ ] Complete detailed analysis sections
+          - [ ] Add supporting data/charts
+          - [ ] Include methodology section
+          - [ ] Append data sources
+      
+      - id: presentation-prep
+        title: Presentation Preparation
+        checklist:
+          - [ ] Create executive presentation
+          - [ ] Prepare key talking points
+          - [ ] Anticipate Q&A topics
+          - [ ] Create backup slides
+          - [ ] Practice delivery
+
+  - id: quality-assurance
+    title: 9. Quality Assurance
+    items:
+      - id: validation
+        title: Analysis Validation
+        checklist:
+          - [ ] Fact-check all data points
+          - [ ] Validate assumptions
+          - [ ] Cross-reference sources
+          - [ ] Get expert review
+          - [ ] Ensure internal consistency
+      
+      - id: completeness
+        title: Completeness Check
+        checklist:
+          - [ ] All objectives addressed
+          - [ ] All segments analyzed
+          - [ ] All competitors covered
+          - [ ] All trends considered
+          - [ ] Clear recommendations provided
+
+summary:
+  completion_criteria:
+    - All checklist items completed or marked N/A with justification
+    - Executive summary captures key findings
+    - Recommendations are actionable and specific
+    - All data is sourced and validated
+    - Stakeholder approval received

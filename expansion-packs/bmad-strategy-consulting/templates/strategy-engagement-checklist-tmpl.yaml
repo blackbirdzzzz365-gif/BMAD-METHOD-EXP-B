@@ -1,0 +1,258 @@
+template:
+  id: strategy-engagement-checklist
+  name: Strategy Consulting Engagement Checklist
+  version: 1.0
+  output:
+    format: markdown
+    filename: docs/strategy-engagement-checklist.md
+    title: "Strategy Engagement Checklist: {{client_name}} - {{engagement_name}}"
+
+workflow:
+  mode: checklist
+  instruction: McKinsey/BCG/Bain-caliber checklist for comprehensive strategy engagements
+
+sections:
+  - id: engagement-setup
+    title: 1. Engagement Setup & Scoping
+    items:
+      - id: client-alignment
+        title: Client Alignment
+        checklist:
+          - [ ] Define engagement objectives with C-suite sponsor
+          - [ ] Align on critical business questions
+          - [ ] Establish success metrics and outcomes
+          - [ ] Confirm scope boundaries and constraints
+          - [ ] Set stakeholder communication cadence
+      
+      - id: team-mobilization
+        title: Team Mobilization
+        checklist:
+          - [ ] Assign senior partner as engagement lead
+          - [ ] Staff project team with appropriate expertise
+          - [ ] Define team roles and responsibilities
+          - [ ] Schedule kick-off with client leadership
+          - [ ] Establish working team protocols
+
+  - id: situation-assessment
+    title: 2. Strategic Situation Assessment
+    items:
+      - id: current-state
+        title: Current State Analysis
+        checklist:
+          - [ ] Analyze financial performance (5-year trend)
+          - [ ] Assess market position and share
+          - [ ] Evaluate competitive positioning
+          - [ ] Review organizational capabilities
+          - [ ] Document strategic assets
+      
+      - id: stakeholder-interviews
+        title: Stakeholder Interviews
+        checklist:
+          - [ ] Interview CEO and C-suite (minimum 5)
+          - [ ] Interview board members (if applicable)
+          - [ ] Interview key business unit leaders
+          - [ ] Interview high-potential employees
+          - [ ] Synthesize stakeholder perspectives
+      
+      - id: external-analysis
+        title: External Environment Analysis
+        checklist:
+          - [ ] Conduct industry structure analysis (5 Forces)
+          - [ ] Analyze market trends and disruptions
+          - [ ] Assess regulatory environment
+          - [ ] Evaluate technology shifts
+          - [ ] Map ecosystem dynamics
+
+  - id: strategic-diagnosis
+    title: 3. Strategic Diagnosis
+    items:
+      - id: performance-gaps
+        title: Performance Gap Analysis
+        checklist:
+          - [ ] Benchmark against industry best-in-class
+          - [ ] Identify value creation gaps
+          - [ ] Analyze operational inefficiencies
+          - [ ] Assess capability gaps
+          - [ ] Quantify improvement potential
+      
+      - id: root-cause
+        title: Root Cause Analysis
+        checklist:
+          - [ ] Apply issue tree methodology
+          - [ ] Conduct hypothesis-driven analysis
+          - [ ] Validate with data and facts
+          - [ ] Pressure test conclusions
+          - [ ] Build fact base
+
+  - id: strategy-development
+    title: 4. Strategy Development
+    items:
+      - id: strategic-options
+        title: Strategic Options Generation
+        checklist:
+          - [ ] Develop 3-5 strategic options
+          - [ ] Define "where to play" choices
+          - [ ] Define "how to win" approaches
+          - [ ] Assess capability requirements
+          - [ ] Evaluate resource implications
+      
+      - id: business-case
+        title: Business Case Development
+        checklist:
+          - [ ] Build financial models for each option
+          - [ ] Conduct sensitivity analysis
+          - [ ] Assess risk-return profiles
+          - [ ] Calculate NPV and ROI
+          - [ ] Develop investment requirements
+      
+      - id: strategy-selection
+        title: Strategy Selection
+        checklist:
+          - [ ] Apply strategic choice cascade
+          - [ ] Evaluate against decision criteria
+          - [ ] Conduct scenario planning
+          - [ ] Test strategic coherence
+          - [ ] Gain leadership alignment
+
+  - id: organizational-design
+    title: 5. Organization & Operating Model
+    items:
+      - id: org-assessment
+        title: Organization Assessment
+        checklist:
+          - [ ] Conduct McKinsey 7S analysis
+          - [ ] Map current operating model
+          - [ ] Assess organizational health
+          - [ ] Identify cultural barriers
+          - [ ] Evaluate leadership capabilities
+      
+      - id: future-state-design
+        title: Future State Design
+        checklist:
+          - [ ] Design target operating model
+          - [ ] Define new organizational structure
+          - [ ] Specify governance mechanisms
+          - [ ] Design performance management
+          - [ ] Plan capability building
+
+  - id: transformation-planning
+    title: 6. Transformation Roadmap
+    items:
+      - id: initiative-design
+        title: Initiative Portfolio
+        checklist:
+          - [ ] Define strategic initiatives
+          - [ ] Prioritize using impact/effort matrix
+          - [ ] Sequence for quick wins and long-term value
+          - [ ] Identify interdependencies
+          - [ ] Assign executive sponsors
+      
+      - id: implementation-planning
+        title: Implementation Planning
+        checklist:
+          - [ ] Create detailed 100-day plan
+          - [ ] Define milestone roadmap (3 years)
+          - [ ] Establish PMO structure
+          - [ ] Design tracking mechanisms
+          - [ ] Plan change management
+      
+      - id: risk-mitigation
+        title: Risk & Mitigation Planning
+        checklist:
+          - [ ] Identify implementation risks
+          - [ ] Assess probability and impact
+          - [ ] Develop mitigation strategies
+          - [ ] Create contingency plans
+          - [ ] Establish early warning indicators
+
+  - id: value-capture
+    title: 7. Value Capture & Tracking
+    items:
+      - id: value-quantification
+        title: Value Quantification
+        checklist:
+          - [ ] Quantify total value potential
+          - [ ] Define value capture timeline
+          - [ ] Allocate value to initiatives
+          - [ ] Create value tracking dashboard
+          - [ ] Establish baseline metrics
+      
+      - id: quick-wins
+        title: Quick Wins Identification
+        checklist:
+          - [ ] Identify 3-5 quick wins
+          - [ ] Validate feasibility
+          - [ ] Quantify immediate impact
+          - [ ] Mobilize implementation
+          - [ ] Communicate early success
+
+  - id: communication-alignment
+    title: 8. Communication & Alignment
+    items:
+      - id: leadership-alignment
+        title: Leadership Alignment
+        checklist:
+          - [ ] Conduct C-suite workshops
+          - [ ] Facilitate board presentation
+          - [ ] Align on strategic narrative
+          - [ ] Secure commitment to change
+          - [ ] Address concerns and resistance
+      
+      - id: organization-cascade
+        title: Organization Cascade
+        checklist:
+          - [ ] Develop communication strategy
+          - [ ] Create compelling change story
+          - [ ] Design town halls and roadshows
+          - [ ] Develop manager toolkits
+          - [ ] Plan feedback mechanisms
+
+  - id: deliverables
+    title: 9. Deliverables & Knowledge Transfer
+    items:
+      - id: executive-deliverables
+        title: Executive Deliverables
+        checklist:
+          - [ ] Create board-ready strategy deck
+          - [ ] Develop executive summary
+          - [ ] Prepare detailed appendices
+          - [ ] Document key decisions
+          - [ ] Archive working materials
+      
+      - id: capability-transfer
+        title: Capability Transfer
+        checklist:
+          - [ ] Train client team on frameworks
+          - [ ] Transfer analytical tools
+          - [ ] Coach on strategy execution
+          - [ ] Establish ongoing governance
+          - [ ] Plan follow-up support
+
+  - id: quality-excellence
+    title: 10. Quality & Excellence Standards
+    items:
+      - id: mckinsey-standards
+        title: Consulting Excellence
+        checklist:
+          - [ ] Apply MECE principle throughout
+          - [ ] Ensure fact-based recommendations
+          - [ ] Use 80/20 focus on high impact
+          - [ ] Maintain CEO-ready quality
+          - [ ] Deliver distinctive insights
+      
+      - id: peer-review
+        title: Quality Assurance
+        checklist:
+          - [ ] Conduct partner review
+          - [ ] Pressure test with experts
+          - [ ] Validate with client data
+          - [ ] Ensure internal consistency
+          - [ ] Polish for executive audience
+
+summary:
+  completion_criteria:
+    - All critical items completed with partner sign-off
+    - Client leadership aligned on strategy
+    - Implementation roadmap activated
+    - Value targets established and tracking begun
+    - Organization mobilized for transformation

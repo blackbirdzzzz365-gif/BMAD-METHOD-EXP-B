@@ -1,0 +1,189 @@
+template:
+  id: product-launch-checklist
+  name: Product Launch Checklist
+  version: 1.0
+  output:
+    format: markdown
+    filename: docs/product-launch-checklist.md
+    title: "Product Launch Checklist: {{product_name}}"
+
+workflow:
+  mode: checklist
+  instruction: Comprehensive checklist for successful product launches
+
+sections:
+  - id: pre-launch-planning
+    title: 1. Pre-Launch Planning (T-12 weeks)
+    items:
+      - id: product-readiness
+        title: Product Readiness
+        checklist:
+          - [ ] Product development complete
+          - [ ] Quality assurance passed
+          - [ ] Performance benchmarks met
+          - [ ] Security review completed
+          - [ ] Accessibility standards met
+      
+      - id: market-validation
+        title: Market Validation
+        checklist:
+          - [ ] Beta testing completed
+          - [ ] Customer feedback incorporated
+          - [ ] Market fit validated
+          - [ ] Pricing strategy confirmed
+          - [ ] Competitive positioning defined
+
+  - id: cross-functional-alignment
+    title: 2. Cross-Functional Alignment (T-8 weeks)
+    items:
+      - id: stakeholder-alignment
+        title: Stakeholder Alignment
+        checklist:
+          - [ ] Executive sponsor approval
+          - [ ] Engineering sign-off
+          - [ ] Design approval
+          - [ ] Legal/compliance clearance
+          - [ ] Finance approval on pricing
+      
+      - id: team-readiness
+        title: Team Readiness
+        checklist:
+          - [ ] Sales team trained
+          - [ ] Support team prepared
+          - [ ] Marketing materials ready
+          - [ ] Documentation complete
+          - [ ] Internal wiki updated
+
+  - id: technical-preparation
+    title: 3. Technical Preparation (T-6 weeks)
+    items:
+      - id: infrastructure
+        title: Infrastructure & Operations
+        checklist:
+          - [ ] Production environment ready
+          - [ ] Scaling plan in place
+          - [ ] Monitoring configured
+          - [ ] Backup/recovery tested
+          - [ ] Load testing completed
+      
+      - id: integrations
+        title: Integrations & APIs
+        checklist:
+          - [ ] Third-party integrations tested
+          - [ ] API documentation published
+          - [ ] Partner integrations verified
+          - [ ] Data pipelines operational
+          - [ ] Analytics tracking implemented
+
+  - id: go-to-market
+    title: 4. Go-to-Market Execution (T-4 weeks)
+    items:
+      - id: marketing-launch
+        title: Marketing Launch
+        checklist:
+          - [ ] Launch campaign created
+          - [ ] Content calendar finalized
+          - [ ] PR strategy activated
+          - [ ] Social media scheduled
+          - [ ] Email campaigns ready
+      
+      - id: sales-enablement
+        title: Sales Enablement
+        checklist:
+          - [ ] Sales deck created
+          - [ ] Demo environment ready
+          - [ ] Pricing tools updated
+          - [ ] CRM configured
+          - [ ] Commission plans set
+
+  - id: launch-week
+    title: 5. Launch Week Activities
+    items:
+      - id: launch-day
+        title: Launch Day (T-0)
+        checklist:
+          - [ ] Product live in production
+          - [ ] Announcement published
+          - [ ] Team standup completed
+          - [ ] Monitoring dashboard active
+          - [ ] Support channels ready
+      
+      - id: immediate-follow-up
+        title: First 48 Hours
+        checklist:
+          - [ ] Monitor system health
+          - [ ] Track early adoption
+          - [ ] Respond to feedback
+          - [ ] Address urgent issues
+          - [ ] Celebrate with team
+
+  - id: post-launch
+    title: 6. Post-Launch Activities (T+1 week)
+    items:
+      - id: metrics-tracking
+        title: Success Metrics
+        checklist:
+          - [ ] Adoption metrics tracked
+          - [ ] Performance KPIs monitored
+          - [ ] User feedback collected
+          - [ ] Revenue impact measured
+          - [ ] Support tickets analyzed
+      
+      - id: optimization
+        title: Optimization
+        checklist:
+          - [ ] Bug fixes prioritized
+          - [ ] Performance optimized
+          - [ ] UX improvements identified
+          - [ ] Feature requests logged
+          - [ ] Roadmap updated
+
+  - id: retrospective
+    title: 7. Launch Retrospective (T+2 weeks)
+    items:
+      - id: lessons-learned
+        title: Lessons Learned
+        checklist:
+          - [ ] Team retrospective held
+          - [ ] Success factors documented
+          - [ ] Improvement areas identified
+          - [ ] Process updates made
+          - [ ] Knowledge base updated
+      
+      - id: stakeholder-review
+        title: Stakeholder Review
+        checklist:
+          - [ ] Executive briefing completed
+          - [ ] Board update prepared
+          - [ ] Customer success stories
+          - [ ] Next phase planning
+          - [ ] Resource allocation review
+
+  - id: ongoing-success
+    title: 8. Ongoing Success Management
+    items:
+      - id: growth-tracking
+        title: Growth Management
+        checklist:
+          - [ ] Weekly metrics review
+          - [ ] Monthly business review
+          - [ ] Quarterly OKR check-in
+          - [ ] Customer health monitoring
+          - [ ] Competitive analysis update
+      
+      - id: continuous-improvement
+        title: Continuous Improvement
+        checklist:
+          - [ ] Feature velocity maintained
+          - [ ] Technical debt managed
+          - [ ] Customer feedback loop
+          - [ ] Team health checked
+          - [ ] Innovation pipeline active
+
+summary:
+  completion_criteria:
+    - All pre-launch items completed before go-live
+    - Launch day activities executed successfully
+    - Post-launch metrics meeting targets
+    - Team retrospective completed
+    - Continuous improvement plan in place
