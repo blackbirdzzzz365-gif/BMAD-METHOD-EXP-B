@@ -1,194 +1,134 @@
 # BMAD-METHOD Expansion Packs
 
-Professional expansion packs for [BMAD-METHOD](https://github.com/bmadcode/BMAD-METHOD) that extend its capabilities beyond software development into business strategy, product management, and market research.
+Three professional expansion packs for [BMAD-METHOD](https://github.com/bmadcode/BMAD-METHOD) that bring business strategy capabilities to your AI agents.
 
-## 🚀 Overview
+## 📦 What's New
 
-This repository contains three comprehensive expansion packs that transform BMAD-METHOD into a complete business analysis and strategy platform:
+### 1. Market Researcher Pack
+**What it does:** Turns your AI into a market research team
+- Analyzes market size (TAM/SAM/SOM)
+- Studies competitors and consumer behavior
+- Creates personas and trend reports
+- Asks smart questions to understand your market
 
-### 📊 Market Researcher Pack
-Transform your AI agents into a professional market research team capable of conducting comprehensive market analysis, consumer insights, and competitive intelligence.
+### 2. Product Manager Pack  
+**What it does:** Gives your AI product management superpowers
+- Uses JTBD, OKR, and RICE frameworks
+- Helps decide between building platforms vs features
+- Creates PRDs and roadmaps
+- Manages full product lifecycle
 
-### 🎯 Product Manager Pack  
-Equip your agents with industry-standard product management frameworks including Jobs-to-be-Done (JTBD), OKRs, and RICE prioritization for full product lifecycle management.
+### 3. Strategy Consulting Pack
+**What it does:** Brings McKinsey/BCG-level consulting to your AI
+- Develops corporate strategies
+- Plans digital transformations
+- Uses frameworks like McKinsey 7S
+- Creates executive-ready presentations
 
-### 🏛️ Strategy Consulting Pack
-Access McKinsey, BCG, and Bain-level strategic consulting capabilities with elite strategy agents, proven frameworks, and executive-ready deliverables.
+## 🚀 Quick Start
 
-## 📦 What's Included
+### Step 1: Install BMAD-METHOD
+First, you need the main BMAD-METHOD in your project. Follow instructions at [BMAD-METHOD](https://github.com/bmadcode/BMAD-METHOD).
 
-### Expansion Pack Contents
-- **12 Specialized Agents**: From market researchers to senior strategy partners
-- **11 Strategic Tasks**: Interactive, framework-based analysis procedures
-- **8 Professional Templates**: Executive-ready reports and presentations
-- **Complete Frameworks**: JTBD, OKR, RICE, McKinsey 7S, Three Horizons
-- **Knowledge Bases**: Deep domain expertise for each pack
-
-## 🛠️ Installation
-
-### Prerequisites
-- BMAD-METHOD installed in your project
-- Access to AI agent platform (Cursor, Windsurf, etc.)
-
-### Installation Steps
-
-1. **Clone this repository**:
+### Step 2: Add These Expansion Packs
 ```bash
+# Clone this repository
 git clone https://github.com/bookmark/BMAD-METHOD-EXP.git
+
+# Copy expansion packs to your BMAD installation
+cp -r BMAD-METHOD-EXP/expansion-packs/* /your/project/BMAD-METHOD/expansion-packs/
 ```
 
-2. **Copy expansion packs to your BMAD installation**:
-```bash
-cp -r BMAD-METHOD-EXP/expansion-packs/* /path/to/your/project/BMAD-METHOD/expansion-packs/
-```
+### Step 3: Use the Agents
 
-3. **Verify installation**:
-Check that the following directories exist:
-- `expansion-packs/bmad-market-researcher/`
-- `expansion-packs/bmad-product-manager/`
-- `expansion-packs/bmad-strategy-consulting/`
-
-## 💡 Usage Examples
-
-### Market Research Example
+**For Market Research:**
 ```
 Load agent: market-research-lead
 
-Agent: "Hello! I'm Maya, your Senior Market Research Strategist. Let's analyze your market opportunity."
-
-User: "I need to understand the market for a new fintech app"
-
-Agent: *Initiates comprehensive market analysis with TAM/SAM/SOM calculations*
+Agent: "I'm Maya, your market researcher. What market should we analyze?"
+You: "I want to launch a fintech app"
+Agent: [Starts interactive market analysis with questions]
 ```
 
-### Product Management Example
+**For Product Management:**
 ```
 Load agent: product-lead
 
-Agent: "I'm Alex Chen, your Senior Product Manager. I'll help you build the right product using JTBD, OKR, and RICE frameworks."
-
-User: "Help me prioritize features for our roadmap"
-
-Agent: *Runs RICE prioritization analysis*
+Agent: "I'm Alex, your product manager. Let's build the right product."
+You: "Help me prioritize my features"
+Agent: [Uses RICE framework to score and rank features]
 ```
 
-### Strategy Consulting Example
+**For Strategy Consulting:**
 ```
 Load agent: senior-partner
 
-Agent: "I'm Victoria Sterling, Senior Partner. I've advised Fortune 500 CEOs for 25+ years. Let's develop your strategy."
-
-User: "We need a digital transformation strategy"
-
-Agent: *Conducts strategic situation assessment and builds transformation roadmap*
+Agent: "I'm Victoria, Senior Partner. Let's develop your strategy."
+You: "We need a digital transformation plan"
+Agent: [Conducts strategic assessment and builds roadmap]
 ```
 
-## 🔗 Integration with BMAD Ecosystem
+## 🎯 When to Use Each Pack
 
-These expansion packs are designed to work seamlessly together and with core BMAD agents:
+| Use This Pack | When You Need To |
+|--------------|------------------|
+| **Market Researcher** | • Understand market size<br>• Analyze competitors<br>• Research customers<br>• Validate ideas |
+| **Product Manager** | • Prioritize features<br>• Write PRDs<br>• Set OKRs<br>• Make platform decisions |
+| **Strategy Consulting** | • Plan transformations<br>• Develop strategy<br>• Restructure organization<br>• Present to executives |
 
-```mermaid
-graph TD
-    MR[Market Research] --> PM[Product Management]
-    SC[Strategy Consulting] --> PM
-    SC --> MR
-    PM --> BMAD[BMAD Core Agents]
-    SC --> BMAD
-    MR --> BMAD
+## 🤝 How They Work Together
+
+```
+Market Research → Provides data for → Product Decisions
+     ↓                                        ↓
+Strategy Consulting ← Aligns with ← Product Roadmap
 ```
 
-### Cross-Pack Collaboration
-- **Market Research** provides insights for Product and Strategy decisions
-- **Product Management** bridges business strategy and development
-- **Strategy Consulting** provides overarching direction for all agents
+Example workflow:
+1. Market Researcher analyzes opportunity
+2. Product Manager defines solution
+3. Strategy Consultant aligns with business goals
+4. All work together with BMAD's dev agents to build
 
-## 📋 Expansion Pack Details
+## 📁 What's Inside Each Pack
 
-### Market Researcher Pack
-
-**Agents**:
-- Maya - Market Research Lead
-- Alex - Data Analyst  
-- Sofia - Consumer Insights Specialist
-- Marcus - Competitive Intelligence Analyst
-
-**Key Capabilities**:
-- Market sizing (TAM/SAM/SOM)
-- Consumer behavior analysis
-- Competitive landscape mapping
-- Persona development
-- Trend analysis
-
-### Product Manager Pack
-
-**Agents**:
-- Alex Chen - Product Lead
-- Sarah Kim - Product Strategist
-- David Park - Product Analyst
-- Maya Patel - Technical PM
-
-**Key Frameworks**:
-- Jobs-to-be-Done (JTBD)
-- Objectives & Key Results (OKR)
-- RICE Prioritization
-- Platform vs Feature Analysis
-
-### Strategy Consulting Pack
-
-**Agents**:
-- Victoria Sterling - Senior Partner
-- Marcus Chen - Strategy Consultant
-- Dr. Sarah Mitchell - Org Design Expert
-- Alex Kumar - Digital Strategist
-
-**Key Frameworks**:
-- McKinsey 7S Analysis
-- Three Horizons Planning
-- Strategic Situation Assessment
-- Transformation Roadmaps
-
-## 🤝 Contributing
-
-Contributions are welcome! If you'd like to add new expansion packs or improve existing ones:
-
-1. Fork this repository
-2. Create your feature branch (`git checkout -b feature/amazing-pack`)
-3. Commit your changes (`git commit -m 'Add amazing expansion pack'`)
-4. Push to the branch (`git push origin feature/amazing-pack`)
-5. Open a Pull Request
-
-### Creating New Expansion Packs
-
-Follow the BMAD-METHOD structure:
 ```
 expansion-packs/
-└── your-pack-name/
-    ├── agents/       # Agent definitions
-    ├── tasks/        # Reusable tasks
-    ├── templates/    # Output templates
-    ├── workflows/    # Multi-step processes
-    ├── data/         # Knowledge bases
-    └── config.yaml   # Pack configuration
+├── bmad-market-researcher/
+│   ├── agents/      # 4 research specialists
+│   ├── tasks/       # Analysis procedures
+│   └── templates/   # Report formats
+│
+├── bmad-product-manager/
+│   ├── agents/      # 4 PM experts
+│   ├── tasks/       # PM workflows
+│   └── frameworks/  # JTBD, OKR, RICE
+│
+└── bmad-strategy-consulting/
+    ├── agents/      # 4 elite consultants
+    ├── tasks/       # Strategic analyses
+    └── templates/   # Executive decks
 ```
 
-## 📄 License
+## 💡 Tips
 
-This project follows the same license as BMAD-METHOD. See the [original repository](https://github.com/bmadcode/BMAD-METHOD) for details.
+1. **Start with one pack** - Don't load all agents at once
+2. **Let agents ask questions** - They're designed to be interactive
+3. **Combine for big projects** - Use multiple packs for comprehensive analysis
+4. **Check BMAD docs** - Main documentation at [BMAD-METHOD](https://github.com/bmadcode/BMAD-METHOD)
 
-## 🙏 Acknowledgments
+## 🙏 Credits
 
-- [Brian Madison (BMad)](https://github.com/bmadcode) for creating BMAD-METHOD
-- The BMAD community for inspiration and support
-- McKinsey, BCG, and Bain for strategic frameworks and methodologies
+- Created for the [BMAD-METHOD](https://github.com/bmadcode/BMAD-METHOD) community
+- Inspired by real consulting and product management practices
+- Built to extend BMAD beyond just coding
 
-## 📞 Support
+## 📞 Need Help?
 
-- **BMAD Discord**: [Join the community](https://discord.gg/gk8jAdXWmj)
-- **Issues**: Open an issue in this repository
-- **Discussions**: Use GitHub Discussions for questions and ideas
+- **BMAD Discord**: [Join here](https://discord.gg/gk8jAdXWmj)
+- **Issues**: Report problems in this repo
+- **Main BMAD docs**: [BMAD-METHOD](https://github.com/bmadcode/BMAD-METHOD)
 
 ---
 
-**Made with ❤️ for the BMAD community**
-
-*Extending AI agents beyond code into complete business solutions*
+**Expand your AI agents from code to complete business solutions!**
