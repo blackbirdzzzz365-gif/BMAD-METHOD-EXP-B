@@ -5,7 +5,6 @@ Six professional expansion packs for [BMAD-METHOD](https://github.com/bmadcode/B
 ## 📑 Table of Contents
 
 - [What's New](#-whats-new---v110)
-- [Prerequisites](#-prerequisites)
 - [The Six Expansion Packs](#-the-six-expansion-packs)
 - [Quick Start](#-quick-start)
 - [When to Use Each Pack](#-when-to-use-each-pack)
@@ -23,24 +22,6 @@ Six professional expansion packs for [BMAD-METHOD](https://github.com/bmadcode/B
 
 ### Enhanced with Multi-Agent Collaboration & Visual Frameworks
 All packs now include advanced capabilities: multi-agent consensus building, visual problem-solving with Mermaid diagrams, cross-pack integration, and adaptive complexity based on user expertise.
-
-## 📋 Prerequisites
-
-Before installing these expansion packs, ensure you have:
-
-- **BMAD-METHOD Core**: Version 1.0.0 or higher ([Installation Guide](https://github.com/bmadcode/BMAD-METHOD))
-- **Node.js**: Version 14.0 or higher (for running BMAD-METHOD)
-- **Git**: For cloning repositories
-- **Disk Space**: ~50MB for all expansion packs
-- **Operating System**: Windows, macOS, or Linux
-
-### Compatibility
-
-| BMAD-METHOD Version | Expansion Pack Version | Status |
-|-------------------|---------------------|---------|
-| 1.0.x | 1.1.0 | ✅ Fully Compatible |
-| 0.9.x | 1.1.0 | ⚠️ Limited Support |
-| < 0.9 | 1.1.0 | ❌ Not Supported |
 
 ## 📦 The Six Expansion Packs
 
@@ -586,13 +567,6 @@ workflows/
 - Strategy Consulting Pack
 - Basic integration capabilities
 - 100+ templates and frameworks
-
-### Roadmap (v1.2.0 - Q4 2025)
-- 🔜 AI-powered insight generation
-- 🔜 Real-time collaboration features
-- 🔜 Industry-specific pack variants
-- 🔜 Multi-language support
-- 🔜 External data integrations
 
 ## 🙏 Credits
 
