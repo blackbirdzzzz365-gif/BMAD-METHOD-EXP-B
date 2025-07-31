@@ -291,13 +291,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🗺️ Roadmap
 
-### Version 1.1 (Q2 2024)
+### Version 1.1 (Q4 2025)
 - [ ] AI-powered user research synthesis
 - [ ] Advanced analytics integrations
 - [ ] Experiment tracking framework
 - [ ] Customer journey mapping
 
-### Version 1.2 (Q4 2024)
+### Version 1.2 (Q2 2026)
 - [ ] Product-led growth frameworks
 - [ ] Automated metric tracking
 - [ ] Stakeholder communication tools

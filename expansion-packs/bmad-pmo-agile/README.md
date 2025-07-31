@@ -305,13 +305,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🗺️ Roadmap
 
-### Version 1.1 (Q2 2024)
+### Version 1.1 (Q4 2025)
 - [ ] Advanced SAFe configurations (Full SAFe)
 - [ ] AI-powered impediment detection
 - [ ] Real-time collaboration tools
 - [ ] Enhanced dependency visualization
 
-### Version 1.2 (Q4 2024)
+### Version 1.2 (Q2 2026)
 - [ ] DevOps integration
 - [ ] Value stream mapping
 - [ ] Automated metric collection

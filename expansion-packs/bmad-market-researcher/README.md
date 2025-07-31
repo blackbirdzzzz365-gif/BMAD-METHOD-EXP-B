@@ -294,13 +294,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🗺️ Roadmap
 
-### Version 1.1 (Q2 2024)
+### Version 1.1 (Q4 2025)
 - [ ] AI-powered insight generation
 - [ ] Real-time market monitoring
 - [ ] Advanced sentiment analysis
 - [ ] Automated report generation
 
-### Version 1.2 (Q4 2024)
+### Version 1.2 (Q2 2026)
 - [ ] Predictive market modeling
 - [ ] Social listening integration
 - [ ] Multi-language research support
