@@ -1,1 +1,357 @@
-# BMAD Problem Solver Pack\n\n[![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](https://github.com/your-org/BMAD-METHOD)\n[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)\n[![Framework](https://img.shields.io/badge/framework-BMAD-orange.svg)](https://github.com/your-org/BMAD-METHOD)\n\n> **Systematic problem-solving through multi-agent collaboration, visual frameworks, and evidence-based analysis.**\n\nTransform complex business challenges into clear, actionable solutions using structured methodologies, expert analysis, and consensus-building workflows.\n\n## 🎯 Overview\n\nThe Problem Solver expansion pack provides comprehensive problem-solving capabilities for the BMAD-METHOD framework. It combines five specialist AI agents, proven frameworks, and collaborative workflows to tackle complex business and operational challenges with systematic rigor and visual clarity.\n\n### Core Capabilities\n\n- **Multi-Agent Analysis**: Five specialized problem-solving perspectives working in consensus\n- **Framework Library**: Classic and modern problem-solving methodologies\n- **Visual Thinking**: Mermaid diagrams, ASCII art, and structured visualizations\n- **Pattern Recognition**: Library of 25+ common business problem patterns\n- **Adaptive Complexity**: Automatically adjusts to user expertise level\n- **Evidence-Based**: Rigorous validation and assumption tracking\n\n## 🚀 Quick Start\n\n### Installation\n\n```bash\n# Clone the BMAD-METHOD repository\ngit clone https://github.com/your-org/BMAD-METHOD.git\ncd BMAD-METHOD/expansion-packs/bmad-problem-solver\n\n# Verify installation\nls -la agents/ frameworks/ tasks/\n```\n\n### Basic Usage\n\n```yaml\n# Activate a specialist agent\n@systems-thinker \"Map the feedback loops in our customer retention system\"\n@root-cause-analyst \"Why do our deployments keep failing?\"\n@creative-solver \"Generate alternatives to our current pricing model\"\n\n# Run comprehensive analysis\n/analyze \"Customer churn rate increased 25% over last quarter\"\n\n# Decision support\n/decide \"Choose between cloud providers: AWS, Azure, or GCP\"\n```\n\n### Interactive Tasks\n\n```bash\n# Comprehensive multi-agent problem analysis\ntask: comprehensive-problem-analysis\n\n# Multi-criteria decision analysis\ntask: decision-analysis-matrix\n\n# Structured consensus building\nworkflow: consensus-problem-solving\n```\n\n## 👥 Expert Team\n\n### 🔬 Dr. Sarah Chen - Systems Thinking Expert\n**Specialty**: Complex system dynamics and leverage points\n- Maps interconnections and feedback loops\n- Identifies system leverage points for maximum impact\n- Analyzes unintended consequences and delays\n- **Commands**: `/map-system`, `/find-loops`, `/leverage-points`\n\n### 🎯 Marcus Reid - First Principles Thinker\n**Specialty**: Assumption-free problem reconstruction\n- Questions all assumptions systematically\n- Breaks problems down to fundamental truths\n- Rebuilds solutions from ground-up reasoning\n- **Commands**: `/breakdown`, `/fundamentals`, `/reconstruct`\n\n### 🧠 Dr. Angela Foster - Critical Thinking Analyst\n**Specialty**: Logic validation and bias detection\n- Identifies cognitive biases and logical fallacies\n- Validates evidence quality and reasoning\n- Ensures analytical rigor and objectivity\n- **Commands**: `/analyze`, `/validate`, `/biases`, `/fallacies`\n\n### 💡 Jordan Park - Creative Problem Solver\n**Specialty**: Innovation and breakthrough thinking\n- Generates creative alternatives using SCAMPER and TRIZ\n- Applies lateral thinking and analogical reasoning\n- Combines disparate concepts for novel solutions\n- **Commands**: `/reframe`, `/generate`, `/combine`, `/patterns`\n\n### 🔍 Kenji Tanaka - Root Cause Analyst\n**Specialty**: True source identification and prevention\n- Conducts systematic root cause investigations\n- Uses 5 Whys, Fishbone, and fault tree analysis\n- Designs prevention strategies to eliminate recurrence\n- **Commands**: `/investigate`, `/fishbone`, `/timeline`, `/prevention`\n\n## 🛠️ Framework Library\n\n### Classic Methodologies\n- **[5 Whys](frameworks/classic/5-whys.md)** - Iterative root cause analysis\n- **[Fishbone Diagram](frameworks/classic/fishbone-ishikawa.md)** - Cause-and-effect mapping\n- **[SWOT Analysis](frameworks/classic/swot-analysis.md)** - Strategic position assessment\n\n### Modern Approaches\n- **[Design Thinking](frameworks/modern/design-thinking.md)** - Human-centered problem solving\n- **[Jobs-to-be-Done](frameworks/modern/jobs-to-be-done.md)** - Customer motivation analysis\n\n### Integration Support\n- Seamless integration with all BMAD expansion packs\n- Cross-pack communication protocols\n- Shared data structures and workflows\n\n## 📊 Problem Pattern Library\n\nThe pack includes a comprehensive library of common business problem patterns:\n\n```json\n{\n  \"operational\": [\"Process Bottleneck\", \"Quality-Speed Trade-off\"],\n  \"strategic\": [\"Analysis Paralysis\", \"Market Positioning\"],\n  \"organizational\": [\"Silos\", \"Communication Breakdown\"],\n  \"technical\": [\"Technical Debt\", \"Scalability Issues\"],\n  \"financial\": [\"Cash Flow Crisis\", \"Cost Management\"],\n  \"customer\": [\"Churn Spiral\", \"Experience Fragmentation\"],\n  \"growth\": [\"Scaling Bottlenecks\", \"Resource Constraints\"]\n}\n```\n\nEach pattern includes:\n- Common symptoms and causes\n- Proven solution approaches\n- Applicable frameworks\n- Success metrics\n- Real-world case studies\n\n## 🎨 Visual Problem Solving\n\n### System Maps\n```mermaid\ngraph TB\n    Problem[Core Problem]\n    Cause1[Root Cause 1] --> Problem\n    Cause2[Root Cause 2] --> Problem\n    Problem --> Effect1[Impact 1]\n    Problem --> Effect2[Impact 2]\n```\n\n### Decision Matrices\n```\n┌─────────────────┬─────────┬─────────┬─────────┐\n│ Criteria        │ Option A│ Option B│ Option C│\n├─────────────────┼─────────┼─────────┼─────────┤\n│ Cost (30%)      │   8.5   │   7.0   │   6.5   │\n│ Speed (25%)     │   6.0   │   9.0   │   7.5   │\n│ Quality (25%)   │   9.0   │   6.5   │   8.0   │\n│ Risk (20%)      │   7.5   │   8.0   │   9.0   │\n├─────────────────┼─────────┼─────────┼─────────┤\n│ TOTAL SCORE     │   7.6   │   7.4   │   7.4   │\n└─────────────────┴─────────┴─────────┴─────────┘\n```\n\n### Process Flows\n```\nProblem Definition → Multi-Agent Analysis → Evidence Validation\n       ➜ Consensus Building → Solution Synthesis → Action Planning\n```\n\n## 📋 Task Workflows\n\n### [Comprehensive Problem Analysis](tasks/comprehensive-problem-analysis.md)\n**Duration**: 90-120 minutes  \n**Output**: Detailed problem analysis report\n\n**Process**:\n1. Problem definition and scoping\n2. Multi-agent perspective gathering\n3. Evidence sharing and validation\n4. Consensus building on root causes\n5. Solution pathway development\n6. Action planning and next steps\n\n### [Decision Analysis Matrix](tasks/decision-analysis-matrix.md)\n**Duration**: 60-90 minutes  \n**Output**: Decision recommendation report\n\n**Process**:\n1. Decision framing and criteria definition\n2. Option generation and evaluation\n3. Multi-criteria scoring and weighting\n4. Sensitivity analysis and validation\n5. Stakeholder impact assessment\n6. Final recommendation with rationale\n\n## 🤝 Consensus Building\n\nThe pack includes a structured [consensus workflow](workflows/consensus-problem-solving.md) that enables five agents to collaborate effectively:\n\n```mermaid\ngraph LR\n    A[Problem Framing] --> B[Individual Analysis]\n    B --> C[Evidence Sharing]\n    C --> D[Structured Debate]\n    D --> E[Consensus Building]\n    E --> F[Solution Synthesis]\n```\n\n**Key Features**:\n- Structured debate protocols\n- Evidence-based argument evaluation\n- Systematic agreement building\n- Clear documentation of consensus areas\n- Transparent handling of disagreements\n\n## 🔗 Integration Capabilities\n\n### Supported Integrations\n- **Strategy Consulting**: Strategic problem diagnosis and validation\n- **Product Management**: Feature prioritization and user feedback analysis\n- **Market Research**: Research methodology validation and insight synthesis\n- **PMO Agile**: Process improvement and team performance analysis\n- **Startup Advisor**: Growth challenges and scaling solutions\n\n### Integration Patterns\n- **Advisory**: Problem Solver provides analysis, domain pack implements\n- **Collaborative**: Joint problem-solving with shared ownership\n- **Sequential**: Analysis phase followed by domain-specific execution\n- **Validation**: Domain solutions validated through analytical frameworks\n\n## 📈 Success Metrics\n\n### Process Quality\n- **Problem Clarity**: 85%+ improvement in problem understanding\n- **Solution Effectiveness**: 75%+ implementation success rate\n- **Stakeholder Alignment**: 90%+ consensus on key decisions\n- **Time to Insight**: <30 minutes for initial analysis\n\n### Business Impact\n- **Decision Quality**: Improved outcomes through systematic analysis\n- **Risk Mitigation**: Proactive identification and management\n- **Implementation Speed**: Faster execution through clear action plans\n- **Learning Capture**: Reusable insights for similar problems\n\n## 🧪 Assumption Management\n\nThe pack includes sophisticated [assumption tracking](data/assumption-tracker.json) capabilities:\n\n```yaml\nassumption_lifecycle:\n  identification: Extract explicit and implicit assumptions\n  assessment: Evaluate confidence and impact levels\n  validation: Test assumptions through appropriate methods\n  monitoring: Track validity throughout implementation\n```\n\n**Validation Methods**:\n- Data analysis and statistical testing\n- Expert consultation and peer review\n- Market research and customer validation\n- Pilot testing and experimentation\n- Sensitivity analysis and scenario modeling\n\n## 📚 Documentation\n\n### Framework Guides\n- [5 Whys Complete Guide](frameworks/classic/5-whys.md)\n- [Fishbone Diagram Tutorial](frameworks/classic/fishbone-ishikawa.md)\n- [SWOT Analysis Framework](frameworks/classic/swot-analysis.md)\n- [Design Thinking Process](frameworks/modern/design-thinking.md)\n- [Jobs-to-be-Done Method](frameworks/modern/jobs-to-be-done.md)\n\n### Integration Documentation\n- [Cross-Pack Integration Guide](INTEGRATION_GUIDE.md)\n- [Communication Protocols](INTEGRATION_GUIDE.md#communication-protocols)\n- [Data Structure Specifications](INTEGRATION_GUIDE.md#shared-data-structures)\n\n### Technical References\n- [Problem Pattern Library](data/problem-patterns.json)\n- [Assumption Tracker Schema](data/assumption-tracker.json)\n- [Template Specifications](templates/)\n\n## 🏗️ Architecture\n\n```\nbmad-problem-solver/\n├── agents/                 # Specialist problem-solving agents\n├── frameworks/            # Mental models and methodologies\n│   ├── classic/          # Proven traditional frameworks\n│   └── modern/           # Contemporary approaches\n├── tasks/                # Interactive problem-solving workflows\n├── templates/            # Professional output formats\n├── workflows/            # Multi-agent collaboration processes\n├── data/                 # Pattern library and knowledge base\n├── config.yaml          # Pack configuration and metadata\n└── INTEGRATION_GUIDE.md  # Cross-pack integration documentation\n```\n\n## 🔧 Configuration\n\n```yaml\n# config.yaml\nname: bmad-problem-solver\nversion: 1.1.0\ndescription: Comprehensive problem-solving with multi-agent collaboration\n\ncapabilities:\n  - problem_decomposition\n  - root_cause_analysis\n  - systems_thinking\n  - decision_making\n  - visual_thinking\n  - pattern_recognition\n  - assumption_testing\n\nvisualization_styles:\n  - mermaid: flowcharts, mind maps, sequence diagrams\n  - ascii_art: box diagrams, trees, matrices\n  - markdown_tables: comparison matrices, decision grids\n```\n\n## 🤝 Contributing\n\nWe welcome contributions to improve the Problem Solver pack:\n\n### Areas for Contribution\n- **Problem Patterns**: Identify new recurring business problem types\n- **Framework Enhancements**: Improve existing methodologies or add new ones\n- **Integration Examples**: Share successful cross-pack collaboration stories\n- **Visualization Tools**: Develop new ways to represent complex problems\n- **Case Studies**: Document real-world problem-solving successes\n\n### Contribution Process\n1. Fork the repository\n2. Create a feature branch (`git checkout -b feature/new-pattern`)\n3. Make your changes with tests and documentation\n4. Submit a pull request with detailed description\n\n### Development Guidelines\n- Follow existing file structure and naming conventions\n- Include comprehensive documentation for new features\n- Add relevant test cases and examples\n- Ensure compatibility with existing integrations\n\n## 📄 License\n\nThis project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.\n\n## 🆘 Support\n\n### Getting Help\n- **Documentation**: Check framework guides and integration documentation\n- **Issues**: Report bugs or request features via GitHub Issues\n- **Discussions**: Join community discussions for best practices\n- **Examples**: Review case studies and integration examples\n\n### Community\n- [GitHub Discussions](https://github.com/your-org/BMAD-METHOD/discussions)\n- [Documentation Wiki](https://github.com/your-org/BMAD-METHOD/wiki)\n- [Issue Tracker](https://github.com/your-org/BMAD-METHOD/issues)\n\n## 🗺️ Roadmap\n\n### Version 1.2 (Next Release)\n- [ ] Advanced pattern matching algorithms\n- [ ] Real-time collaboration features\n- [ ] Enhanced visualization capabilities\n- [ ] Mobile-responsive interfaces\n\n### Version 1.3 (Future)\n- [ ] Machine learning-powered pattern recognition\n- [ ] Automated assumption validation\n- [ ] Integration with external data sources\n- [ ] Multi-language framework support\n\n---\n\n**Built for BMAD-METHOD** • **Designed for systematic problem solving** • **Optimized for collaborative intelligence**\n\n*Transform your most complex challenges into clear pathways forward.*
+# BMAD Problem Solver Pack
+
+[![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](https://github.com/your-org/BMAD-METHOD)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Framework](https://img.shields.io/badge/framework-BMAD-orange.svg)](https://github.com/your-org/BMAD-METHOD)
+
+> **Systematic problem-solving through multi-agent collaboration, visual frameworks, and evidence-based analysis.**
+
+## 🎯 Overview
+
+The Problem Solver expansion pack provides comprehensive problem-solving capabilities for the BMAD-METHOD framework. It combines five specialist AI agents, proven frameworks, and collaborative workflows to tackle complex business and operational challenges.
+
+### Key Features
+
+- **Multi-Agent Analysis** - Five specialized problem-solving perspectives working in consensus
+- **Framework Library** - Classic and modern problem-solving methodologies
+- **Visual Thinking** - Mermaid diagrams, ASCII art, and structured visualizations
+- **Pattern Recognition** - Library of 25+ common business problem patterns
+- **Adaptive Complexity** - Automatically adjusts to user expertise level
+- **Evidence-Based** - Rigorous validation and assumption tracking
+
+## 🚀 Quick Start
+
+### Installation
+
+```bash
+# Clone the BMAD-METHOD repository
+git clone https://github.com/your-org/BMAD-METHOD.git
+cd BMAD-METHOD/expansion-packs/bmad-problem-solver
+
+# Verify installation
+ls -la agents/ frameworks/ tasks/
+```
+
+### Basic Usage
+
+```yaml
+# Activate specialist agents
+@systems-thinker "Map the feedback loops in our customer retention system"
+@root-cause-analyst "Why do our deployments keep failing?"
+@creative-solver "Generate alternatives to our current pricing model"
+
+# Run comprehensive analysis
+/analyze "Customer churn rate increased 25% over last quarter"
+
+# Decision support
+/decide "Choose between cloud providers: AWS, Azure, or GCP"
+```
+
+### Interactive Tasks
+
+```bash
+# Comprehensive multi-agent problem analysis
+task: comprehensive-problem-analysis
+
+# Multi-criteria decision analysis
+task: decision-analysis-matrix
+
+# Structured consensus building
+workflow: consensus-problem-solving
+```
+
+## 👥 Expert Team
+
+### 🔬 Dr. Sarah Chen - Systems Thinking Expert
+**Specialty**: Complex system dynamics and leverage points
+- Maps interconnections and feedback loops
+- Identifies system leverage points for maximum impact
+- Analyzes unintended consequences and delays
+- **Commands**: `/map-system`, `/find-loops`, `/leverage-points`
+
+### 🎯 Marcus Reid - First Principles Thinker
+**Specialty**: Assumption-free problem reconstruction
+- Questions all assumptions systematically
+- Breaks problems down to fundamental truths
+- Rebuilds solutions from ground-up reasoning
+- **Commands**: `/breakdown`, `/fundamentals`, `/reconstruct`
+
+### 🧠 Dr. Angela Foster - Critical Thinking Analyst
+**Specialty**: Logic validation and bias detection
+- Identifies cognitive biases and logical fallacies
+- Validates evidence quality and reasoning
+- Ensures analytical rigor and objectivity
+- **Commands**: `/analyze`, `/validate`, `/biases`, `/fallacies`
+
+### 💡 Jordan Park - Creative Problem Solver
+**Specialty**: Innovation and breakthrough thinking
+- Generates creative alternatives using SCAMPER and TRIZ
+- Applies lateral thinking and analogical reasoning
+- Combines disparate concepts for novel solutions
+- **Commands**: `/reframe`, `/generate`, `/combine`, `/patterns`
+
+### 🔍 Kenji Tanaka - Root Cause Analyst
+**Specialty**: True source identification and prevention
+- Conducts systematic root cause investigations
+- Uses 5 Whys, Fishbone, and fault tree analysis
+- Designs prevention strategies to eliminate recurrence
+- **Commands**: `/investigate`, `/fishbone`, `/timeline`, `/prevention`
+
+## 🛠️ Frameworks
+
+### Classic Methodologies
+- **[5 Whys](frameworks/classic/5-whys.md)** - Iterative root cause analysis
+- **[Fishbone Diagram](frameworks/classic/fishbone-ishikawa.md)** - Cause-and-effect mapping
+- **[SWOT Analysis](frameworks/classic/swot-analysis.md)** - Strategic position assessment
+- **[Force Field Analysis](frameworks/classic/force-field-analysis.md)** - Change management tool
+- **[Pareto Analysis](frameworks/classic/pareto-analysis.md)** - 80/20 prioritization
+
+### Modern Approaches
+- **[Design Thinking](frameworks/modern/design-thinking.md)** - Human-centered problem solving
+- **[Jobs-to-be-Done](frameworks/modern/jobs-to-be-done.md)** - Customer motivation analysis
+- **[Cynefin Framework](frameworks/modern/cynefin-framework.md)** - Complexity assessment
+- **[OODA Loop](frameworks/modern/ooda-loop.md)** - Rapid decision cycles
+- **[Blue Ocean Strategy](frameworks/modern/blue-ocean-strategy.md)** - Market creation
+
+## 📊 Problem Pattern Library
+
+Our comprehensive library includes patterns across key business domains:
+
+### Operational Patterns
+- Process Bottleneck
+- Quality-Speed Trade-off
+- Resource Allocation
+- Workflow Inefficiency
+
+### Strategic Patterns
+- Analysis Paralysis
+- Market Positioning
+- Competitive Response
+- Innovation Stagnation
+
+### Organizational Patterns
+- Communication Silos
+- Change Resistance
+- Culture Misalignment
+- Leadership Gap
+
+### Technical Patterns
+- Technical Debt
+- Scalability Issues
+- Integration Complexity
+- Security Vulnerabilities
+
+### Financial Patterns
+- Cash Flow Crisis
+- Cost Management
+- Revenue Plateau
+- Investment ROI
+
+Each pattern includes:
+- Common symptoms and causes
+- Proven solution approaches
+- Applicable frameworks
+- Success metrics
+- Real-world case studies
+
+## 🎨 Visual Problem Solving
+
+### System Maps
+```mermaid
+graph TB
+    Problem[Core Problem]
+    Cause1[Root Cause 1] --> Problem
+    Cause2[Root Cause 2] --> Problem
+    Problem --> Effect1[Impact 1]
+    Problem --> Effect2[Impact 2]
+```
+
+### Decision Matrices
+```
+┌─────────────────┬─────────┬─────────┬─────────┐
+│ Criteria        │ Option A│ Option B│ Option C│
+├─────────────────┼─────────┼─────────┼─────────┤
+│ Cost (30%)      │   8.5   │   7.0   │   6.5   │
+│ Speed (25%)     │   6.0   │   9.0   │   7.5   │
+│ Quality (25%)   │   9.0   │   6.5   │   8.0   │
+│ Risk (20%)      │   7.5   │   8.0   │   9.0   │
+├─────────────────┼─────────┼─────────┼─────────┤
+│ TOTAL SCORE     │   7.6   │   7.4   │   7.4   │
+└─────────────────┴─────────┴─────────┴─────────┘
+```
+
+### Process Flow
+```
+Problem Definition → Multi-Agent Analysis → Evidence Validation
+       ↓                                           ↓
+Action Planning ← Solution Synthesis ← Consensus Building
+```
+
+## 📋 Key Workflows
+
+### Comprehensive Problem Analysis
+**Duration**: 90-120 minutes  
+**Output**: Detailed problem analysis report
+
+1. Problem definition and scoping
+2. Multi-agent perspective gathering
+3. Evidence sharing and validation
+4. Consensus building on root causes
+5. Solution pathway development
+6. Action planning and next steps
+
+### Decision Analysis Matrix
+**Duration**: 60-90 minutes  
+**Output**: Decision recommendation report
+
+1. Decision framing and criteria definition
+2. Option generation and evaluation
+3. Multi-criteria scoring and weighting
+4. Sensitivity analysis and validation
+5. Stakeholder impact assessment
+6. Final recommendation with rationale
+
+### Consensus Building Process
+```mermaid
+graph LR
+    A[Problem Framing] --> B[Individual Analysis]
+    B --> C[Evidence Sharing]
+    C --> D[Structured Debate]
+    D --> E[Consensus Building]
+    E --> F[Solution Synthesis]
+```
+
+## 🔗 Integration Ecosystem
+
+### Supported Integrations
+- **Strategy Consulting** - Strategic problem diagnosis and validation
+- **Product Management** - Feature prioritization and user feedback analysis
+- **Market Research** - Research methodology validation and insight synthesis
+- **PMO Agile** - Process improvement and team performance analysis
+- **Startup Advisor** - Growth challenges and scaling solutions
+
+### Integration Patterns
+- **Advisory** - Problem Solver provides analysis, domain pack implements
+- **Collaborative** - Joint problem-solving with shared ownership
+- **Sequential** - Analysis phase followed by domain-specific execution
+- **Validation** - Domain solutions validated through analytical frameworks
+
+## 📈 Success Metrics
+
+### Process Quality
+- **Problem Clarity** - 85%+ improvement in problem understanding
+- **Solution Effectiveness** - 75%+ implementation success rate
+- **Stakeholder Alignment** - 90%+ consensus on key decisions
+- **Time to Insight** - <30 minutes for initial analysis
+
+### Business Impact
+- **Decision Quality** - Improved outcomes through systematic analysis
+- **Risk Mitigation** - Proactive identification and management
+- **Implementation Speed** - Faster execution through clear action plans
+- **Learning Capture** - Reusable insights for similar problems
+
+## 🏗️ Architecture
+
+```
+bmad-problem-solver/
+├── agents/              # Specialist problem-solving agents
+├── frameworks/          # Mental models and methodologies
+│   ├── classic/        # Proven traditional frameworks
+│   └── modern/         # Contemporary approaches
+├── tasks/              # Interactive problem-solving workflows
+├── templates/          # Professional output formats
+├── workflows/          # Multi-agent collaboration processes
+├── data/               # Pattern library and knowledge base
+├── config.yaml         # Pack configuration and metadata
+└── INTEGRATION_GUIDE.md # Cross-pack integration documentation
+```
+
+## 🔧 Configuration
+
+```yaml
+# config.yaml
+name: bmad-problem-solver
+version: 1.1.0
+description: Comprehensive problem-solving with multi-agent collaboration
+
+capabilities:
+  - problem_decomposition
+  - root_cause_analysis
+  - systems_thinking
+  - decision_making
+  - visual_thinking
+  - pattern_recognition
+  - assumption_testing
+
+visualization_styles:
+  - mermaid: flowcharts, mind maps, sequence diagrams
+  - ascii_art: box diagrams, trees, matrices
+  - markdown_tables: comparison matrices, decision grids
+```
+
+## 📚 Documentation
+
+### Core Documentation
+- [Framework Library](frameworks/)
+- [Agent Specifications](agents/)
+- [Task Workflows](tasks/)
+- [Integration Guide](INTEGRATION_GUIDE.md)
+
+### Technical References
+- [Problem Pattern Library](data/problem-patterns.json)
+- [Assumption Tracker Schema](data/assumption-tracker.json)
+- [Template Specifications](templates/)
+
+## 🤝 Contributing
+
+We welcome contributions to improve the Problem Solver pack:
+
+### Areas for Contribution
+- **Problem Patterns** - Identify new recurring business problem types
+- **Framework Enhancements** - Improve existing methodologies
+- **Integration Examples** - Share successful cross-pack collaborations
+- **Visualization Tools** - Develop new representation methods
+- **Case Studies** - Document real-world successes
+
+### Contribution Process
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/new-pattern`)
+3. Make your changes with tests and documentation
+4. Submit a pull request with detailed description
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🆘 Support
+
+### Getting Help
+- **Documentation** - Check framework guides and integration docs
+- **Issues** - Report bugs or request features via GitHub Issues
+- **Discussions** - Join community discussions for best practices
+- **Examples** - Review case studies and integration examples
+
+### Community Resources
+- [GitHub Discussions](https://github.com/your-org/BMAD-METHOD/discussions)
+- [Documentation Wiki](https://github.com/your-org/BMAD-METHOD/wiki)
+- [Issue Tracker](https://github.com/your-org/BMAD-METHOD/issues)
+
+## 🗺️ Roadmap
+
+### Version 1.2 (Q2 2024)
+- [ ] Advanced pattern matching algorithms
+- [ ] Real-time collaboration features
+- [ ] Enhanced visualization capabilities
+- [ ] Mobile-responsive interfaces
+
+### Version 1.3 (Q4 2024)
+- [ ] Machine learning-powered pattern recognition
+- [ ] Automated assumption validation
+- [ ] Integration with external data sources
+- [ ] Multi-language framework support
+
+---
+
+**Built for BMAD-METHOD** • **Designed for systematic problem solving** • **Optimized for collaborative intelligence**
+
+*Transform your most complex challenges into clear pathways forward.*

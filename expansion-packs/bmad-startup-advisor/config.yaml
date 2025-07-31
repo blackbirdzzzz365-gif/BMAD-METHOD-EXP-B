@@ -4,7 +4,7 @@ pack:
   name: BMAD Startup Advisor
   version: 1.0.0
   description: Comprehensive startup advisory for early and growth stage companies
-  author: BMAD
+  author: BMAD Community
   tags:
     - startup
     - entrepreneurship
@@ -13,6 +13,17 @@ pack:
     - lean-startup
     - fundraising
     - product-market-fit
+  
+  slashPrefix: bmadsa
+  
+  agents:
+    - serial-entrepreneur
+    - vc-advisor
+    - growth-hacker
+  
+  primaryUseCase: |
+    Enable comprehensive startup advisory from ideation through exit, with focus on 
+    business model validation, fundraising, growth strategy, and scaling operations.
   
   capabilities:
     - business_model_validation

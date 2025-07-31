@@ -1,10 +1,59 @@
-name: bmad-strategy-consulting
-version: 1.0.0
-short-title: Strategy Consulting Pack
-description: >-
-  Elite Strategy Consulting expansion pack for BMad Method - McKinsey, BCG, and 
-  Bain-inspired strategic analysis, long-term planning, and organizational 
-  alignment. Provides frameworks, tools, and methodologies used by top-tier 
-  strategy consulting firms.
-author: BMad Community
-slashPrefix: bmadsc
+pack:
+  id: bmad-strategy-consulting
+  name: BMAD Strategy Consulting
+  version: 1.0.0
+  description: >-
+    Elite Strategy Consulting expansion pack for BMad Method - McKinsey, BCG, and 
+    Bain-inspired strategic analysis, long-term planning, and organizational 
+    alignment. Provides frameworks, tools, and methodologies used by top-tier 
+    strategy consulting firms.
+  author: BMAD Community
+  tags:
+    - strategy-consulting
+    - mckinsey-7s
+    - three-horizons
+    - transformation
+    - organizational-design
+    - digital-strategy
+    - executive-advisory
+  
+  slashPrefix: bmadsc
+  
+  agents:
+    - senior-partner
+    - strategy-consultant
+    - digital-strategist
+    - org-design-expert
+  
+  primaryUseCase: |
+    Enable elite strategy consulting capabilities for C-suite advisory, organizational 
+    transformation, and strategic planning using proven consulting methodologies.
+  
+  capabilities:
+    - strategic_analysis
+    - transformation_planning
+    - organizational_design
+    - competitive_strategy
+    - digital_strategy
+    - executive_advisory
+    - change_management
+  
+  dependencies:
+    required:
+      - bmad-core
+    recommended:
+      - bmad-market-researcher
+      - bmad-product-manager
+      - bmad-problem-solver
+      - bmad-pmo-agile
+  
+  integration_points:
+    - market_intelligence
+    - product_strategy
+    - problem_diagnosis
+    - execution_planning
+  
+  metadata:
+    min_bmad_version: "1.0.0"
+    last_updated: "2024-01-31"
+    stability: "stable"
