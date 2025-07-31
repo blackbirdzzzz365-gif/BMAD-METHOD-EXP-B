@@ -5,10 +5,9 @@ Six professional expansion packs for [BMAD-METHOD](https://github.com/bmadcode/B
 ## 📑 Table of Contents
 
 - [What's New](#-whats-new---v110)
-- [The Six Expansion Packs](#-the-six-expansion-packs)
-- [Quick Start](#-quick-start)
 - [When to Use Each Pack](#-when-to-use-each-pack)
 - [How They Work Together](#-how-they-work-together)
+- [Quick Start](#-quick-start)
 - [Real-World Use Cases](#-real-world-use-cases)
 - [Contributing](#-contributing)
 - [Complete Ecosystem Structure](#-complete-ecosystem-structure)
@@ -23,7 +22,7 @@ Six professional expansion packs for [BMAD-METHOD](https://github.com/bmadcode/B
 ### Enhanced with Multi-Agent Collaboration & Visual Frameworks
 All packs now include advanced capabilities: multi-agent consensus building, visual problem-solving with Mermaid diagrams, cross-pack integration, and adaptive complexity based on user expertise.
 
-## 📦 The Six Expansion Packs
+## 🎯 When to Use Each Pack
 
 ### 1. 🔬 Problem Solver Pack
 **What it does:** Systematic problem-solving through multi-agent collaboration and evidence-based analysis
@@ -155,14 +154,42 @@ All packs now include advanced capabilities: multi-agent consensus building, vis
 - **Business Model Canvas** - Comprehensive business design
 - **Fundraising Strategy** - Investment readiness and pitch development
 
-## 🔗 Advanced Integration Ecosystem
+### Quick Reference Table
 
-**Multi-Pack Collaboration Architecture**
-- Orchestrates all six packs for comprehensive business solutions
-- Multi-agent consensus building across domains
-- Visual problem-solving with Mermaid diagrams and structured thinking
-- Cross-pack communication protocols and data sharing
-- Adaptive complexity that adjusts to user expertise level
+| Use This Pack | When You Need To | Key Frameworks |
+|--------------|------------------|----------------|
+| **🔬 Problem Solver** | • Analyze complex challenges<br>• Build consensus on solutions<br>• Map systems and root causes<br>• Track assumptions | 5 Whys, Fishbone, Systems Thinking, Multi-Agent Consensus |
+| **📊 Market Researcher** | • Size markets (TAM/SAM/SOM)<br>• Map customer journeys<br>• Analyze competitors<br>• Scan environment (PESTEL) | PESTEL, Journey Mapping, Competitive Intel |
+| **🚀 Product Manager** | • Define product strategy<br>• Prioritize features (RICE)<br>• Set OKRs<br>• Platform decisions | JTBD, Platform vs Feature, North Star |
+| **🎯 Strategy Consulting** | • Transform business<br>• Manage portfolio<br>• Optimize operations<br>• Lead change | Three Horizons, Value Chain, McKinsey 7S |
+| **⚡ PMO Agile** | • Scale agile practices<br>• Coordinate ARTs<br>• Plan program increments<br>• Manage dependencies | SAFe, PI Planning, Agile Portfolio Management |
+| **💡 Startup Advisor** | • Validate business models<br>• Develop go-to-market<br>• Prepare for fundraising<br>• Scale operations | Lean Startup, Business Model Canvas, Growth Hacking |
+
+## 🤝 How They Work Together
+
+The six packs form an integrated ecosystem for comprehensive business problem-solving:
+
+```mermaid
+graph TB
+    PS[🔬 Problem Solver] --> |Problem Analysis| MR[📊 Market Research]
+    PS --> |Root Cause Analysis| PM[🚀 Product Management]
+    PS --> |Systems Thinking| SC[🎯 Strategy Consulting]
+    PS --> |Process Analysis| PMO[⚡ PMO Agile]
+    PS --> |Growth Challenges| SA[💡 Startup Advisor]
+    
+    MR -->|Market Insights| PM
+    PM -->|Product Strategy| SC
+    SC -->|Strategic Direction| PMO
+    PMO -->|Execution Framework| SA
+    SA -->|Innovation Feedback| PS
+    
+    PS -.->|Consensus Building| Integration[🔄 Multi-Pack Integration]
+    MR -.->|Research Data| Integration
+    PM -.->|Product Insights| Integration
+    SC -.->|Strategic Vision| Integration
+    PMO -.->|Execution Plans| Integration
+    SA -.->|Growth Strategy| Integration
+```
 
 ## 🚀 Quick Start
 
@@ -285,43 +312,6 @@ Use workflow: comprehensive-business-analysis
 
 System: "Orchestrating all six packs for systematic problem-solving"
 [Problem Analysis + Market Research + Product Strategy + Business Transformation + Agile Execution + Growth Strategy]
-```
-
-## 🎯 When to Use Each Pack
-
-| Use This Pack | When You Need To | Key Frameworks |
-|--------------|------------------|----------------|
-| **🔬 Problem Solver** | • Analyze complex challenges<br>• Build consensus on solutions<br>• Map systems and root causes<br>• Track assumptions | 5 Whys, Fishbone, Systems Thinking, Multi-Agent Consensus |
-| **📊 Market Researcher** | • Size markets (TAM/SAM/SOM)<br>• Map customer journeys<br>• Analyze competitors<br>• Scan environment (PESTEL) | PESTEL, Journey Mapping, Competitive Intel |
-| **🚀 Product Manager** | • Define product strategy<br>• Prioritize features (RICE)<br>• Set OKRs<br>• Platform decisions | JTBD, Platform vs Feature, North Star |
-| **🎯 Strategy Consulting** | • Transform business<br>• Manage portfolio<br>• Optimize operations<br>• Lead change | Three Horizons, Value Chain, McKinsey 7S |
-| **⚡ PMO Agile** | • Scale agile practices<br>• Coordinate ARTs<br>• Plan program increments<br>• Manage dependencies | SAFe, PI Planning, Agile Portfolio Management |
-| **💡 Startup Advisor** | • Validate business models<br>• Develop go-to-market<br>• Prepare for fundraising<br>• Scale operations | Lean Startup, Business Model Canvas, Growth Hacking |
-
-## 🤝 How They Work Together
-
-The six packs form an integrated ecosystem for comprehensive business problem-solving:
-
-```mermaid
-graph TB
-    PS[🔬 Problem Solver] --> |Problem Analysis| MR[📊 Market Research]
-    PS --> |Root Cause Analysis| PM[🚀 Product Management]
-    PS --> |Systems Thinking| SC[🎯 Strategy Consulting]
-    PS --> |Process Analysis| PMO[⚡ PMO Agile]
-    PS --> |Growth Challenges| SA[💡 Startup Advisor]
-    
-    MR -->|Market Insights| PM
-    PM -->|Product Strategy| SC
-    SC -->|Strategic Direction| PMO
-    PMO -->|Execution Framework| SA
-    SA -->|Innovation Feedback| PS
-    
-    PS -.->|Consensus Building| Integration[🔄 Multi-Pack Integration]
-    MR -.->|Research Data| Integration
-    PM -.->|Product Insights| Integration
-    SC -.->|Strategic Vision| Integration
-    PMO -.->|Execution Plans| Integration
-    SA -.->|Growth Strategy| Integration
 ```
 
 ## 🌍 Real-World Use Cases
