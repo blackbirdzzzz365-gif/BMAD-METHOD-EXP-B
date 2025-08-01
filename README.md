@@ -8,6 +8,7 @@ Six professional expansion packs for [BMAD-METHOD](https://github.com/bmadcode/B
 - [When to Use Each Pack](#-when-to-use-each-pack)
 - [How They Work Together](#-how-they-work-together)
 - [Quick Start](#-quick-start)
+- [Using with AI Platforms](#-using-with-ai-platforms)
 - [Real-World Use Cases](#-real-world-use-cases)
 - [Contributing](#-contributing)
 - [Complete Ecosystem Structure](#-complete-ecosystem-structure)
@@ -44,13 +45,13 @@ graph TB
     PS --> |Systems Thinking| SC[🎯 Strategy Consulting]
     PS --> |Process Analysis| PMO[⚡ PMO Agile]
     PS --> |Growth Challenges| SA[💡 Startup Advisor]
-    
+
     MR -->|Market Insights| PM
     PM -->|Product Strategy| SC
     SC -->|Strategic Direction| PMO
     PMO -->|Execution Framework| SA
     SA -->|Innovation Feedback| PS
-    
+
     PS -.->|Consensus Building| Integration[🔄 Multi-Pack Integration]
     MR -.->|Research Data| Integration
     PM -.->|Product Insights| Integration
@@ -180,6 +181,162 @@ Use workflow: comprehensive-business-analysis
 
 System: "Orchestrating all six packs for systematic problem-solving"
 [Problem Analysis + Market Research + Product Strategy + Business Transformation + Agile Execution + Growth Strategy]
+```
+
+## 🤖 Using with AI Platforms
+
+You can use BMAD-METHOD expansion packs with any AI platform. Here are simple instructions for the most popular ones:
+
+### Option 1: Google Gemini (with GEM)
+
+**Quick Start in 3 Steps:**
+
+1. **Open Google AI Studio (GEM)**
+   - Go to [makersuite.google.com](https://makersuite.google.com)
+   - Create a new chat
+
+2. **Load an Agent**
+   ```
+   Copy and paste this to activate a Problem Solver agent:
+
+   "I want you to act as Dr. Sarah Chen, a systems thinking expert with 20 years
+   of experience analyzing complex organizational systems. You see the big picture,
+   map relationships, identify feedback loops, and find leverage points in systems.
+
+   When I describe a problem, help me analyze it using systems thinking principles,
+   create visual diagrams when helpful, and identify root causes and leverage points."
+   ```
+
+3. **Start Your Session**
+   ```
+   Example: "Our customer retention is declining despite increased marketing spend"
+   ```
+
+**💡 Pro Tips for Gemini:**
+- Save your agent prompts as "Saved Prompts" in GEM for reuse
+- Use Gemini's long context window to paste entire agent files
+- Enable "Google Search" for real-time market data
+
+### Option 2: ChatGPT (with CustomGPT)
+
+**Create Your BMAD CustomGPT:**
+
+1. **Go to ChatGPT Settings**
+   - Navigate to "Explore GPTs" → "Create a GPT"
+   - Choose "Configure"
+
+2. **Set Up Your CustomGPT**
+   ```
+   Name: BMAD Business Strategy Team
+
+   Description: Professional business strategy and problem-solving team with
+   6 specialized expansion packs
+
+   Instructions:
+   You have access to 6 expansion packs:
+   - Problem Solver: Systems thinking and root cause analysis
+   - Market Researcher: Market analysis and customer insights
+   - Product Manager: Product strategy and roadmaps
+   - Strategy Consulting: Corporate strategy and transformation
+   - PMO Agile: Scaled agile and project management
+   - Startup Advisor: Startup guidance and growth hacking
+
+   When asked, activate the appropriate specialist and respond in their voice.
+   ```
+
+3. **Upload Knowledge Files**
+   - Download agent files from the expansion pack folders
+   - Upload to your CustomGPT's knowledge base
+   - Example: `bmad-problem-solver/agents/systems-thinker.md`
+
+**💡 Pro Tips for ChatGPT:**
+- Create separate CustomGPTs for each expansion pack for focused expertise
+- Use conversation starters like "Analyze my business problem" or "Help with market research"
+- Leverage GPT-4's code interpreter for data analysis
+
+### Option 3: Claude (with Projects)
+
+**Set Up a Claude Project:**
+
+1. **Create a New Project**
+   - Go to [claude.ai](https://claude.ai)
+   - Click "Projects" → "Create Project"
+   - Name it "BMAD Business Strategy"
+
+2. **Add Project Knowledge**
+   ```
+   Add these instructions to your project:
+
+   You are a BMAD-METHOD business strategy assistant with access to 6 expansion packs.
+   When I ask for help, identify which pack is most relevant and activate that specialist.
+
+   Available specialists:
+   • Dr. Sarah Chen (Systems Thinking) - Complex problem analysis
+   • Maya Patel (Market Research) - Market analysis and insights
+   • Alex Rivera (Product Management) - Product strategy
+   • Victoria Sterling (Strategy Consulting) - Corporate strategy
+   • Marcus Thompson (Agile Coach) - Scaled agile implementation
+   • Elena Martinez (Startup Advisor) - Startup guidance
+   ```
+
+3. **Upload Agent Files**
+   - Add agent markdown files to project knowledge
+   - Include framework files for deeper expertise
+   - Claude will reference these automatically
+
+**💡 Pro Tips for Claude:**
+- Use Claude's 200K context window to load multiple agents at once
+- Create project snippets for common workflows
+- Leverage Claude's analytical strengths for complex problems
+
+### 🎯 Platform Comparison
+
+| Feature | Gemini | ChatGPT | Claude |
+|---------|---------|---------|---------|
+| **Setup Complexity** | ⭐ Simple (copy-paste) | ⭐⭐ Moderate (CustomGPT) | ⭐⭐ Moderate (Projects) |
+| **Context Window** | 1M tokens | 128K tokens | 200K tokens |
+| **Best For** | Quick analysis, real-time data | Persistent agents, teamwork | Deep analysis, long documents |
+| **Multi-Agent Support** | Manual switching | Built into CustomGPT | Project-based |
+| **Cost** | Free tier available | Plus subscription | Pro subscription |
+
+### 🚀 Quick Agent Activation Prompts
+
+Copy and paste these to instantly activate any specialist:
+
+**Problem Solver:**
+```
+Activate Dr. Sarah Chen, systems thinking expert. Help me analyze complex
+problems using systems thinking, feedback loops, and root cause analysis.
+```
+
+**Market Researcher:**
+```
+Activate Maya Patel, market research lead. Help me understand market size,
+customer journeys, competitive landscape, and market opportunities.
+```
+
+**Product Manager:**
+```
+Activate Alex Rivera, product management expert. Help me with product strategy,
+feature prioritization, roadmaps, and jobs-to-be-done analysis.
+```
+
+**Strategy Consultant:**
+```
+Activate Victoria Sterling, senior strategy partner. Help me with corporate
+strategy, digital transformation, and organizational design.
+```
+
+**PMO Agile:**
+```
+Activate Marcus Thompson, agile coach. Help me implement scaled agile,
+improve team performance, and manage complex projects.
+```
+
+**Startup Advisor:**
+```
+Activate Elena Martinez, startup advisor. Help me validate business ideas,
+prepare for fundraising, and scale my startup.
 ```
 
 ## 🌍 Real-World Use Cases
@@ -324,7 +481,7 @@ workflows/
 - **Journey Mapping**: Complete customer experience visualization
 - **Competitive Intel**: Systematic competitor monitoring
 
-### Product Management Frameworks  
+### Product Management Frameworks
 - **Jobs-to-be-Done**: Why customers "hire" products
 - **Platform vs Feature**: Architecture decision matrix
 - **North Star Metrics**: Single metric that matters
@@ -402,7 +559,7 @@ workflows/
 ### Version 1.1.0 (Current) - Released Jun 2025
 **Major Enhancements:**
 - ✅ **Problem Solver Pack** - Multi-agent systematic problem analysis
-- ✅ **PMO Agile Pack** - Scaled agile framework implementation  
+- ✅ **PMO Agile Pack** - Scaled agile framework implementation
 - ✅ **Startup Advisor Pack** - Complete startup lifecycle guidance
 - ✅ **Multi-Agent Consensus** - Structured debate and agreement building
 - ✅ **Visual Problem Solving** - Mermaid diagrams and ASCII art
@@ -417,14 +574,6 @@ workflows/
 - Enhanced agent personality and interaction styles
 - Improved error handling and user feedback
 - Performance optimizations for multi-pack operations
-
-### Version 1.0.0 - Released Mar 2025
-**Initial Release:**
-- Market Researcher Pack
-- Product Manager Pack
-- Strategy Consulting Pack
-- Basic integration capabilities
-- 100+ templates and frameworks
 
 ## 🙏 Credits
 
