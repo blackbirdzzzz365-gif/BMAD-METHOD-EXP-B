@@ -1,0 +1,37 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Build outputs
+dist
+.svelte-kit
+build
+.vercel
+.netlify
+.cloudflare
+
+# Development
+.env
+.env.local
+.env.*.local
+*.log
+.DS_Store
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea
+
+# Testing
+coverage
+.nyc_output
+
+# Temporary files
+*.tmp
+*.temp
+.cache
+
+# Cloudflare
+.wrangler
+.mf

@@ -1,0 +1,60 @@
+{
+  "name": "bmad-web-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Web demo application for BMAD-METHOD agent interaction",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bookmark/BMAD-METHOD-EXP.git"
+  },
+  "keywords": [
+    "bmad",
+    "ai-agents",
+    "sveltekit",
+    "cloudflare-workers"
+  ],
+  "author": "BMad Community",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.15.1",
+  "scripts": {
+    "dev": "pnpm -r --parallel run dev",
+    "dev:web": "pnpm --filter @bmad/web dev",
+    "dev:worker": "pnpm --filter @bmad/worker dev",
+    "dev:server": "pnpm --filter @bmad/local-server dev",
+    "dev:docker": "docker-compose up",
+    "build": "pnpm -r run build",
+    "build:web": "pnpm --filter @bmad/web build",
+    "build:worker": "pnpm --filter @bmad/worker build",
+    "build:docker": "docker-compose build",
+    "preview": "pnpm --filter @bmad/web preview",
+    "check": "pnpm -r run check",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "test": "pnpm -r run test",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:debug": "playwright test --debug",
+    "typecheck": "pnpm -r run typecheck",
+    "deploy:cf": "./deployment/cloudflare/deploy.sh",
+    "upload:packs": "node ./deployment/cloudflare/upload-packs.js",
+    "clean": "pnpm -r run clean && rm -rf node_modules",
+    "setup": "pnpm install && pnpm build && cp .env.example .env.local"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.1",
+    "@types/node": "^20.11.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-svelte": "^2.35.1",
+    "playwright": "^1.54.1",
+    "prettier": "^3.2.4",
+    "prettier-plugin-svelte": "^3.1.2",
+    "typescript": "^5.3.3"
+  }
+}
