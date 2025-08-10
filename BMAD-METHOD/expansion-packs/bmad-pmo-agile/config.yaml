@@ -1,0 +1,56 @@
+pack:
+  id: bmad-pmo-agile
+  name: BMAD PMO Agile Excellence
+  version: 1.0.0
+  description: >-
+    Professional PMO with agile mindset using SAFe methodology for project and portfolio management. 
+    Enables agile transformations and provides risk management with ROAM methodology.
+  author: BMAD Community
+  tags:
+    - pmo
+    - agile
+    - safe
+    - project-management
+    - portfolio
+    - scrum
+    - transformation
+  
+  slashPrefix: pmo
+  
+  agents:
+    - agile-coach
+    - release-train-engineer
+    - portfolio-manager
+    - metrics-analyst
+  
+  primaryUseCase: |
+    Enable agile project management at team and portfolio levels using SAFe Essential framework.
+    Support agile transformations and provide risk management with ROAM methodology.
+  
+  capabilities:
+    - agile_transformation
+    - safe_implementation
+    - pi_planning
+    - portfolio_management
+    - risk_management
+    - flow_metrics
+    - sprint_coordination
+  
+  dependencies:
+    required:
+      - bmad-core
+    recommended:
+      - bmad-product-manager
+      - bmad-strategy-consulting
+      - bmad-market-researcher
+  
+  integration_points:
+    - backlog_refinement
+    - strategic_alignment
+    - market_insights
+    - sprint_execution
+  
+  metadata:
+    min_bmad_version: "1.0.0"
+    last_updated: "2024-01-31"
+    stability: "stable"

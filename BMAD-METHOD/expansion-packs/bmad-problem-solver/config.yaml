@@ -1,0 +1,86 @@
+pack:
+  id: bmad-problem-solver
+  name: BMAD Problem Solver
+  version: 1.1.0
+  description: >-
+    Comprehensive problem-solving expansion pack using mental models, systems thinking, 
+    and structured frameworks. Tackles complex business and operational problems with 
+    visual explanations, consensus-based analysis, and adaptive complexity levels.
+  author: BMAD Community
+  tags:
+    - problem-solving
+    - root-cause-analysis
+    - systems-thinking
+    - decision-making
+    - critical-thinking
+    - creative-solutions
+    - consensus-building
+    - visual-thinking
+  
+  slashPrefix: bmadps
+  
+  agents:
+    - systems-thinker
+    - first-principles
+    - critical-analyst
+    - creative-solver
+    - root-cause-analyst
+  
+  primaryUseCase: |
+    Enable systematic problem decomposition, root cause analysis, and consensus-based 
+    solution development through multi-agent collaboration and proven frameworks.
+  
+  capabilities:
+    - problem_decomposition
+    - root_cause_analysis
+    - systems_thinking
+    - decision_making
+    - visual_thinking
+    - pattern_recognition
+    - assumption_testing
+  
+  dependencies:
+    required:
+      - bmad-core
+    recommended:
+      - bmad-strategy-consulting
+      - bmad-product-manager
+      - bmad-startup-advisor
+      - bmad-pmo-agile
+  
+  integration_points:
+    - strategic_problems
+    - product_challenges
+    - startup_issues
+    - operational_problems
+  
+  core_frameworks:
+    classic:
+      - five_whys: Root cause analysis through iterative questioning
+      - fishbone_diagram: Cause and effect visualization
+      - swot_analysis: Strengths, Weaknesses, Opportunities, Threats
+      - force_field: Driving and restraining forces analysis
+      - pareto_principle: 80/20 analysis for prioritization
+    modern:
+      - design_thinking: Human-centered problem solving
+      - systems_mapping: Complex system visualization
+      - first_principles: Fundamental truth analysis
+      - mental_models: Charlie Munger's latticework
+      - cynefin: Problem complexity categorization
+  
+  visualization_styles:
+    - mermaid: flowcharts, mind maps, sequence diagrams
+    - ascii_art: box diagrams, trees, matrices
+    - markdown_tables: comparison matrices, decision grids
+    - emoji_enhanced: visual markers for quick scanning
+  
+  agent_coordination:
+    mode: consensus
+    process: collaborative_analysis
+    conflict_resolution: structured_debate
+    output_synthesis: unified_recommendations
+  
+  metadata:
+    min_bmad_version: "1.0.0"
+    last_updated: "2024-01-31"
+    stability: "stable"

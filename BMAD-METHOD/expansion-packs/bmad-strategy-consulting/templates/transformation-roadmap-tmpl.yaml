@@ -1,0 +1,365 @@
+template:
+  id: transformation-roadmap-template
+  name: Enterprise Transformation Roadmap
+  version: 1.0
+  output:
+    format: markdown
+    filename: docs/transformation-roadmap-{{organization}}.md
+    title: "Transformation Roadmap: {{organization}}"
+
+workflow:
+  mode: structured
+  instruction: Create comprehensive transformation roadmap with clear phases, workstreams, and governance
+
+sections:
+  - id: executive-overview
+    title: Transformation Overview
+    template: |
+      # {{organization}} Transformation Roadmap
+      
+      ## Executive Summary
+      
+      ### Transformation Vision
+      {{transformation_vision}}
+      
+      ### Strategic Objectives
+      1. {{objective_1}}
+      2. {{objective_2}}
+      3. {{objective_3}}
+      
+      ### Transformation Scope
+      - **Duration:** {{duration}} ({{start_date}} - {{end_date}})
+      - **Investment:** {{total_investment}}
+      - **Impacted Areas:** {{impacted_areas}}
+      - **Expected Value:** {{expected_value}}
+
+  - id: case-for-change
+    title: Case for Change
+    template: |
+      ## Why Transform Now
+      
+      ### External Drivers
+      - **Market:** {{market_driver}}
+      - **Competition:** {{competitive_driver}}
+      - **Technology:** {{technology_driver}}
+      - **Regulatory:** {{regulatory_driver}}
+      
+      ### Internal Imperatives
+      - **Performance:** {{performance_gap}}
+      - **Capability:** {{capability_gap}}
+      - **Culture:** {{culture_gap}}
+      - **Operating Model:** {{operating_model_gap}}
+      
+      ### Cost of Inaction
+      {{cost_of_inaction_narrative}}
+
+  - id: transformation-design
+    title: Transformation Design
+    sections:
+      - id: guiding-principles
+        title: Guiding Principles
+        template: |
+          ### Transformation Principles
+          
+          1. **{{principle_1}}**
+             - {{principle_1_description}}
+          
+          2. **{{principle_2}}**
+             - {{principle_2_description}}
+          
+          3. **{{principle_3}}**
+             - {{principle_3_description}}
+          
+          4. **{{principle_4}}**
+             - {{principle_4_description}}
+          
+          5. **{{principle_5}}**
+             - {{principle_5_description}}
+      
+      - id: target-state
+        title: Target State
+        template: |
+          ### From-To Transformation
+          
+          | Dimension | Current State | Target State | Key Changes |
+          |-----------|---------------|--------------|-------------|
+          | Strategy | {{current_strategy}} | {{target_strategy}} | {{strategy_changes}} |
+          | Operating Model | {{current_op_model}} | {{target_op_model}} | {{op_model_changes}} |
+          | Technology | {{current_tech}} | {{target_tech}} | {{tech_changes}} |
+          | Organization | {{current_org}} | {{target_org}} | {{org_changes}} |
+          | Culture | {{current_culture}} | {{target_culture}} | {{culture_changes}} |
+          | Capabilities | {{current_capabilities}} | {{target_capabilities}} | {{capability_changes}} |
+
+  - id: transformation-workstreams
+    title: Transformation Workstreams
+    repeatable: true
+    sections:
+      - id: workstream
+        title: "Workstream {{workstream_number}}: {{workstream_name}}"
+        template: |
+          ### {{workstream_name}}
+          
+          **Objective:** {{workstream_objective}}
+          
+          **Scope:** {{workstream_scope}}
+          
+          **Key Initiatives:**
+          1. {{initiative_1}}
+             - Description: {{initiative_1_desc}}
+             - Owner: {{initiative_1_owner}}
+             - Timeline: {{initiative_1_timeline}}
+          
+          2. {{initiative_2}}
+             - Description: {{initiative_2_desc}}
+             - Owner: {{initiative_2_owner}}
+             - Timeline: {{initiative_2_timeline}}
+          
+          3. {{initiative_3}}
+             - Description: {{initiative_3_desc}}
+             - Owner: {{initiative_3_owner}}
+             - Timeline: {{initiative_3_timeline}}
+          
+          **Dependencies:**
+          - {{dependency_1}}
+          - {{dependency_2}}
+          
+          **Success Metrics:**
+          - {{metric_1}}
+          - {{metric_2}}
+          - {{metric_3}}
+
+  - id: transformation-phases
+    title: Transformation Phases
+    sections:
+      - id: phase-overview
+        title: Phased Approach
+        template: |
+          ### Transformation Timeline
+          
+          ```
+          Phase 1: {{phase_1_name}} ({{phase_1_duration}})
+          ├── Focus: {{phase_1_focus}}
+          └── Outcomes: {{phase_1_outcomes}}
+          
+          Phase 2: {{phase_2_name}} ({{phase_2_duration}})
+          ├── Focus: {{phase_2_focus}}
+          └── Outcomes: {{phase_2_outcomes}}
+          
+          Phase 3: {{phase_3_name}} ({{phase_3_duration}})
+          ├── Focus: {{phase_3_focus}}
+          └── Outcomes: {{phase_3_outcomes}}
+          ```
+      
+      - id: phase-details
+        title: Phase Details
+        repeatable: true
+        template: |
+          ### Phase {{phase_number}}: {{phase_name}}
+          
+          **Duration:** {{phase_start}} - {{phase_end}}
+          
+          **Objectives:**
+          - {{phase_objective_1}}
+          - {{phase_objective_2}}
+          - {{phase_objective_3}}
+          
+          **Key Activities by Workstream:**
+          
+          | Workstream | Key Activities | Deliverables |
+          |------------|---------------|--------------|
+          | {{ws_1}} | {{ws_1_activities}} | {{ws_1_deliverables}} |
+          | {{ws_2}} | {{ws_2_activities}} | {{ws_2_deliverables}} |
+          | {{ws_3}} | {{ws_3_activities}} | {{ws_3_deliverables}} |
+          | {{ws_4}} | {{ws_4_activities}} | {{ws_4_deliverables}} |
+          
+          **Milestones:**
+          - {{milestone_1}}: {{milestone_1_date}}
+          - {{milestone_2}}: {{milestone_2_date}}
+          - {{milestone_3}}: {{milestone_3_date}}
+          
+          **Phase Gate Criteria:**
+          - [ ] {{gate_criteria_1}}
+          - [ ] {{gate_criteria_2}}
+          - [ ] {{gate_criteria_3}}
+
+  - id: change-management
+    title: Change Management Strategy
+    sections:
+      - id: stakeholder-impact
+        title: Stakeholder Impact Assessment
+        template: |
+          ### Stakeholder Impact and Engagement
+          
+          | Stakeholder Group | Impact Level | Current State | Engagement Strategy |
+          |-------------------|--------------|---------------|-------------------|
+          | {{stakeholder_1}} | {{impact_1}} | {{state_1}} | {{strategy_1}} |
+          | {{stakeholder_2}} | {{impact_2}} | {{state_2}} | {{strategy_2}} |
+          | {{stakeholder_3}} | {{impact_3}} | {{state_3}} | {{strategy_3}} |
+          | {{stakeholder_4}} | {{impact_4}} | {{state_4}} | {{strategy_4}} |
+          | {{stakeholder_5}} | {{impact_5}} | {{state_5}} | {{strategy_5}} |
+      
+      - id: change-approach
+        title: Change Management Approach
+        template: |
+          ### Change Strategy
+          
+          **Change Management Model:** {{change_model}}
+          
+          **Key Interventions:**
+          
+          1. **Leadership Alignment**
+             - {{leadership_intervention_1}}
+             - {{leadership_intervention_2}}
+          
+          2. **Communication**
+             - {{communication_approach}}
+             - Key Messages: {{key_messages}}
+             - Channels: {{communication_channels}}
+          
+          3. **Capability Building**
+             - {{capability_approach}}
+             - Priority Skills: {{priority_skills}}
+             - Training Plan: {{training_overview}}
+          
+          4. **Culture Change**
+             - {{culture_approach}}
+             - Behavior Changes: {{target_behaviors}}
+             - Reinforcement: {{reinforcement_mechanisms}}
+
+  - id: governance-structure
+    title: Governance Structure
+    template: |
+      ## Transformation Governance
+      
+      ### Governance Bodies
+      
+      #### Steering Committee
+      - **Role:** Strategic oversight and decisions
+      - **Chair:** {{steering_chair}}
+      - **Members:** {{steering_members}}
+      - **Frequency:** {{steering_frequency}}
+      
+      #### Transformation Office
+      - **Role:** Day-to-day management and coordination
+      - **Lead:** {{tmo_lead}}
+      - **Team Size:** {{tmo_size}}
+      - **Responsibilities:** {{tmo_responsibilities}}
+      
+      #### Workstream Leads
+      | Workstream | Lead | Team Size | Meeting Cadence |
+      |------------|------|-----------|-----------------|
+      | {{ws_1}} | {{lead_1}} | {{size_1}} | {{cadence_1}} |
+      | {{ws_2}} | {{lead_2}} | {{size_2}} | {{cadence_2}} |
+      | {{ws_3}} | {{lead_3}} | {{size_3}} | {{cadence_3}} |
+      
+      ### Decision Rights
+      | Decision Type | Workstream Lead | TMO | Steering Committee |
+      |---------------|-----------------|-----|-------------------|
+      | {{decision_1}} | {{rights_1_ws}} | {{rights_1_tmo}} | {{rights_1_sc}} |
+      | {{decision_2}} | {{rights_2_ws}} | {{rights_2_tmo}} | {{rights_2_sc}} |
+      | {{decision_3}} | {{rights_3_ws}} | {{rights_3_tmo}} | {{rights_3_sc}} |
+
+  - id: risk-management
+    title: Risk Management
+    template: |
+      ## Risk Management Framework
+      
+      ### Top Transformation Risks
+      
+      | Risk | Probability | Impact | Mitigation Strategy | Owner |
+      |------|-------------|--------|-------------------|-------|
+      | {{risk_1}} | {{prob_1}} | {{impact_1}} | {{mitigation_1}} | {{owner_1}} |
+      | {{risk_2}} | {{prob_2}} | {{impact_2}} | {{mitigation_2}} | {{owner_2}} |
+      | {{risk_3}} | {{prob_3}} | {{impact_3}} | {{mitigation_3}} | {{owner_3}} |
+      | {{risk_4}} | {{prob_4}} | {{impact_4}} | {{mitigation_4}} | {{owner_4}} |
+      | {{risk_5}} | {{prob_5}} | {{impact_5}} | {{mitigation_5}} | {{owner_5}} |
+      
+      ### Risk Monitoring Process
+      - **Review Frequency:** {{risk_review_frequency}}
+      - **Escalation Path:** {{risk_escalation}}
+      - **Early Warning Indicators:** {{early_warnings}}
+
+  - id: success-metrics
+    title: Success Metrics & Tracking
+    template: |
+      ## Transformation Scorecard
+      
+      ### Overall Health Metrics
+      | Metric | Baseline | Target | Current | Status |
+      |--------|----------|--------|---------|--------|
+      | {{metric_1}} | {{baseline_1}} | {{target_1}} | {{current_1}} | {{status_1}} |
+      | {{metric_2}} | {{baseline_2}} | {{target_2}} | {{current_2}} | {{status_2}} |
+      | {{metric_3}} | {{baseline_3}} | {{target_3}} | {{current_3}} | {{status_3}} |
+      
+      ### Workstream KPIs
+      
+      #### {{workstream_1}} KPIs
+      - {{ws1_kpi_1}}: {{ws1_kpi_1_target}}
+      - {{ws1_kpi_2}}: {{ws1_kpi_2_target}}
+      - {{ws1_kpi_3}}: {{ws1_kpi_3_target}}
+      
+      #### {{workstream_2}} KPIs
+      - {{ws2_kpi_1}}: {{ws2_kpi_1_target}}
+      - {{ws2_kpi_2}}: {{ws2_kpi_2_target}}
+      - {{ws2_kpi_3}}: {{ws2_kpi_3_target}}
+      
+      ### Value Realization Tracking
+      | Value Driver | Year 1 Target | Year 2 Target | Year 3 Target |
+      |--------------|---------------|---------------|---------------|
+      | {{value_driver_1}} | {{vd1_y1}} | {{vd1_y2}} | {{vd1_y3}} |
+      | {{value_driver_2}} | {{vd2_y1}} | {{vd2_y2}} | {{vd2_y3}} |
+      | {{value_driver_3}} | {{vd3_y1}} | {{vd3_y2}} | {{vd3_y3}} |
+
+  - id: critical-path
+    title: Critical Path & Dependencies
+    template: |
+      ## Critical Path Analysis
+      
+      ### Critical Path Items
+      1. {{critical_item_1}}
+         - Duration: {{duration_1}}
+         - Dependencies: {{dependencies_1}}
+         - Risk: {{risk_1}}
+      
+      2. {{critical_item_2}}
+         - Duration: {{duration_2}}
+         - Dependencies: {{dependencies_2}}
+         - Risk: {{risk_2}}
+      
+      3. {{critical_item_3}}
+         - Duration: {{duration_3}}
+         - Dependencies: {{dependencies_3}}
+         - Risk: {{risk_3}}
+      
+      ### Key Dependencies Map
+      ```
+      {{dependency_map_visual}}
+      ```
+
+  - id: first-100-days
+    title: First 100 Days Plan
+    template: |
+      ## First 100 Days: Building Momentum
+      
+      ### Days 1-30: Foundation
+      - [ ] {{day_1_30_action_1}}
+      - [ ] {{day_1_30_action_2}}
+      - [ ] {{day_1_30_action_3}}
+      - [ ] {{day_1_30_action_4}}
+      
+      ### Days 31-60: Mobilization
+      - [ ] {{day_31_60_action_1}}
+      - [ ] {{day_31_60_action_2}}
+      - [ ] {{day_31_60_action_3}}
+      - [ ] {{day_31_60_action_4}}
+      
+      ### Days 61-100: Acceleration
+      - [ ] {{day_61_100_action_1}}
+      - [ ] {{day_61_100_action_2}}
+      - [ ] {{day_61_100_action_3}}
+      - [ ] {{day_61_100_action_4}}
+      
+      ### 100-Day Outcomes
+      - {{outcome_1}}
+      - {{outcome_2}}
+      - {{outcome_3}}

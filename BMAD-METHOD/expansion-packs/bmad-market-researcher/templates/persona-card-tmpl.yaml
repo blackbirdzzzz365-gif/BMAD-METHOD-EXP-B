@@ -1,0 +1,205 @@
+template:
+  id: persona-card-template
+  name: Customer Persona Card
+  version: 1.0
+  output:
+    format: markdown
+    filename: docs/persona-{{persona_name}}.md
+    title: "Persona: {{persona_name}}"
+
+workflow:
+  mode: guided
+  instruction: Create a comprehensive persona that brings your target customer to life
+
+sections:
+  - id: persona-header
+    title: "{{persona_name}}"
+    template: |
+      > "{{characteristic_quote}}"
+      
+      **{{job_title}}** | {{age}} years old | {{location}}
+
+  - id: background
+    title: Background
+    sections:
+      - id: demographics
+        title: Demographics
+        template: |
+          - **Age:** {{age}}
+          - **Gender:** {{gender}}
+          - **Location:** {{location}}
+          - **Income:** {{income_range}}
+          - **Education:** {{education_level}}
+          - **Family:** {{family_status}}
+      - id: professional
+        title: Professional Background
+        template: |
+          - **Industry:** {{industry}}
+          - **Company Size:** {{company_size}}
+          - **Role:** {{job_title}}
+          - **Experience:** {{years_experience}}
+          - **Team Size:** {{team_size}}
+          - **Reports to:** {{reports_to}}
+
+  - id: psychographics
+    title: Psychographics
+    sections:
+      - id: goals
+        title: Goals & Motivations
+        instruction: List 3-5 primary goals
+        template: |
+          **Professional Goals:**
+          - {{professional_goal_1}}
+          - {{professional_goal_2}}
+          - {{professional_goal_3}}
+          
+          **Personal Goals:**
+          - {{personal_goal_1}}
+          - {{personal_goal_2}}
+      - id: values
+        title: Values & Priorities
+        template: |
+          **Core Values:**
+          - {{value_1}}
+          - {{value_2}}
+          - {{value_3}}
+          
+          **Decision Priorities:**
+          1. {{priority_1}}
+          2. {{priority_2}}
+          3. {{priority_3}}
+
+  - id: behaviors
+    title: Behaviors & Preferences
+    sections:
+      - id: daily-life
+        title: A Day in the Life
+        template: |
+          **Typical Day:**
+          {{daily_routine_description}}
+          
+          **Key Activities:**
+          - {{activity_1}}
+          - {{activity_2}}
+          - {{activity_3}}
+      - id: technology
+        title: Technology & Tools
+        template: |
+          **Devices:** {{devices_used}}
+          **Key Apps/Tools:** {{favorite_tools}}
+          **Tech Comfort:** {{tech_savviness_level}}
+          **Online Behavior:** {{online_habits}}
+      - id: information
+        title: Information Sources
+        template: |
+          **Preferred Channels:**
+          - {{info_source_1}}
+          - {{info_source_2}}
+          - {{info_source_3}}
+          
+          **Influencers:** {{key_influencers}}
+
+  - id: needs-pain-points
+    title: Needs & Pain Points
+    sections:
+      - id: jobs-to-be-done
+        title: Jobs to be Done
+        template: |
+          **Functional Jobs:**
+          - {{functional_job_1}}
+          - {{functional_job_2}}
+          
+          **Emotional Jobs:**
+          - {{emotional_job_1}}
+          - {{emotional_job_2}}
+          
+          **Social Jobs:**
+          - {{social_job_1}}
+      - id: pain-points
+        title: Frustrations & Pain Points
+        template: |
+          **Primary Frustrations:**
+          1. {{pain_point_1}}
+          2. {{pain_point_2}}
+          3. {{pain_point_3}}
+          
+          **Current Solutions:**
+          {{current_workarounds}}
+          
+          **Why They Fall Short:**
+          {{solution_gaps}}
+
+  - id: purchase-behavior
+    title: Purchase Behavior
+    sections:
+      - id: buying-process
+        title: Buying Process
+        template: |
+          **Trigger:** {{purchase_trigger}}
+          **Research Process:** {{research_behavior}}
+          **Decision Criteria:**
+          1. {{criteria_1}}
+          2. {{criteria_2}}
+          3. {{criteria_3}}
+          **Decision Makers:** {{decision_influencers}}
+          **Typical Timeline:** {{purchase_timeline}}
+      - id: objections
+        title: Common Objections
+        template: |
+          - {{objection_1}}
+          - {{objection_2}}
+          - {{objection_3}}
+
+  - id: product-relationship
+    title: Relationship with [Product/Service]
+    sections:
+      - id: value-perception
+        title: Value Perception
+        template: |
+          **What Success Looks Like:**
+          {{success_definition}}
+          
+          **Key Value Drivers:**
+          - {{value_driver_1}}
+          - {{value_driver_2}}
+          - {{value_driver_3}}
+          
+          **Willingness to Pay:** {{price_sensitivity}}
+      - id: usage-scenario
+        title: Usage Scenario
+        template: |
+          **Primary Use Cases:**
+          {{main_use_cases}}
+          
+          **Frequency:** {{usage_frequency}}
+          
+          **Context:** {{usage_context}}
+
+  - id: marketing-insights
+    title: Marketing & Sales Insights
+    sections:
+      - id: messaging
+        title: Messaging That Resonates
+        template: |
+          **Key Messages:**
+          - {{resonant_message_1}}
+          - {{resonant_message_2}}
+          
+          **Avoid:** {{messaging_turnoffs}}
+      - id: engagement
+        title: Engagement Preferences
+        template: |
+          **Preferred Channels:** {{marketing_channels}}
+          **Content Types:** {{content_preferences}}
+          **Best Times:** {{engagement_timing}}
+
+  - id: persona-summary
+    title: Quick Reference
+    template: |
+      **In One Sentence:** {{one_line_description}}
+      
+      **Key Insight:** {{primary_insight}}
+      
+      **How to Win Them Over:** {{winning_strategy}}
+      
+      **Biggest Risk:** {{main_risk}}

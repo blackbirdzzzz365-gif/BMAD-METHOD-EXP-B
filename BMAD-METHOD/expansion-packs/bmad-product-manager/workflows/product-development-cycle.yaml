@@ -1,0 +1,174 @@
+workflow:
+  id: product-development-cycle
+  name: Full Product Development Cycle
+  description: End-to-end product development from discovery to launch
+  type: sequential
+  
+phases:
+  - id: discovery
+    name: Discovery & Research
+    agents:
+      - product-lead
+      - product-analyst
+    tasks:
+      - task: Market and user research
+        description: Understand market opportunity and user needs
+        templates:
+          - market-research-report-tmpl (from market-researcher pack)
+      - task: jtbd-analysis
+        description: Identify jobs users are trying to accomplish
+      - task: Competitive analysis
+        description: Understand competitive landscape
+    outputs:
+      - Research insights document
+      - JTBD framework
+      - Opportunity assessment
+    duration: 2-4 weeks
+
+  - id: strategy
+    name: Strategy & Planning
+    agents:
+      - product-strategist
+      - product-lead
+    tasks:
+      - task: Define product vision and strategy
+        description: Set long-term direction
+      - task: okr-planning
+        description: Set objectives and key results
+      - task: platform-feature-analysis
+        description: Decide on platform vs feature approach
+    outputs:
+      - Product vision document
+      - OKRs for next period
+      - Strategic approach decision
+    duration: 1-2 weeks
+
+  - id: prioritization
+    name: Prioritization & Roadmapping
+    agents:
+      - product-lead
+      - product-analyst
+    tasks:
+      - task: rice-prioritization
+        description: Score and rank initiatives
+      - task: Create product roadmap
+        description: Timeline and sequencing
+      - task: Resource planning
+        description: Align resources with priorities
+    outputs:
+      - Prioritized backlog
+      - Product roadmap
+      - Resource allocation plan
+    duration: 1 week
+
+  - id: definition
+    name: Product Definition
+    agents:
+      - product-lead
+      - technical-pm
+    tasks:
+      - task: Write PRD
+        template: prd-tmpl
+        description: Detailed requirements documentation
+      - task: Technical specification
+        description: Architecture and technical approach
+      - task: Create user stories
+        description: Break down into development tasks
+    outputs:
+      - Product Requirements Document
+      - Technical specification
+      - User story backlog
+    duration: 2-3 weeks
+
+  - id: design
+    name: Design & Prototyping
+    agents:
+      - product-lead
+    collaboration:
+      - Design team
+    tasks:
+      - task: UX research and testing
+        description: Validate design concepts
+      - task: Create mockups and prototypes
+        description: Visual design and interactions
+      - task: Design review and iteration
+        description: Refine based on feedback
+    outputs:
+      - Design mockups
+      - Interactive prototype
+      - Design system updates
+    duration: 2-4 weeks
+
+  - id: development
+    name: Development & Testing
+    agents:
+      - technical-pm
+      - product-lead
+    tasks:
+      - task: Sprint planning
+        description: Plan development sprints
+      - task: Development execution
+        description: Build the product
+      - task: QA and testing
+        description: Ensure quality
+      - task: Beta testing
+        description: Test with real users
+    outputs:
+      - Working product increment
+      - Test results
+      - Beta feedback
+    duration: 4-12 weeks (varies)
+
+  - id: launch
+    name: Launch & Rollout
+    agents:
+      - product-lead
+      - product-analyst
+    tasks:
+      - task: Launch planning
+        description: Coordinate go-to-market
+      - task: Phased rollout
+        description: Gradual release
+      - task: Monitor metrics
+        description: Track success metrics
+      - task: Gather feedback
+        description: Collect user feedback
+    outputs:
+      - Launch plan
+      - Metrics dashboard
+      - User feedback summary
+    duration: 2-4 weeks
+
+  - id: optimization
+    name: Measure & Optimize
+    agents:
+      - product-analyst
+      - product-lead
+    tasks:
+      - task: Analyze performance metrics
+        description: Measure against success criteria
+      - task: A/B testing
+        description: Test improvements
+      - task: Iterate based on data
+        description: Make data-driven improvements
+      - task: Report on OKR progress
+        description: Update stakeholders
+    outputs:
+      - Performance report
+      - Optimization roadmap
+      - OKR progress update
+    duration: Ongoing
+
+success_criteria:
+  - Product shipped on schedule
+  - Success metrics achieved
+  - Positive user feedback
+  - Team satisfaction high
+  - Learning captured for next cycle
+
+checkpoints:
+  - After Discovery: Go/No-Go decision
+  - After Definition: Requirements approval
+  - After Design: Design approval
+  - Before Launch: Launch readiness review
+  - After Launch: Success criteria review

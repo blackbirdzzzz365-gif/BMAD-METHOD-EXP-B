@@ -1,0 +1,317 @@
+template:
+  id: product-requirements-document
+  name: Product Requirements Document (PRD)
+  version: 1.0
+  output:
+    format: markdown
+    filename: docs/prd-{{feature_name}}.md
+    title: "PRD: {{feature_name}}"
+
+workflow:
+  mode: structured
+  instruction: Create comprehensive PRD following best practices for clarity and completeness
+
+sections:
+  - id: header
+    title: Document Header
+    template: |
+      **Product Requirements Document**
+      
+      | Field | Value |
+      |-------|-------|
+      | Feature Name | {{feature_name}} |
+      | Author | {{author_name}} |
+      | Date Created | {{date_created}} |
+      | Last Updated | {{last_updated}} |
+      | Status | {{status}} |
+      | Version | {{version}} |
+      
+      **Reviewers:**
+      - [ ] {{reviewer_1}} - {{reviewer_1_role}}
+      - [ ] {{reviewer_2}} - {{reviewer_2_role}}
+      - [ ] {{reviewer_3}} - {{reviewer_3_role}}
+
+  - id: executive-summary
+    title: Executive Summary
+    instruction: Write 2-3 paragraphs summarizing the what, why, and impact
+    template: |
+      {{summary_paragraph_1}}
+      
+      {{summary_paragraph_2}}
+      
+      **Key Benefits:**
+      - {{benefit_1}}
+      - {{benefit_2}}
+      - {{benefit_3}}
+
+  - id: problem-statement
+    title: Problem Statement
+    sections:
+      - id: problem-description
+        title: Problem Description
+        template: |
+          {{problem_description}}
+          
+          **User Pain Points:**
+          1. {{pain_point_1}}
+          2. {{pain_point_2}}
+          3. {{pain_point_3}}
+      
+      - id: jobs-to-be-done
+        title: Jobs to be Done
+        template: |
+          **Primary Job:** {{primary_job}}
+          
+          **Related Jobs:**
+          - {{related_job_1}}
+          - {{related_job_2}}
+          
+          **Current Solutions:**
+          | Solution | Satisfaction | Limitations |
+          |----------|--------------|-------------|
+          | {{solution_1}} | {{satisfaction_1}} | {{limitations_1}} |
+          | {{solution_2}} | {{satisfaction_2}} | {{limitations_2}} |
+
+  - id: goals-success
+    title: Goals & Success Criteria
+    sections:
+      - id: objectives
+        title: Objectives
+        template: |
+          **Primary Objective:** {{primary_objective}}
+          
+          **Secondary Objectives:**
+          - {{secondary_objective_1}}
+          - {{secondary_objective_2}}
+      
+      - id: success-metrics
+        title: Success Metrics
+        template: |
+          | Metric | Current | Target | Measurement |
+          |--------|---------|--------|-------------|
+          | {{metric_1}} | {{current_1}} | {{target_1}} | {{how_measured_1}} |
+          | {{metric_2}} | {{current_2}} | {{target_2}} | {{how_measured_2}} |
+          | {{metric_3}} | {{current_3}} | {{target_3}} | {{how_measured_3}} |
+      
+      - id: okr-alignment
+        title: OKR Alignment
+        template: |
+          **Aligned OKR:** {{aligned_okr}}
+          **Key Result Impact:** {{kr_impact}}
+
+  - id: user-research
+    title: User & Research
+    sections:
+      - id: target-users
+        title: Target Users
+        template: |
+          **Primary Users:** {{primary_users}}
+          - Characteristics: {{primary_characteristics}}
+          - Use cases: {{primary_use_cases}}
+          
+          **Secondary Users:** {{secondary_users}}
+          - Characteristics: {{secondary_characteristics}}
+          - Use cases: {{secondary_use_cases}}
+      
+      - id: research-insights
+        title: Research Insights
+        template: |
+          **Research Conducted:**
+          - {{research_method_1}}: {{research_finding_1}}
+          - {{research_method_2}}: {{research_finding_2}}
+          
+          **Key Insights:**
+          1. {{insight_1}}
+          2. {{insight_2}}
+          3. {{insight_3}}
+
+  - id: solution-overview
+    title: Solution Overview
+    sections:
+      - id: proposed-solution
+        title: Proposed Solution
+        template: |
+          {{solution_description}}
+          
+          **Core Components:**
+          1. {{component_1}} - {{component_1_description}}
+          2. {{component_2}} - {{component_2_description}}
+          3. {{component_3}} - {{component_3_description}}
+      
+      - id: user-flow
+        title: User Flow
+        template: |
+          **Primary Flow:**
+          1. {{flow_step_1}}
+          2. {{flow_step_2}}
+          3. {{flow_step_3}}
+          4. {{flow_step_4}}
+          5. {{flow_step_5}}
+          
+          **Alternative Flows:**
+          - {{alt_flow_1}}
+          - {{alt_flow_2}}
+
+  - id: detailed-requirements
+    title: Detailed Requirements
+    sections:
+      - id: functional-requirements
+        title: Functional Requirements
+        instruction: List all functional requirements with priority
+        repeatable: true
+        template: |
+          **{{requirement_id}}: {{requirement_title}}**
+          - Description: {{requirement_description}}
+          - Priority: {{priority_level}}
+          - Acceptance Criteria:
+            - {{acceptance_criteria_1}}
+            - {{acceptance_criteria_2}}
+      
+      - id: non-functional-requirements
+        title: Non-Functional Requirements
+        template: |
+          **Performance:**
+          - {{performance_req_1}}
+          - {{performance_req_2}}
+          
+          **Security:**
+          - {{security_req_1}}
+          - {{security_req_2}}
+          
+          **Usability:**
+          - {{usability_req_1}}
+          - {{usability_req_2}}
+          
+          **Accessibility:**
+          - {{accessibility_req_1}}
+
+  - id: technical-considerations
+    title: Technical Considerations
+    sections:
+      - id: architecture
+        title: Architecture & Infrastructure
+        template: |
+          **Architectural Approach:** {{architecture_approach}}
+          
+          **Key Components:**
+          - {{tech_component_1}}
+          - {{tech_component_2}}
+          
+          **Infrastructure Needs:**
+          - {{infra_need_1}}
+          - {{infra_need_2}}
+      
+      - id: integrations
+        title: Integrations & Dependencies
+        template: |
+          **Internal Dependencies:**
+          - {{internal_dep_1}}
+          - {{internal_dep_2}}
+          
+          **External Integrations:**
+          - {{external_integration_1}}
+          - {{external_integration_2}}
+          
+          **API Requirements:**
+          - {{api_requirement_1}}
+          - {{api_requirement_2}}
+
+  - id: design-ux
+    title: Design & User Experience
+    sections:
+      - id: design-principles
+        title: Design Principles
+        template: |
+          1. {{design_principle_1}}
+          2. {{design_principle_2}}
+          3. {{design_principle_3}}
+      
+      - id: mockups
+        title: Mockups & Wireframes
+        template: |
+          **Key Screens:**
+          - {{screen_1}}: {{screen_1_description}}
+          - {{screen_2}}: {{screen_2_description}}
+          - {{screen_3}}: {{screen_3_description}}
+          
+          **Interaction Patterns:**
+          - {{interaction_pattern_1}}
+          - {{interaction_pattern_2}}
+
+  - id: launch-strategy
+    title: Launch Strategy
+    sections:
+      - id: rollout-plan
+        title: Rollout Plan
+        template: |
+          **Phase 1 - Beta ({{beta_timeline}}):**
+          - Target: {{beta_target}}
+          - Success Criteria: {{beta_success}}
+          
+          **Phase 2 - Limited Release ({{limited_timeline}}):**
+          - Target: {{limited_target}}
+          - Success Criteria: {{limited_success}}
+          
+          **Phase 3 - General Availability ({{ga_timeline}}):**
+          - Target: All users
+          - Success Criteria: {{ga_success}}
+      
+      - id: communication-plan
+        title: Communication Plan
+        template: |
+          **Internal Communication:**
+          - {{internal_comm_1}}
+          - {{internal_comm_2}}
+          
+          **External Communication:**
+          - {{external_comm_1}}
+          - {{external_comm_2}}
+
+  - id: risks-mitigation
+    title: Risks & Mitigation
+    sections:
+      - id: risk-analysis
+        title: Risk Analysis
+        repeatable: true
+        template: |
+          **Risk:** {{risk_description}}
+          - Probability: {{probability}}
+          - Impact: {{impact}}
+          - Mitigation: {{mitigation_strategy}}
+
+  - id: timeline-resources
+    title: Timeline & Resources
+    sections:
+      - id: timeline
+        title: Timeline
+        template: |
+          | Milestone | Date | Dependencies |
+          |-----------|------|--------------|
+          | {{milestone_1}} | {{date_1}} | {{dependencies_1}} |
+          | {{milestone_2}} | {{date_2}} | {{dependencies_2}} |
+          | {{milestone_3}} | {{date_3}} | {{dependencies_3}} |
+          | {{milestone_4}} | {{date_4}} | {{dependencies_4}} |
+      
+      - id: resources
+        title: Resource Requirements
+        template: |
+          **Engineering:** {{eng_resources}}
+          **Design:** {{design_resources}}
+          **Product:** {{product_resources}}
+          **Other:** {{other_resources}}
+
+  - id: appendices
+    title: Appendices
+    sections:
+      - id: references
+        title: References
+        template: |
+          - {{reference_1}}
+          - {{reference_2}}
+          - {{reference_3}}
+      
+      - id: glossary
+        title: Glossary
+        template: |
+          - **{{term_1}}:** {{definition_1}}
+          - **{{term_2}}:** {{definition_2}}

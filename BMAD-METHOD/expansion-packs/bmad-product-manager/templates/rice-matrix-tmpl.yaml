@@ -1,0 +1,246 @@
+template:
+  id: rice-prioritization-matrix
+  name: RICE Prioritization Matrix
+  version: 1.0
+  output:
+    format: markdown
+    filename: docs/rice-prioritization-{{date}}.md
+    title: "RICE Prioritization: {{project_name}}"
+
+workflow:
+  mode: structured
+  instruction: Create comprehensive RICE analysis with transparent scoring and clear recommendations
+
+sections:
+  - id: header
+    title: RICE Prioritization Overview
+    template: |
+      # RICE Prioritization Analysis
+      
+      **Project:** {{project_name}}
+      **Date:** {{analysis_date}}
+      **Analyst:** {{analyst_name}}
+      **Stakeholders:** {{stakeholder_list}}
+      
+      ## Context
+      {{prioritization_context}}
+      
+      ## Methodology
+      **RICE Score = (Reach × Impact × Confidence) / Effort**
+      
+      - **Reach:** # of users impacted per {{time_period}}
+      - **Impact:** Scale of 0.25 (minimal) to 3 (massive)
+      - **Confidence:** 0-100% certainty in estimates
+      - **Effort:** Person-months required
+
+  - id: executive-summary
+    title: Executive Summary
+    template: |
+      ## Key Findings
+      
+      **Top 3 Priorities:**
+      1. {{top_priority_1}} (Score: {{score_1}})
+      2. {{top_priority_2}} (Score: {{score_2}})
+      3. {{top_priority_3}} (Score: {{score_3}})
+      
+      **Total Initiatives Evaluated:** {{total_initiatives}}
+      **Recommended for Q{{quarter}}:** {{recommended_count}}
+      **Total Effort Required:** {{total_effort}} person-months
+      
+      **Strategic Insights:**
+      {{strategic_insights}}
+
+  - id: scoring-criteria
+    title: Detailed Scoring Criteria
+    template: |
+      ## Scoring Guidelines Used
+      
+      ### Reach Calculation
+      {{reach_methodology}}
+      
+      **User Segments:**
+      - Total Users: {{total_users}}
+      - Power Users: {{power_users}} ({{power_user_percentage}}%)
+      - Regular Users: {{regular_users}} ({{regular_user_percentage}}%)
+      - Occasional Users: {{occasional_users}} ({{occasional_user_percentage}}%)
+      
+      ### Impact Scale
+      | Score | Description | Examples |
+      |-------|-------------|----------|
+      | 3.0 | Massive positive impact | {{massive_impact_example}} |
+      | 2.0 | High positive impact | {{high_impact_example}} |
+      | 1.0 | Medium positive impact | {{medium_impact_example}} |
+      | 0.5 | Low positive impact | {{low_impact_example}} |
+      | 0.25 | Minimal impact | {{minimal_impact_example}} |
+      
+      ### Confidence Factors
+      **High Confidence (80-100%):**
+      - {{high_confidence_factor_1}}
+      - {{high_confidence_factor_2}}
+      
+      **Medium Confidence (50-79%):**
+      - {{medium_confidence_factor_1}}
+      - {{medium_confidence_factor_2}}
+      
+      **Low Confidence (20-49%):**
+      - {{low_confidence_factor_1}}
+      - {{low_confidence_factor_2}}
+      
+      ### Effort Estimation
+      **Includes:** Design, Development, QA, Deployment
+      **Team Composition:** {{team_composition}}
+
+  - id: rice-matrix
+    title: RICE Scoring Matrix
+    template: |
+      ## Complete RICE Matrix
+      
+      | # | Initiative | Reach | Impact | Confidence | Effort | RICE Score | Rank |
+      |---|------------|-------|---------|------------|--------|------------|------|
+      | 1 | {{initiative_1}} | {{reach_1}} | {{impact_1}} | {{confidence_1}}% | {{effort_1}} | {{rice_1}} | {{rank_1}} |
+      | 2 | {{initiative_2}} | {{reach_2}} | {{impact_2}} | {{confidence_2}}% | {{effort_2}} | {{rice_2}} | {{rank_2}} |
+      | 3 | {{initiative_3}} | {{reach_3}} | {{impact_3}} | {{confidence_3}}% | {{effort_3}} | {{rice_3}} | {{rank_3}} |
+      | 4 | {{initiative_4}} | {{reach_4}} | {{impact_4}} | {{confidence_4}}% | {{effort_4}} | {{rice_4}} | {{rank_4}} |
+      | 5 | {{initiative_5}} | {{reach_5}} | {{impact_5}} | {{confidence_5}}% | {{effort_5}} | {{rice_5}} | {{rank_5}} |
+
+  - id: detailed-analysis
+    title: Detailed Initiative Analysis
+    repeatable: true
+    sections:
+      - id: initiative-detail
+        title: "{{initiative_name}} (Rank #{{rank}})"
+        template: |
+          ### {{initiative_name}}
+          **RICE Score:** {{rice_score}} | **Priority:** {{priority_level}}
+          
+          **Description:** {{initiative_description}}
+          
+          #### Scoring Rationale
+          
+          **Reach ({{reach_value}}):**
+          - User Segment: {{affected_segment}}
+          - Usage Frequency: {{usage_frequency}}
+          - Calculation: {{reach_calculation}}
+          
+          **Impact ({{impact_value}}):**
+          - Problem Severity: {{problem_severity}}
+          - Improvement Expected: {{improvement_expected}}
+          - Strategic Value: {{strategic_value}}
+          
+          **Confidence ({{confidence_value}}%):**
+          - Data Quality: {{data_quality}}
+          - Previous Experience: {{previous_experience}}
+          - Unknowns: {{key_unknowns}}
+          
+          **Effort ({{effort_value}} PM):**
+          - Design: {{design_effort}} PM
+          - Development: {{dev_effort}} PM
+          - QA/Testing: {{qa_effort}} PM
+          - Release: {{release_effort}} PM
+          
+          **Dependencies & Risks:**
+          - {{dependency_1}}
+          - {{risk_1}}
+
+  - id: sensitivity-analysis
+    title: Sensitivity Analysis
+    template: |
+      ## Sensitivity Analysis
+      
+      ### High Sensitivity Initiatives
+      Initiatives where small changes in inputs significantly affect ranking:
+      
+      | Initiative | Original Rank | -20% Reach | -1 Impact Level | +50% Effort |
+      |------------|--------------|------------|-----------------|-------------|
+      | {{sensitive_1}} | {{orig_rank_1}} | {{reach_rank_1}} | {{impact_rank_1}} | {{effort_rank_1}} |
+      | {{sensitive_2}} | {{orig_rank_2}} | {{reach_rank_2}} | {{impact_rank_2}} | {{effort_rank_2}} |
+      
+      ### Robust Priorities
+      Initiatives that remain high priority under various scenarios:
+      1. {{robust_1}}
+      2. {{robust_2}}
+      3. {{robust_3}}
+
+  - id: strategic-adjustments
+    title: Strategic Adjustments
+    template: |
+      ## Strategic Considerations
+      
+      ### Adjustments Made
+      
+      | Initiative | RICE Rank | Adjusted Rank | Reason |
+      |------------|-----------|---------------|---------|
+      | {{adjusted_1}} | {{rice_rank_1}} | {{new_rank_1}} | {{reason_1}} |
+      | {{adjusted_2}} | {{rice_rank_2}} | {{new_rank_2}} | {{reason_2}} |
+      
+      ### Strategic Factors Considered
+      - **Technical Debt:** {{tech_debt_consideration}}
+      - **Platform Investment:** {{platform_consideration}}
+      - **Competitive Response:** {{competitive_consideration}}
+      - **Risk Mitigation:** {{risk_consideration}}
+      - **Dependencies:** {{dependency_consideration}}
+
+  - id: roadmap-recommendation
+    title: Roadmap Recommendation
+    template: |
+      ## Recommended Roadmap
+      
+      ### Q{{current_quarter}} (Current)
+      **Capacity:** {{q_current_capacity}} PM
+      **Allocated Initiatives:**
+      1. {{q_current_init_1}} ({{q_current_effort_1}} PM)
+      2. {{q_current_init_2}} ({{q_current_effort_2}} PM)
+      3. {{q_current_init_3}} ({{q_current_effort_3}} PM)
+      **Total:** {{q_current_total}} PM
+      
+      ### Q{{next_quarter}} (Next)
+      **Capacity:** {{q_next_capacity}} PM
+      **Planned Initiatives:**
+      1. {{q_next_init_1}} ({{q_next_effort_1}} PM)
+      2. {{q_next_init_2}} ({{q_next_effort_2}} PM)
+      **Total:** {{q_next_total}} PM
+      
+      ### Backlog (Future Consideration)
+      {{backlog_items}}
+
+  - id: success-metrics
+    title: Success Metrics & Tracking
+    template: |
+      ## Success Tracking Plan
+      
+      ### Key Metrics to Monitor
+      
+      | Initiative | Primary Metric | Target | Measurement Method |
+      |------------|---------------|--------|-------------------|
+      | {{init_1}} | {{metric_1}} | {{target_1}} | {{method_1}} |
+      | {{init_2}} | {{metric_2}} | {{target_2}} | {{method_2}} |
+      | {{init_3}} | {{metric_3}} | {{target_3}} | {{method_3}} |
+      
+      ### Review Cadence
+      - **Weekly:** {{weekly_review}}
+      - **Monthly:** {{monthly_review}}
+      - **Quarterly:** {{quarterly_review}}
+
+  - id: appendices
+    title: Appendices
+    sections:
+      - id: methodology-notes
+        title: Methodology Notes
+        template: |
+          ### Data Sources
+          - {{data_source_1}}
+          - {{data_source_2}}
+          - {{data_source_3}}
+          
+          ### Assumptions Made
+          - {{assumption_1}}
+          - {{assumption_2}}
+          - {{assumption_3}}
+      
+      - id: stakeholder-input
+        title: Stakeholder Input
+        template: |
+          ### Stakeholder Feedback Incorporated
+          - **{{stakeholder_1}}:** {{feedback_1}}
+          - **{{stakeholder_2}}:** {{feedback_2}}
+          - **{{stakeholder_3}}:** {{feedback_3}}

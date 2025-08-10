@@ -1,0 +1,48 @@
+workflow:
+  id: quick-market-assessment
+  name: Quick Market Assessment
+  description: Rapid market evaluation for initial go/no-go decisions
+  type: parallel
+  
+phases:
+  - id: rapid-assessment
+    name: Rapid Market Assessment
+    agents:
+      - market-research-lead
+      - data-analyst
+    parallel_tasks:
+      - task: Quick market sizing
+        description: High-level TAM/SAM estimates
+        timeframe: 2-4 hours
+      - task: Competitor scan
+        description: Identify main players and positioning
+        timeframe: 2-3 hours
+      - task: Customer needs assessment
+        description: Key pain points and needs
+        timeframe: 2-3 hours
+    outputs:
+      - Market size estimates
+      - Competitive landscape overview
+      - Customer needs summary
+
+  - id: opportunity-evaluation
+    name: Quick Opportunity Evaluation
+    agents:
+      - market-research-lead
+    tasks:
+      - task: Synthesize findings
+        description: Integrate parallel research streams
+      - task: Identify key opportunities and risks
+        description: High-level assessment
+      - task: Make go/no-go recommendation
+        description: Based on initial findings
+    outputs:
+      - Opportunity assessment
+      - Risk factors
+      - Go/no-go recommendation
+      - Next steps if "go"
+
+success_criteria:
+  - Completed within 1-2 days
+  - Sufficient data for initial decision
+  - Clear next steps identified

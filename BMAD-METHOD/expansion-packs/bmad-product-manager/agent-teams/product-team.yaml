@@ -1,0 +1,82 @@
+team:
+  id: product-management-team
+  name: Product Management Team
+  description: Complete product team for full lifecycle management
+  
+agents:
+  - id: product-lead
+    role: Product Manager & Team Lead
+    responsibilities:
+      - Overall product strategy and vision
+      - Stakeholder management
+      - Feature prioritization
+      - PRD creation
+      - Cross-functional coordination
+    when_active: Always - leads all product activities
+    
+  - id: product-strategist
+    role: Product Strategy Director
+    responsibilities:
+      - Long-term vision and strategy
+      - Market positioning
+      - Platform architecture decisions
+      - Competitive strategy
+      - Innovation planning
+    when_active: During strategic planning and major decisions
+    
+  - id: product-analyst
+    role: Product Analytics Lead
+    responsibilities:
+      - Metrics definition and tracking
+      - A/B test design
+      - Data analysis and insights
+      - Funnel optimization
+      - Performance reporting
+    when_active: During discovery, launch, and optimization phases
+    
+  - id: technical-pm
+    role: Technical Product Manager
+    responsibilities:
+      - Technical specifications
+      - API design
+      - Platform capabilities
+      - Engineering collaboration
+      - Infrastructure planning
+    when_active: During technical design and implementation
+
+collaboration_model:
+  leadership: product-lead
+  communication: All agents collaborate through product-lead
+  handoffs:
+    - from: product-strategist
+      to: product-lead
+      trigger: Strategy defined
+    - from: product-lead
+      to: technical-pm
+      trigger: PRD approved
+    - from: technical-pm
+      to: product-lead
+      trigger: Technical spec complete
+    - from: product-analyst
+      to: product-lead
+      trigger: Metrics insights ready
+
+integration_points:
+  - with: market-researcher
+    when: Discovery phase
+    purpose: Market analysis and user insights
+  - with: architect
+    when: Technical design
+    purpose: System architecture
+  - with: dev
+    when: Implementation
+    purpose: Feature development
+  - with: qa
+    when: Testing phase
+    purpose: Quality assurance
+
+workflows:
+  - product-development-cycle
+  - quick-feature-assessment
+  - platform-evaluation
+  - quarterly-planning

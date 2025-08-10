@@ -1,0 +1,375 @@
+template:
+  id: strategy-presentation-deck
+  name: Executive Strategy Presentation
+  version: 1.0
+  output:
+    format: markdown
+    filename: docs/strategy-deck-{{client_name}}.md
+    title: "Strategic Plan: {{client_name}}"
+
+workflow:
+  mode: structured
+  instruction: Create McKinsey/BCG-style executive strategy presentation
+
+sections:
+  - id: title-slide
+    title: Title Slide
+    template: |
+      # {{presentation_title}}
+      ## {{subtitle}}
+      
+      **Prepared for:** {{client_executive_team}}
+      **Date:** {{presentation_date}}
+      **Confidential**
+
+  - id: executive-summary
+    title: Executive Summary
+    template: |
+      ## Executive Summary
+      
+      ### The Situation
+      {{situation_summary}}
+      
+      ### Key Findings
+      1. {{key_finding_1}}
+      2. {{key_finding_2}}
+      3. {{key_finding_3}}
+      
+      ### Strategic Recommendation
+      {{strategic_recommendation}}
+      
+      ### Expected Impact
+      - **Financial:** {{financial_impact}}
+      - **Market Position:** {{market_impact}}
+      - **Organizational:** {{org_impact}}
+
+  - id: agenda
+    title: Today's Discussion
+    template: |
+      ## Today's Discussion
+      
+      1. **Strategic Context** - Where we are today
+      2. **Market Dynamics** - Forces shaping our future
+      3. **Strategic Options** - Paths forward
+      4. **Recommended Strategy** - Our proposed direction
+      5. **Implementation Roadmap** - How we get there
+      6. **Financial Implications** - Investment and returns
+      7. **Next Steps** - Immediate actions
+
+  - id: strategic-context
+    title: Strategic Context
+    sections:
+      - id: current-performance
+        title: Current Performance Signals Need for Change
+        template: |
+          ## {{section_title}}
+          
+          | Metric | Current | vs. Plan | vs. Competition |
+          |--------|---------|----------|-----------------|
+          | Revenue Growth | {{revenue_growth}}% | {{revenue_variance}} | {{revenue_vs_comp}} |
+          | Market Share | {{market_share}}% | {{share_variance}} | {{share_vs_comp}} |
+          | EBITDA Margin | {{ebitda_margin}}% | {{margin_variance}} | {{margin_vs_comp}} |
+          | Customer NPS | {{nps_score}} | {{nps_variance}} | {{nps_vs_comp}} |
+          
+          **Key Message:** {{performance_narrative}}
+      
+      - id: burning-platform
+        title: The Burning Platform
+        template: |
+          ## {{section_title}}
+          
+          ### External Pressures
+          - {{external_pressure_1}}
+          - {{external_pressure_2}}
+          - {{external_pressure_3}}
+          
+          ### Internal Challenges
+          - {{internal_challenge_1}}
+          - {{internal_challenge_2}}
+          - {{internal_challenge_3}}
+          
+          > **"{{compelling_quote}}"**
+          > - {{quote_source}}
+
+  - id: market-dynamics
+    title: Market Forces Analysis
+    sections:
+      - id: market-trends
+        title: Key Market Trends Reshaping Our Industry
+        template: |
+          ## {{section_title}}
+          
+          ### Trend 1: {{trend_1_name}}
+          - **Impact:** {{trend_1_impact}}
+          - **Timeline:** {{trend_1_timeline}}
+          - **Implications:** {{trend_1_implications}}
+          
+          ### Trend 2: {{trend_2_name}}
+          - **Impact:** {{trend_2_impact}}
+          - **Timeline:** {{trend_2_timeline}}
+          - **Implications:** {{trend_2_implications}}
+          
+          ### Trend 3: {{trend_3_name}}
+          - **Impact:** {{trend_3_impact}}
+          - **Timeline:** {{trend_3_timeline}}
+          - **Implications:** {{trend_3_implications}}
+      
+      - id: competitive-landscape
+        title: Competitive Landscape is Intensifying
+        template: |
+          ## {{section_title}}
+          
+          ### Competitive Positioning Map
+          {{competitive_positioning_description}}
+          
+          | Competitor | Strategy | Strengths | Our Advantage |
+          |------------|----------|-----------|---------------|
+          | {{comp_1}} | {{comp_1_strategy}} | {{comp_1_strengths}} | {{our_adv_1}} |
+          | {{comp_2}} | {{comp_2_strategy}} | {{comp_2_strengths}} | {{our_adv_2}} |
+          | {{comp_3}} | {{comp_3_strategy}} | {{comp_3_strengths}} | {{our_adv_3}} |
+
+  - id: strategic-options
+    title: Strategic Options
+    sections:
+      - id: options-overview
+        title: We Have Evaluated Three Strategic Options
+        template: |
+          ## {{section_title}}
+          
+          | Option | Core Idea | Potential Value | Risk Level | Investment |
+          |--------|-----------|-----------------|------------|------------|
+          | **Option A:** {{option_a_name}} | {{option_a_idea}} | {{option_a_value}} | {{option_a_risk}} | {{option_a_invest}} |
+          | **Option B:** {{option_b_name}} | {{option_b_idea}} | {{option_b_value}} | {{option_b_risk}} | {{option_b_invest}} |
+          | **Option C:** {{option_c_name}} | {{option_c_idea}} | {{option_c_value}} | {{option_c_risk}} | {{option_c_invest}} |
+      
+      - id: option-deep-dive
+        title: Strategic Option Deep Dive
+        repeatable: true
+        template: |
+          ### Option {{option_number}}: {{option_name}}
+          
+          **Strategic Rationale**
+          {{option_rationale}}
+          
+          **Key Initiatives**
+          1. {{initiative_1}}
+          2. {{initiative_2}}
+          3. {{initiative_3}}
+          
+          **Value Creation**
+          - Revenue Impact: {{revenue_impact}}
+          - Cost Impact: {{cost_impact}}
+          - Strategic Value: {{strategic_value}}
+          
+          **Implementation Requirements**
+          - Capabilities: {{capability_needs}}
+          - Investment: {{investment_needs}}
+          - Timeline: {{timeline}}
+          
+          **Key Risks**
+          - {{risk_1}}
+          - {{risk_2}}
+
+  - id: recommended-strategy
+    title: Recommended Strategy
+    sections:
+      - id: recommendation
+        title: Our Recommendation - {{recommended_option}}
+        template: |
+          ## {{section_title}}
+          
+          ### Why This Strategy Wins
+          1. **{{win_reason_1}}**
+             - {{win_reason_1_detail}}
+          
+          2. **{{win_reason_2}}**
+             - {{win_reason_2_detail}}
+          
+          3. **{{win_reason_3}}**
+             - {{win_reason_3_detail}}
+          
+          ### Strategic Pillars
+          {{strategic_pillars_visual}}
+          
+          **Pillar 1:** {{pillar_1_name}}
+          - {{pillar_1_description}}
+          
+          **Pillar 2:** {{pillar_2_name}}
+          - {{pillar_2_description}}
+          
+          **Pillar 3:** {{pillar_3_name}}
+          - {{pillar_3_description}}
+      
+      - id: target-state
+        title: Target State Vision
+        template: |
+          ### From... To... Vision
+          
+          | Dimension | From (Today) | To ({{target_year}}) |
+          |-----------|--------------|----------------------|
+          | Market Position | {{current_position}} | {{target_position}} |
+          | Business Model | {{current_model}} | {{target_model}} |
+          | Capabilities | {{current_capabilities}} | {{target_capabilities}} |
+          | Culture | {{current_culture}} | {{target_culture}} |
+          | Financial Performance | {{current_financial}} | {{target_financial}} |
+
+  - id: implementation-roadmap
+    title: Implementation Roadmap
+    sections:
+      - id: phases
+        title: Three-Phase Transformation Journey
+        template: |
+          ## {{section_title}}
+          
+          ### Phase 1: {{phase_1_name}} ({{phase_1_timeline}})
+          **Focus:** {{phase_1_focus}}
+          
+          Key Initiatives:
+          - {{phase_1_initiative_1}}
+          - {{phase_1_initiative_2}}
+          - {{phase_1_initiative_3}}
+          
+          **Success Metrics:** {{phase_1_metrics}}
+          
+          ### Phase 2: {{phase_2_name}} ({{phase_2_timeline}})
+          **Focus:** {{phase_2_focus}}
+          
+          Key Initiatives:
+          - {{phase_2_initiative_1}}
+          - {{phase_2_initiative_2}}
+          - {{phase_2_initiative_3}}
+          
+          **Success Metrics:** {{phase_2_metrics}}
+          
+          ### Phase 3: {{phase_3_name}} ({{phase_3_timeline}})
+          **Focus:** {{phase_3_focus}}
+          
+          Key Initiatives:
+          - {{phase_3_initiative_1}}
+          - {{phase_3_initiative_2}}
+          - {{phase_3_initiative_3}}
+          
+          **Success Metrics:** {{phase_3_metrics}}
+      
+      - id: quick-wins
+        title: Quick Wins to Build Momentum
+        template: |
+          ### 90-Day Quick Wins
+          
+          | Initiative | Owner | Impact | Status |
+          |------------|-------|--------|--------|
+          | {{quick_win_1}} | {{owner_1}} | {{impact_1}} | {{status_1}} |
+          | {{quick_win_2}} | {{owner_2}} | {{impact_2}} | {{status_2}} |
+          | {{quick_win_3}} | {{owner_3}} | {{impact_3}} | {{status_3}} |
+          | {{quick_win_4}} | {{owner_4}} | {{impact_4}} | {{status_4}} |
+
+  - id: financial-implications
+    title: Financial Implications
+    sections:
+      - id: investment-profile
+        title: Investment Profile
+        template: |
+          ## Investment Requirements
+          
+          ### Total Investment: {{total_investment}}
+          
+          | Category | Year 1 | Year 2 | Year 3 | Total |
+          |----------|--------|--------|--------|-------|
+          | Technology | {{tech_y1}} | {{tech_y2}} | {{tech_y3}} | {{tech_total}} |
+          | Talent | {{talent_y1}} | {{talent_y2}} | {{talent_y3}} | {{talent_total}} |
+          | Operations | {{ops_y1}} | {{ops_y2}} | {{ops_y3}} | {{ops_total}} |
+          | Other | {{other_y1}} | {{other_y2}} | {{other_y3}} | {{other_total}} |
+          | **Total** | **{{total_y1}}** | **{{total_y2}}** | **{{total_y3}}** | **{{grand_total}}** |
+      
+      - id: value-creation
+        title: Value Creation Potential
+        template: |
+          ## Expected Value Creation
+          
+          ### Financial Impact by Year 5
+          - **Revenue Uplift:** {{revenue_uplift}}
+          - **EBITDA Improvement:** {{ebitda_improvement}}
+          - **ROI:** {{roi_percentage}}%
+          - **Payback Period:** {{payback_period}}
+          
+          ### Value Creation Waterfall
+          {{value_waterfall_description}}
+          
+          | Value Driver | Impact |
+          |--------------|--------|
+          | Revenue Growth | +{{revenue_growth_value}} |
+          | Cost Optimization | +{{cost_optimization_value}} |
+          | Efficiency Gains | +{{efficiency_value}} |
+          | **Total Value** | **{{total_value}}** |
+
+  - id: critical-success-factors
+    title: Critical Success Factors
+    template: |
+      ## Critical Success Factors
+      
+      ### Must Get Right
+      1. **{{csf_1}}**
+         - Why critical: {{csf_1_rationale}}
+         - How we'll ensure: {{csf_1_approach}}
+      
+      2. **{{csf_2}}**
+         - Why critical: {{csf_2_rationale}}
+         - How we'll ensure: {{csf_2_approach}}
+      
+      3. **{{csf_3}}**
+         - Why critical: {{csf_3_rationale}}
+         - How we'll ensure: {{csf_3_approach}}
+      
+      ### Key Risks and Mitigation
+      | Risk | Probability | Impact | Mitigation |
+      |------|-------------|--------|------------|
+      | {{risk_1}} | {{prob_1}} | {{impact_1}} | {{mitigation_1}} |
+      | {{risk_2}} | {{prob_2}} | {{impact_2}} | {{mitigation_2}} |
+      | {{risk_3}} | {{prob_3}} | {{impact_3}} | {{mitigation_3}} |
+
+  - id: next-steps
+    title: Next Steps
+    template: |
+      ## Immediate Next Steps
+      
+      ### Decisions Required Today
+      1. {{decision_1}}
+      2. {{decision_2}}
+      3. {{decision_3}}
+      
+      ### 30-Day Action Plan
+      | Week | Actions | Owner | Deliverable |
+      |------|---------|-------|-------------|
+      | 1 | {{week_1_actions}} | {{week_1_owner}} | {{week_1_deliverable}} |
+      | 2 | {{week_2_actions}} | {{week_2_owner}} | {{week_2_deliverable}} |
+      | 3 | {{week_3_actions}} | {{week_3_owner}} | {{week_3_deliverable}} |
+      | 4 | {{week_4_actions}} | {{week_4_owner}} | {{week_4_deliverable}} |
+      
+      ### Support Required
+      - **From Board:** {{board_support}}
+      - **From Leadership:** {{leadership_support}}
+      - **From Organization:** {{org_support}}
+
+  - id: appendix
+    title: Appendix
+    sections:
+      - id: methodology
+        title: Analysis Methodology
+        template: |
+          ### Our Approach
+          {{methodology_description}}
+          
+          ### Data Sources
+          - {{data_source_1}}
+          - {{data_source_2}}
+          - {{data_source_3}}
+      
+      - id: detailed-analysis
+        title: Supporting Analysis
+        template: |
+          ### Additional Detail Available On:
+          - Market analysis deep dive
+          - Financial modeling assumptions
+          - Capability assessment details
+          - Risk analysis framework
+          - Implementation planning tools

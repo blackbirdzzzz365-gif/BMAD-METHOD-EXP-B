@@ -1,0 +1,57 @@
+pack:
+  id: bmad-market-researcher
+  name: BMAD Market Researcher
+  version: 1.0.0
+  description: >-
+    Professional Market Research expansion pack for BMad Method - Comprehensive 
+    market analysis, consumer insights, and competitive intelligence focused. 
+    Supports both B2B and B2C research with interactive data gathering.
+  author: BMAD Community
+  tags:
+    - market-research
+    - consumer-insights
+    - competitive-intelligence
+    - data-analysis
+    - persona-development
+    - customer-journey
+    - market-analysis
+  
+  slashPrefix: bmadmr
+  
+  agents:
+    - market-research-lead
+    - consumer-insights
+    - competitive-intelligence
+    - data-analyst
+  
+  primaryUseCase: |
+    Enable comprehensive market research, consumer behavior analysis, and competitive 
+    intelligence gathering for informed business decisions.
+  
+  capabilities:
+    - market_analysis
+    - consumer_insights
+    - competitive_intelligence
+    - persona_development
+    - journey_mapping
+    - trend_analysis
+    - data_visualization
+  
+  dependencies:
+    required:
+      - bmad-core
+    recommended:
+      - bmad-product-manager
+      - bmad-strategy-consulting
+      - bmad-startup-advisor
+  
+  integration_points:
+    - product_validation
+    - strategy_formulation
+    - customer_understanding
+    - competitive_positioning
+  
+  metadata:
+    min_bmad_version: "1.0.0"
+    last_updated: "2024-01-31"
+    stability: "stable"
