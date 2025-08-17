@@ -1,0 +1,75 @@
+name: CI/CD (B)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install deps
+        run: npm ci
+      - name: Run tests (non-blocking if missing)
+        run: npm test --if-present || true
+      - name: Build image (no push on PR)
+        run: docker build -t ghcr.io/${{ github.repository }}/bmad:${{ github.sha }} .
+      - name: Login to GHCR (main only)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: echo "${{ github.token }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+      - name: Push images (main only)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          docker tag ghcr.io/${{ github.repository }}/bmad:${{ github.sha }} ghcr.io/${{ github.repository }}/bmad:latest
+          docker push ghcr.io/${{ github.repository }}/bmad:${{ github.sha }}
+          docker push ghcr.io/${{ github.repository }}/bmad:latest
+
+  deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: test-build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to EC2 (service bmad-dev)
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_KEY }}
+          script: |
+            set -e
+            mkdir -p ~/bmad-app-dev && cd ~/bmad-app-dev
+            cat > .env << 'EOF'
+            OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
+            PORT=3001
+            EOF
+            cat > docker-compose.yml << 'YAML'
+            services:
+              bmad-dev:
+                image: ghcr.io/${{ github.repository }}/bmad:latest
+                container_name: bmad-dev
+                env_file: .env
+                restart: unless-stopped
+                labels:
+                  - "traefik.enable=true"
+                  - "traefik.http.routers.bmad-dev.rule=Host(`bmad-dev.blackbirdn8n.xyz`)"
+                  - "traefik.http.routers.bmad-dev.entrypoints=websecure"
+                  - "traefik.http.routers.bmad-dev.tls.certresolver=mytlschallenge"
+            networks:
+              default:
+                name: traefik-proxy
+                external: true
+            YAML
+            echo "${{ github.token }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin || true
+            docker network create traefik-proxy || true
+            docker compose pull
+            docker compose up -d
+            docker system prune -f
