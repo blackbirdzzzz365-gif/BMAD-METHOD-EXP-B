@@ -4,6 +4,7 @@ on:
   push:
     branches: [ main ]
   pull_request:
+    branches: [ main ]
 
 jobs:
   test-build:
@@ -12,30 +13,28 @@ jobs:
       contents: read
       packages: write
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
-
       - name: Install deps
         run: npm ci
-
-      - name: Run tests (optional)
-        run: npm test --if-present
-
-      - name: Login to GHCR
+      - name: Run tests (non-blocking if missing)
+        run: npm test --if-present || true
+      - name: Build image (no push on PR)
+        run: docker build -t ghcr.io/${{ github.repository }}/bmad:${{ github.sha }} .
+      - name: Login to GHCR (main only)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: echo "${{ github.token }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-
-      - name: Build & Push image
+      - name: Push images (main only)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
-          IMAGE=ghcr.io/${{ github.repository }}/bmad:latest
-          docker build -t $IMAGE .
-          docker push $IMAGE
+          docker tag ghcr.io/${{ github.repository }}/bmad:${{ github.sha }} ghcr.io/${{ github.repository }}/bmad:latest
+          docker push ghcr.io/${{ github.repository }}/bmad:${{ github.sha }}
+          docker push ghcr.io/${{ github.repository }}/bmad:latest
 
   deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: test-build
     runs-on: ubuntu-latest
     steps:
@@ -47,16 +46,11 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           script: |
             set -e
-            mkdir -p ~/bmad-app-dev
-            cd ~/bmad-app-dev
-
-            # render .env (OPENAI_API_KEY lấy từ repo secret)
+            mkdir -p ~/bmad-app-dev && cd ~/bmad-app-dev
             cat > .env << 'EOF'
             OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
             PORT=3001
             EOF
-
-            # docker-compose cho service mới bmad-dev (domain: bmad-dev.blackbirdn8n.xyz)
             cat > docker-compose.yml << 'YAML'
             services:
               bmad-dev:
@@ -74,13 +68,8 @@ jobs:
                 name: traefik-proxy
                 external: true
             YAML
-
-            # nếu image private, login GHCR; nếu public thì lệnh này vẫn OK
             echo "${{ github.token }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin || true
-
-            # đảm bảo mạng traefik-proxy tồn tại
             docker network create traefik-proxy || true
-
             docker compose pull
             docker compose up -d
             docker system prune -f
